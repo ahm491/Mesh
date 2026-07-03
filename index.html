@@ -240,11 +240,11 @@ tr:nth-child(even) td{background:#FAFCFE}
 
 <!-- HEADER -->
 <div class="hdr">
-  <span class="pill">خطة تطوير مهني — 6 أشهر</span>
-  <span class="pill ghost">تبدأ: 3 يوليو 2026 — تنتهي: 2 يناير 2027</span>
-  <h1>من تشغيل خط الإنتاج إلى إدارة الإنتاج الدوائي</h1>
-  <p>مسار متوازٍ: جودة دوائية ← سياسات وإجراءات ← مؤشرات ومستهدفات ← حل مشاكل ← Green Belt وISO ← انتقال وظيفي — والسيرة تُبنى في الخلفية طوال الوقت</p>
-  <div class="roles">
+  <span class="pill" id="hp1">المرحلة الأولى — خطة الـ 6 أشهر</span>
+  <span class="pill ghost" id="hp2">3 يوليو 2026 ← 2 يناير 2027</span>
+  <h1 id="hTitle">من تشغيل خط الإنتاج إلى إدارة الإنتاج الدوائي</h1>
+  <p id="hSub">مسار متوازٍ: جودة دوائية ← سياسات وإجراءات ← مؤشرات ومستهدفات ← حل مشاكل ← Green Belt وISO ← انتقال وظيفي — والسيرة تُبنى في الخلفية طوال الوقت</p>
+  <div class="roles" id="hRoles">
     <span class="role">Senior Production Supervisor</span>
     <span class="role">Shift Production Manager / Shift Lead</span>
     <span class="role">Production Compliance Coordinator</span>
@@ -1236,7 +1236,29 @@ try{state=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){state={}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
 
 function toggle(h){h.parentElement.classList.toggle('open')}
+const HDR={
+  6:{p1:'المرحلة الأولى — خطة الـ 6 أشهر',
+     p2:'3 يوليو 2026 ← 2 يناير 2027',
+     h:'من تشغيل خط الإنتاج إلى إدارة الإنتاج الدوائي',
+     sub:'مسار متوازٍ: جودة دوائية ← سياسات وإجراءات ← مؤشرات ومستهدفات ← حل مشاكل ← Green Belt وISO ← انتقال وظيفي — والسيرة تُبنى في الخلفية طوال الوقت',
+     roles:['Senior Production Supervisor','Shift Production Manager / Shift Lead','Production Compliance Coordinator'],
+     gold:'Production Line Manager — هدف 12–18 شهر'},
+  5:{p1:'المرحلة الثانية — خطة الـ 5–7 سنوات',
+     p2:'2027 ← 2033 · معالم لا مواعيد',
+     h:'من مشرف أول إلى مدير مصنع دوائي',
+     sub:'البكالوريوس عمود فقري + شهادة احترافية ثقيلة كل سنة (CPIM ← Black Belt ← PMP) + خبرات مستهدفة موثقة — والرافعة السعودية تضغط المسار',
+     roles:['بكالوريوس إدارة أعمال 2027–2030','ASCM CPIM · LSS Black Belt · PMP','Production Manager ← Operations Manager'],
+     gold:'Plant Manager — نافذة 2032–2033'}
+};
 function showTab(n){
+  const h=HDR[n];
+  document.getElementById('hp1').textContent=h.p1;
+  document.getElementById('hp2').textContent=h.p2;
+  document.getElementById('hTitle').textContent=h.h;
+  document.getElementById('hSub').textContent=h.sub;
+  document.getElementById('hRoles').innerHTML=
+    h.roles.map(r=>'<span class="role">'+r+'</span>').join('')+
+    '<span class="role" style="border-color:rgba(201,154,59,.55);color:#EBD9AE">'+h.gold+'</span>';
   document.getElementById('tab6').style.display=(n===6?'':'none');
   document.getElementById('tab5').style.display=(n===5?'':'none');
   document.getElementById('btn6').classList.toggle('active',n===6);
