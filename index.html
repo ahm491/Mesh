@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خطة تطوير مهني — 6 أشهر | من تشغيل الخط إلى إدارة الإنتاج الدوائي</title>
+<style>
+:root{
+  --navy:#0F172A; --navy2:#1E293B; --navy3:#334155;
+  --gold:#C99A3B; --gold-soft:#F3E8CF; --gold-deep:#8A6A12;
+  --ink:#1E293B; --muted:#64748B; --paper:#F1F5F9; --card:#FFFFFF; --line:#E2E8F0;
+  --blue:#2C5AA0; --green:#2D6A4F; --amber:#B45309; --slate:#5B6472; --purple:#6D28D9; --teal:#0E7C86; --rose:#9F1239;
+  --shadow:0 1px 3px rgba(15,23,42,.06),0 4px 14px rgba(15,23,42,.05);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important}}
+body{font-family:'IBM Plex Sans Arabic','Segoe UI',sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;padding:18px 14px 60px}
+.wrap{max-width:1080px;margin:0 auto}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* Header — Navy + Gold */
+.hdr{background:linear-gradient(135deg,#0F172A,#1E293B 55%,#334155);border-radius:16px;padding:30px 30px 26px;color:#fff;position:relative;overflow:hidden;margin-bottom:16px;box-shadow:var(--shadow)}
+.hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 220px at 12% -10%,rgba(201,154,59,.22),transparent 60%),radial-gradient(420px 200px at 95% 115%,rgba(201,154,59,.13),transparent 60%)}
+.hdr::after{content:'';position:absolute;right:0;left:0;bottom:0;height:4px;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold) 70%,transparent)}
+.hdr *{position:relative}
+.hdr h1{font-size:23px;font-weight:700;margin-bottom:6px;letter-spacing:-.2px}
+.hdr p{font-size:14px;opacity:.85}
+.pill{display:inline-block;background:var(--gold);color:#0F172A;font-size:12px;font-weight:700;padding:3px 13px;border-radius:20px;margin-bottom:12px;margin-inline-end:6px}
+.pill.ghost{background:rgba(201,154,59,.16);color:#EBD9AE;border:1px solid rgba(201,154,59,.45)}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.role{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 13px;font-size:12.5px;font-weight:600;color:#E2E8F0}
+
+/* Progress bar */
+.progress-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:var(--shadow)}
+.progress-card .lbl{font-size:13px;font-weight:700;color:var(--navy);white-space:nowrap}
+.pbar{flex:1;min-width:200px;height:12px;background:#E8EDF3;border-radius:8px;overflow:hidden}
+.pbar>div{height:100%;background:linear-gradient(90deg,#C99A3B,#DDB65C);width:0%;transition:width .4s;border-radius:8px}
+.pct{font-size:14px;font-weight:700;color:var(--gold-deep);min-width:44px;text-align:left}
+.reset-btn{background:none;border:1px solid var(--line);border-radius:8px;padding:5px 14px;font-size:12px;color:var(--muted);cursor:pointer;font-family:inherit;transition:all .15s}
+.reset-btn:hover{border-color:var(--gold);color:var(--gold-deep);background:var(--gold-soft)}
+
+/* Timeline strip */
+.tstrip{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:18px}
+.tstep{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center;cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s;border-top:3px solid var(--line);box-shadow:var(--shadow)}
+.tstep:hover{border-color:var(--gold);border-top-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 18px rgba(15,23,42,.1)}
+.tstep .n{font-size:17px;font-weight:700;color:var(--navy)}
+.tstep .t{font-size:11px;color:var(--navy3);line-height:1.4;font-weight:600}
+.tstep .d{font-size:10px;color:var(--muted)}
+.tstep .mini{height:5px;background:#E8EDF3;border-radius:4px;margin-top:8px;overflow:hidden}
+.tstep .mini>div{height:100%;background:var(--gold);width:0%;transition:width .3s}
+
+/* Cards base */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px;border-top:4px solid var(--navy);box-shadow:var(--shadow)}
+.card h2{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.card .sub{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+
+/* GANTT */
+.gantt-scroll{overflow-x:auto}
+.gantt{min-width:760px}
+.g-head{display:grid;grid-template-columns:190px repeat(12,1fr);border-bottom:2px solid var(--navy)}
+.g-head .g-mon{grid-column:span 2;text-align:center;font-size:11.5px;font-weight:700;color:var(--navy);padding:6px 2px;border-right:1px dashed var(--line)}
+.g-head .g-mon small{display:block;font-weight:500;color:var(--muted);font-size:10px}
+.g-head .g-corner{padding:6px 8px;font-size:11.5px;font-weight:700;color:var(--muted)}
+.g-row{display:grid;grid-template-columns:190px repeat(12,1fr);align-items:center;border-bottom:1px dashed #EBF0F5;min-height:34px}
+.g-row:hover{background:#F8FAFC}
+.g-row:last-child{border-bottom:none}
+.g-label{font-size:11.5px;font-weight:600;padding:4px 8px;line-height:1.4;color:var(--navy2)}
+.g-cell{height:100%;border-right:1px dashed #EFF3F7;position:relative;min-height:34px}
+.g-bar{position:absolute;top:50%;transform:translateY(-50%);height:15px;border-radius:8px;font-size:9.5px;color:#fff;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;padding:0 6px;right:2px;left:2px;box-shadow:0 1px 2px rgba(15,23,42,.18)}
+.g-bar.light{opacity:.42;box-shadow:none}
+.bg-gold{background:var(--gold)} .bg-blue{background:var(--blue)} .bg-green{background:var(--green)}
+.bg-amber{background:var(--amber)} .bg-purple{background:var(--purple)} .bg-slate{background:var(--slate)} .bg-teal{background:var(--teal)} .bg-rose{background:var(--rose)}
+.g-group{background:#F8FAFC;font-size:11px;font-weight:700;color:var(--navy);padding:5px 10px;grid-column:1/-1;border-bottom:1px solid var(--line);border-right:3px solid var(--gold)}
+.g-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:11px;color:var(--muted)}
+.g-legend span{display:flex;align-items:center;gap:5px}
+.g-legend i{width:14px;height:9px;border-radius:4px;display:inline-block}
+
+/* Month cards */
+.month{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:16px;overflow:hidden;border-top:4px solid var(--gold);box-shadow:var(--shadow)}
+.month[data-color="blue"]{border-top-color:var(--blue)}
+.month[data-color="green"]{border-top-color:var(--green)}
+.month[data-color="amber"]{border-top-color:var(--amber)}
+.month[data-color="purple"]{border-top-color:var(--purple)}
+.month[data-color="teal"]{border-top-color:var(--teal)}
+.month[data-color="rose"]{border-top-color:var(--rose)}
+.mhead{display:flex;align-items:center;gap:14px;padding:17px 22px;cursor:pointer;user-select:none;transition:background .15s}
+.mhead:hover{background:#F8FAFC}
+.mnum{width:46px;height:46px;border-radius:12px;background:var(--gold);color:#0F172A;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+.month[data-color="blue"] .mnum{background:var(--blue);color:#fff}
+.month[data-color="green"] .mnum{background:var(--green);color:#fff}
+.month[data-color="amber"] .mnum{background:var(--amber);color:#fff}
+.month[data-color="purple"] .mnum{background:var(--purple);color:#fff}
+.month[data-color="teal"] .mnum{background:var(--teal);color:#fff}
+.month[data-color="rose"] .mnum{background:var(--rose);color:#fff}
+.mnum b{font-size:18px;line-height:1}
+.mnum span{font-size:9px;opacity:.85}
+.mtitle{flex:1}
+.mtitle h2{font-size:16.5px;font-weight:700;color:var(--navy)}
+.mtitle p{font-size:12.5px;color:var(--muted)}
+.mdate{font-size:11px;font-weight:700;color:var(--gold-deep);background:var(--gold-soft);border:1px solid #E6D4A6;border-radius:14px;padding:2px 11px;white-space:nowrap}
+.arrow{font-size:13px;color:var(--muted);transition:transform .25s}
+.month.open .arrow{transform:rotate(180deg)}
+.mbody{display:none;padding:0 22px 22px;border-top:1px dashed var(--line)}
+.month.open .mbody{display:block}
+
+.sec{margin-top:16px}
+.sec h3{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.sec h3::before{content:'';width:8px;height:8px;border-radius:2px;background:var(--gold);flex-shrink:0}
+.goal{background:#F8FAFC;border:1px solid var(--line);border-right:3px solid var(--gold);border-radius:8px;padding:11px 15px;font-size:13.5px;margin-top:14px}
+
+/* Checklist */
+.chk{list-style:none}
+.chk li{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px dashed #EBF0F5;font-size:13.5px}
+.chk li:last-child{border-bottom:none}
+.chk input{width:17px;height:17px;margin-top:4px;accent-color:var(--gold);cursor:pointer;flex-shrink:0}
+.chk li.done label{text-decoration:line-through;color:var(--muted)}
+.chk label{cursor:pointer;flex:1}
+
+/* Chips */
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:12px;font-weight:600;padding:4px 12px;border-radius:16px;border:1px solid}
+.chip.good{background:#DBEDE1;color:#2D6A4F;border-color:#BFE0CC}
+.chip.warn{background:#FBE2CC;color:#B45309;border-color:#F0CBA8}
+.chip.critical{background:#F3E8CF;color:#8A6A12;border-color:#E6D4A6}
+.chip.info{background:#E3EAF4;color:#2C5AA0;border-color:#C7D6EC}
+.chip.medium{background:#E0F0F1;color:#0E7C86;border-color:#BADEE1}
+.chip.low{background:#EDF1F5;color:#64748B;border-color:#DBE2EA}
+.chip.rose{background:#FBE5EA;color:#9F1239;border-color:#F1C2CD}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px}
+th{background:#F1F5F9;color:var(--navy);font-weight:700;text-align:right;padding:8px 12px;border:1px solid var(--line)}
+td{padding:7px 12px;border:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#FAFCFE}
+.tbl-scroll{overflow-x:auto;border-radius:10px;border:1px solid var(--line)}
+.tbl-scroll table{margin:0}
+.tbl-scroll th,.tbl-scroll td{border-left:1px solid var(--line);border-top:none;border-right:none}
+.tbl-scroll td:last-child,.tbl-scroll th:last-child{border-left:none}
+.tbl-scroll tr td{border-top:1px solid var(--line)}
+
+/* Output box */
+.output{background:#DBEDE1;border:1px solid #BFE0CC;border-radius:10px;padding:12px 16px;margin-top:16px}
+.output h4{font-size:13px;color:#2D6A4F;font-weight:700;margin-bottom:6px}
+.output ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.output li{background:#fff;border:1px solid #BFE0CC;color:#2D6A4F;font-size:12px;font-weight:600;padding:3px 11px;border-radius:14px}
+
+/* Practice box */
+.practice{background:var(--gold-soft);border:1px solid #E6D4A6;border-right:3px solid var(--gold);border-radius:8px;padding:12px 16px;font-size:13px;margin-top:8px}
+.practice b{color:var(--gold-deep)}
+
+/* Background track card */
+.bg-track{background:linear-gradient(135deg,#1E293B,#334155);border-radius:16px;padding:20px 24px;color:#E2E8F0;margin-bottom:16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.bg-track::after{content:'';position:absolute;right:0;top:0;bottom:0;width:4px;background:var(--gold)}
+.bg-track h2{font-size:15.5px;font-weight:700;color:#fff;margin-bottom:2px}
+.bg-track .sub{font-size:12px;color:#B7C2D2;margin-bottom:12px}
+.bg-track .chk li{border-bottom-color:rgba(255,255,255,.1)}
+.bg-track .chk label{color:#E2E8F0}
+.bg-track .chk li.done label{color:#8B99AC}
+
+/* Cert cards */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin-top:8px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;border-top:3px solid var(--blue);box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
+.cert:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(15,23,42,.09)}
+.cert h4{font-size:14px;font-weight:700;margin-bottom:2px;color:var(--navy)}
+.cert .when{font-size:11px;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
+.cert p{font-size:12.5px;color:#3F4A5C;margin-bottom:10px}
+.cert .meta{font-size:12px;margin-bottom:4px}
+.cert .meta b{color:var(--navy)}
+.cert .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.cert .links a{font-size:11.5px;font-weight:600;background:#E3EAF4;color:#2C5AA0;border:1px solid #C7D6EC;border-radius:14px;padding:3px 11px;text-decoration:none;transition:background .15s}
+.cert .links a:hover{background:#D3DEEF}
+.cert .links a.free{background:#DBEDE1;color:#2D6A4F;border-color:#BFE0CC}
+.cert .links a.free:hover{background:#CBE5D5}
+
+/* Diploma options */
+.dip-badge{display:inline-block;font-size:10.5px;font-weight:700;border-radius:12px;padding:2px 10px;margin-inline-start:6px;vertical-align:middle}
+.dip-badge.free{background:#DBEDE1;color:#2D6A4F;border:1px solid #BFE0CC}
+.dip-badge.sa{background:#E0F0F1;color:#0E7C86;border:1px solid #BADEE1}
+.dip-badge.prem{background:var(--gold-soft);color:var(--gold-deep);border:1px solid #E6D4A6}
+
+/* Summary + final */
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;margin-top:10px}
+.flow .step{background:#F8FAFC;border:1px solid var(--line);border-radius:8px;padding:7px 14px;font-size:12.5px;font-weight:700;color:var(--navy)}
+.flow .sep{color:var(--gold);font-weight:700}
+.final{background:linear-gradient(135deg,#0F172A,#1E293B 55%,#334155);border-radius:16px;padding:24px 28px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.final::before{content:'';position:absolute;inset:0;background:radial-gradient(500px 200px at 88% -10%,rgba(201,154,59,.2),transparent 60%)}
+.final::after{content:'';position:absolute;right:0;left:0;top:0;height:4px;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold) 70%,transparent)}
+.final *{position:relative}
+.final h2{font-size:16px;margin-bottom:6px}
+.final p.note{font-size:12.5px;opacity:.85;margin-bottom:12px}
+.final .en{direction:ltr;text-align:left;background:rgba(255,255,255,.07);border:1px solid rgba(201,154,59,.4);border-radius:10px;padding:14px 16px;font-size:13.5px;font-style:italic;line-height:1.6;color:#F1F5F9}
+
+.budget-total{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px}
+.bt{border:1px solid var(--line);border-radius:12px;padding:15px 17px;border-top:3px solid var(--green);background:#FAFCFE}
+.bt.std{border-top-color:var(--gold)}
+.bt h4{font-size:13px;font-weight:700;margin-bottom:2px;color:var(--navy)}
+.bt .amt{font-size:21px;font-weight:700;color:var(--navy)}
+.bt p{font-size:11.5px;color:var(--muted)}
+.disclaimer{font-size:11.5px;color:var(--muted);margin-top:12px;background:#F8FAFC;border:1px dashed var(--line);border-radius:8px;padding:9px 13px}
+
+/* Tabs */
+.tabbar{display:flex;gap:8px;margin-bottom:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;box-shadow:var(--shadow)}
+.tabbtn{flex:1;border:none;background:none;font-family:inherit;font-size:13.5px;font-weight:700;color:var(--muted);padding:10px 8px;border-radius:10px;cursor:pointer;transition:all .15s;line-height:1.4}
+.tabbtn small{display:block;font-size:10.5px;font-weight:500;opacity:.8}
+.tabbtn.active{background:linear-gradient(135deg,#0F172A,#334155);color:#fff}
+.tabbtn.active small{color:#EBD9AE}
+.tabbtn:not(.active):hover{background:#F1F5F9;color:var(--navy)}
+
+/* Career ladder */
+.ladder{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:8px}
+.rung{background:#F8FAFC;border:1px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center;position:relative;border-top:3px solid var(--gold)}
+.rung .yr{font-size:12px;font-weight:700;color:var(--gold-deep)}
+.rung .pos{font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px}
+.rung .cert{font-size:10.5px;color:var(--muted);margin-top:4px}
+.rung.last{background:linear-gradient(135deg,#0F172A,#334155);border-color:#334155}
+.rung.last .pos{color:#fff}
+.rung.last .yr{color:var(--gold)}
+.rung.last .cert{color:#B7C2D2}
+@media(max-width:720px){.ladder{grid-template-columns:repeat(2,1fr)}}
+.gantt5{min-width:860px}
+.gantt5 .g-head{grid-template-columns:170px repeat(14,1fr)}
+.gantt5 .g-row{grid-template-columns:170px repeat(14,1fr)}
+
+@media(max-width:640px){
+  .tstrip{grid-template-columns:repeat(3,1fr)}
+  .hdr h1{font-size:18px}
+  .mdate{display:none}
+}
+@media print{
+  body{background:#fff;padding:0}
+  .month .mbody{display:block!important}
+  .arrow,.reset-btn{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="hdr">
+  <span class="pill">خطة تطوير مهني — 6 أشهر</span>
+  <span class="pill ghost">تبدأ: 3 يوليو 2026 — تنتهي: 2 يناير 2027</span>
+  <h1>من تشغيل خط الإنتاج إلى إدارة الإنتاج الدوائي</h1>
+  <p>مسار متوازٍ: جودة دوائية ← سياسات وإجراءات ← مؤشرات ومستهدفات ← حل مشاكل ← Green Belt وISO ← انتقال وظيفي — والسيرة تُبنى في الخلفية طوال الوقت</p>
+  <div class="roles">
+    <span class="role">Senior Production Supervisor</span>
+    <span class="role">Shift Production Manager / Shift Lead</span>
+    <span class="role">Production Compliance Coordinator</span>
+    <span class="role" style="border-color:rgba(201,154,59,.55);color:#EBD9AE">Production Line Manager — هدف 12–18 شهر</span>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabbar" role="tablist">
+  <button class="tabbtn active" id="btn6" onclick="showTab(6)">خطة الـ 6 أشهر<small>يوليو 2026 – يناير 2027 · التأسيس والانتقال</small></button>
+  <button class="tabbtn" id="btn5" onclick="showTab(5)">خطة 5–7 سنوات<small>2027 – 2033 · البكالوريوس والطريق إلى مدير مصنع</small></button>
+</div>
+
+<div id="tab6">
+<!-- OVERALL PROGRESS -->
+<div class="progress-card">
+  <span class="lbl">التقدم الكلي في الخطة</span>
+  <div class="pbar"><div id="totalBar"></div></div>
+  <span class="pct" id="totalPct">0%</span>
+  <button class="reset-btn" onclick="resetAll()">إعادة تصفير</button>
+</div>
+
+<!-- TIMELINE STRIP -->
+<div class="tstrip" id="tstrip">
+  <div class="tstep" onclick="jump(1)"><div class="n">1</div><div class="t">الجودة الدوائية</div><div class="d">يوليو</div><div class="mini"><div id="mini1"></div></div></div>
+  <div class="tstep" onclick="jump(2)"><div class="n">2</div><div class="t">السياسات وSOP</div><div class="d">أغسطس</div><div class="mini"><div id="mini2"></div></div></div>
+  <div class="tstep" onclick="jump(3)"><div class="n">3</div><div class="t">KPI والمستهدفات</div><div class="d">سبتمبر</div><div class="mini"><div id="mini3"></div></div></div>
+  <div class="tstep" onclick="jump(4)"><div class="n">4</div><div class="t">CAPA + بدء Green Belt</div><div class="d">أكتوبر</div><div class="mini"><div id="mini4"></div></div></div>
+  <div class="tstep" onclick="jump(5)"><div class="n">5</div><div class="t">ISO 9001 + Dashboard</div><div class="d">نوفمبر</div><div class="mini"><div id="mini5"></div></div></div>
+  <div class="tstep" onclick="jump(6)"><div class="n">6</div><div class="t">اختبار GB + التقديم</div><div class="d">ديسمبر</div><div class="mini"><div id="mini6"></div></div></div>
+</div>
+
+<!-- BACKGROUND TRACK -->
+<div class="bg-track">
+  <h2>المسار الخلفي — لا يأخذ شهرًا من الخطة</h2>
+  <div class="sub">جمع البيانات والسيرة وLinkedIn تُنجز في أول 3 أسابيع بالتوازي مع دورة GMP، ثم تُحدَّث أسبوعيًا بما يُنجز من شهادات — الخطة نفسها مخصصة للمحتوى الفني</div>
+  <ul class="chk" data-m="0">
+    <li><input type="checkbox" id="c0a"><label for="c0a">جمع الأرقام من العمل: سنوات الخبرة · عدد الخطوط · نوع الأقسام (Solid / Liquid / Packaging / Sterile) · عدد الموظفين تحت الإشراف · عدد الدُفعات شهريًا · نسب التوقفات والتحسينات · أنواع المستندات (Batch Record, SOP, Logbook, Deviation, Cleaning Record)</label></li>
+    <li><input type="checkbox" id="c0b"><label for="c0b">تجهيز CV احترافي بالإنجليزي + LinkedIn بنفس التوجه (الأسبوعان 2–3)</label></li>
+    <li><input type="checkbox" id="c0c"><label for="c0c">تحديد 3 مسارات وظيفية: إدارة خطوط الإنتاج / توثيق الإنتاج والامتثال / إشراف الورديات</label></li>
+    <li><input type="checkbox" id="c0d"><label for="c0d">تحديث أسبوعي مستمر: كل شهادة تُنجز تُضاف فورًا للسيرة وLinkedIn</label></li>
+  </ul>
+</div>
+
+<!-- GANTT -->
+<div class="card">
+  <h2>مخطط Gantt — تنفيذ متوازٍ</h2>
+  <div class="sub">المهام تتداخل ولا تنتظر بعضها · كل عمود = نصف شهر · البداية: 3 يوليو 2026</div>
+  <div class="gantt-scroll"><div class="gantt">
+    <div class="g-head">
+      <div class="g-corner">المهمة</div>
+      <div class="g-mon">يوليو<small>3/7 – 2/8</small></div>
+      <div class="g-mon">أغسطس<small>3/8 – 2/9</small></div>
+      <div class="g-mon">سبتمبر<small>3/9 – 2/10</small></div>
+      <div class="g-mon">أكتوبر<small>3/10 – 2/11</small></div>
+      <div class="g-mon">نوفمبر<small>3/11 – 2/12</small></div>
+      <div class="g-mon">ديسمبر<small>3/12 – 2/1</small></div>
+    </div>
+
+    <div class="g-group">المسار الخلفي — بالتوازي، لا يستهلك الخطة</div>
+    <div class="g-row"><div class="g-label">جمع البيانات + CV + LinkedIn</div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">تحديث السيرة بكل شهادة تُنجز</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div></div>
+
+    <div class="g-group">الجودة الدوائية — تبدأ من اليوم الأول</div>
+    <div class="g-row"><div class="g-label">شهادة GMP</div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">شهادتا GDP + Data Integrity</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue light"></div></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+
+    <div class="g-group">السياسات والإجراءات — تكمل التوثيق مباشرة</div>
+    <div class="g-row"><div class="g-label">إطار السياسات والإجراءات وSOPs</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-rose"></div></div><div class="g-cell"><div class="g-bar bg-rose"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">تطبيق: كتابة SOP كامل لعملية معروفة</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+
+    <div class="g-group">إدارة الإنتاج — الدبلوم عمل خلفي من منتصف أغسطس</div>
+    <div class="g-row"><div class="g-label">الدبلوم المهني: Production &amp; Operations Mgmt</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">KPIs ومستهدفات الإنتاج + نموذج المتابعة</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+
+    <div class="g-group">حل المشاكل والتحسين</div>
+    <div class="g-row"><div class="g-label">دورات CAPA / Deviation / RCA</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">تحليل 3 حالات من الخبرة العملية</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">مشروع تحسين موثق على الخط (بيانات قبل/بعد — يصبح مشروع GB ودليل المقابلات)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div></div>
+    <div class="g-row"><div class="g-label">Lean Six Sigma Green Belt — تحضير DMAIC</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple">اختبار</div></div></div>
+
+    <div class="g-group">أنظمة الجودة وقياس الأداء</div>
+    <div class="g-row"><div class="g-label">ISO 9001:2015 — Awareness + Internal Auditor</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal"></div></div><div class="g-cell"><div class="g-bar bg-teal"></div></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">Validation Awareness (IQ/OQ/PQ + Cleaning Validation)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">دورة Advanced Excel</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">بناء Dashboard الإنتاج</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"></div><div class="g-cell"></div></div>
+
+    <div class="g-group">الانتقال الوظيفي — يبدأ قبل نهاية الخطة بشهر ونصف</div>
+    <div class="g-row"><div class="g-label">CV نهائي + تدريب مقابلات</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">التقديم على الوظائف</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold">مستمر</div></div></div>
+  </div></div>
+  <div class="g-legend">
+    <span><i class="bg-slate"></i> المسار الخلفي</span>
+    <span><i class="bg-blue"></i> الجودة الدوائية</span>
+    <span><i class="bg-rose"></i> السياسات وSOP</span>
+    <span><i class="bg-green"></i> إدارة الإنتاج وKPI</span>
+    <span><i class="bg-amber"></i> CAPA وRCA</span>
+    <span><i class="bg-purple"></i> Green Belt</span>
+    <span><i class="bg-teal"></i> ISO وExcel</span>
+    <span><i class="bg-gold"></i> الانتقال الوظيفي</span>
+  </div>
+  <div class="disclaimer" style="margin-top:10px"><b>منطق التوازي:</b> الشهادات القصيرة (GMP + GDP + Data Integrity أقل من 15 ساعة مجتمعة) تُنجز خلال أول 6 أسابيع · الدبلوم المهني وGreen Belt عمل خلفي مستمر (3–4 ساعات أسبوعيًا لكل منهما) · التقديم يبدأ من منتصف نوفمبر — دورة التوظيف نفسها تأخذ أسابيع، وGreen Belt يُضاف للسيرة "قيد الإنجاز — الاختبار ديسمبر 2026".</div>
+</div>
+
+<!-- ===== MONTH 1 ===== -->
+<div class="month open" id="m1" data-color="blue">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum" style="background:var(--blue);color:#fff"><b>1</b><span>يوليو</span></div>
+    <div class="mtitle"><h2>أساسيات الجودة الدوائية</h2><p>GMP · GDP · Data Integrity — أهم متطلب في مصانع الأدوية، يبدأ من اليوم الأول</p></div>
+    <span class="mdate">3 يوليو – 2 أغسطس 2026</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>الهدف:</b> تقوية أهم نقطة مطلوبة في مصانع الأدوية: الالتزام بالـ GMP والتوثيق — بالتوازي مع بناء السيرة في الخلفية.</div>
+
+    <div class="sec"><h3>الشهادات (تمتد أوائل أغسطس)</h3>
+      <div class="chips">
+        <span class="chip critical">GMP — Good Manufacturing Practice</span>
+        <span class="chip info">GDP — Good Documentation Practice</span>
+        <span class="chip medium">Data Integrity / ALCOA+</span>
+      </div>
+    </div>
+
+    <div class="sec"><h3>المهارات المطلوب التركيز عليها</h3>
+      <ul class="chk" data-m="1">
+        <li><input type="checkbox" id="c1a"><label for="c1a">كيف تتم تعبئة سجلات الإنتاج بشكل صحيح</label></li>
+        <li><input type="checkbox" id="c1b"><label for="c1b">أخطاء التوثيق الشائعة</label></li>
+        <li><input type="checkbox" id="c1c"><label for="c1c">الفرق بين الخطأ التشغيلي والانحراف</label></li>
+        <li><input type="checkbox" id="c1d"><label for="c1d">أهمية التوقيع، التاريخ، التصحيح، واعتماد السجلات</label></li>
+        <li><input type="checkbox" id="c1e"><label for="c1e">أساسيات النظافة، التلوث، والمطابقة في بيئة الأدوية</label></li>
+        <li><input type="checkbox" id="c1f"><label for="c1f">الحصول على شهادة GMP</label></li>
+        <li><input type="checkbox" id="c1g"><label for="c1g">الحصول على شهادتي GDP وData Integrity (أوائل أغسطس)</label></li>
+      </ul>
+    </div>
+
+    <div class="sec"><h3>تطبيق عملي</h3>
+      <div class="practice"><b>كتابة صفحة واحدة عن:</b> كيف أضمن أن مستندات خط الإنتاج مكتملة وصحيحة قبل تسليمها للجودة؟</div>
+    </div>
+
+    <div class="output"><h4>مخرج الشهر</h4>
+      <ul><li>شهادة GMP</li><li>GDP + Data Integrity قيد الإنهاء</li><li>CV وLinkedIn جاهزان (من المسار الخلفي)</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MONTH 2 ===== -->
+<div class="month" id="m2" data-color="rose">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>2</b><span>أغسطس</span></div>
+    <div class="mtitle"><h2>السياسات والإجراءات وSOPs</h2><p>Policies, Procedures &amp; SOP Framework — فهم هرم الوثائق والقدرة على كتابته</p></div>
+    <span class="mdate">3 أغسطس – 2 سبتمبر 2026</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>الهدف:</b> الانتقال من "منفّذ للإجراء" إلى شخص يفهم <b>لماذا</b> كُتب الإجراء، ويعرف هرم الوثائق كاملًا، ويستطيع كتابة SOP بنفسه — مهارة تميّز المدير عن المشرف. <b>(يبدأ الدبلوم المهني منتصف هذا الشهر كعمل خلفي)</b></div>
+
+    <div class="sec"><h3>الاسم الصحيح في السيرة</h3>
+      <div class="chips">
+        <span class="chip critical">SOP Development &amp; Compliance</span>
+        <span class="chip info">Document Control Awareness</span>
+        <span class="chip medium">Quality Management Documentation</span>
+      </div>
+    </div>
+
+    <div class="sec"><h3>المفاهيم الأساسية — هرم الوثائق</h3>
+      <div class="tbl-scroll"><table>
+        <tr><th>المستوى</th><th>الوثيقة</th><th>وظيفتها</th></tr>
+        <tr><td>1</td><td>Policy — السياسة</td><td>لماذا؟ التوجه العام والالتزام (مثال: سياسة الجودة)</td></tr>
+        <tr><td>2</td><td>Procedure — الإجراء</td><td>من يفعل ماذا ومتى؟ تسلسل المسؤوليات بين الأقسام</td></tr>
+        <tr><td>3</td><td>SOP / Work Instruction</td><td>كيف بالضبط؟ خطوات التنفيذ التفصيلية على الخط</td></tr>
+        <tr><td>4</td><td>Form / Record — النموذج والسجل</td><td>الدليل: ما تم تعبئته أثناء التنفيذ (Batch Record, Logbook)</td></tr>
+      </table></div>
+    </div>
+
+    <div class="sec"><h3>المهارات المطلوب التركيز عليها</h3>
+      <ul class="chk" data-m="2">
+        <li><input type="checkbox" id="c2a"><label for="c2a">الفرق بين السياسة والإجراء وSOP والنموذج — ومتى يُستخدم كل منها</label></li>
+        <li><input type="checkbox" id="c2b"><label for="c2b">بنية SOP القياسية: الهدف، النطاق، المسؤوليات، الخطوات، السجلات، المراجع</label></li>
+        <li><input type="checkbox" id="c2c"><label for="c2c">دورة حياة الوثيقة: إعداد ← مراجعة ← اعتماد ← تدريب ← تطبيق ← مراجعة دورية (Document Control)</label></li>
+        <li><input type="checkbox" id="c2d"><label for="c2d">لماذا يُمنع العمل بنسخة غير معتمدة أو منتهية (Obsolete)</label></li>
+        <li><input type="checkbox" id="c2e"><label for="c2e">العلاقة بين SOP والتدريب: لا تنفيذ قبل التدريب الموثق</label></li>
+      </ul>
+    </div>
+
+    <div class="sec"><h3>تطبيق عملي</h3>
+      <div class="practice"><b>كتابة SOP كامل</b> لعملية مألوفة من الخط (مثل تسليم الوردية أو تصفية الخط Line Clearance) بالبنية القياسية — هذا المستند يُعرض في المقابلات كدليل عملي.</div>
+    </div>
+
+    <div class="output"><h4>مخرج الشهر</h4>
+      <ul><li>فهم هرم الوثائق كاملًا</li><li>SOP مكتوب بيد المتقدم</li><li>GDP + Data Integrity مكتملتان</li><li>الدبلوم المهني بدأ</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MONTH 3 ===== -->
+<div class="month" id="m3" data-color="green">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>3</b><span>سبتمبر</span></div>
+    <div class="mtitle"><h2>مؤشرات الأداء ومستهدفات الإنتاج</h2><p>Production KPIs &amp; Target Setting — لغة الأرقام التي يتكلم بها المدير</p></div>
+    <span class="mdate">3 سبتمبر – 2 أكتوبر 2026</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>الهدف:</b> فهم كيف تُبنى مستهدفات الإنتاج وكيف تُقاس — الفرق بين KPI والمستهدف (Target) والفعلي (Actual)، وكيف تتدرج المستهدفات من خطة المصنع السنوية إلى الخط إلى الوردية. <b>(الدبلوم المهني مستمر بالتوازي)</b></div>
+
+    <div class="sec"><h3>الاسم الصحيح في السيرة</h3>
+      <div class="chips">
+        <span class="chip critical">KPI Monitoring &amp; Target Setting</span>
+        <span class="chip info">OEE &amp; Downtime Analysis</span>
+        <span class="chip medium">Daily Production Reporting</span>
+      </div>
+    </div>
+
+    <div class="sec"><h3>مؤشرات يجب إتقانها</h3>
+      <div class="tbl-scroll"><table>
+        <tr><th>المؤشر</th><th>معناه</th></tr>
+        <tr><td>OEE</td><td>كفاءة المعدات العامة (توافر × أداء × جودة)</td></tr>
+        <tr><td>Downtime %</td><td>نسبة التوقف</td></tr>
+        <tr><td>Yield %</td><td>نسبة الإنتاج المقبول</td></tr>
+        <tr><td>Rejection %</td><td>نسبة المرفوض</td></tr>
+        <tr><td>Plan Achievement %</td><td>نسبة تحقيق الخطة</td></tr>
+        <tr><td>Manpower Productivity</td><td>إنتاجية الموظفين</td></tr>
+        <tr><td>Batch Documentation Accuracy</td><td>دقة مستندات الدفعات</td></tr>
+        <tr><td>Line Clearance Compliance</td><td>الالتزام بتصفية الخط</td></tr>
+      </table></div>
+    </div>
+
+    <div class="sec"><h3>مفاهيم المستهدفات</h3>
+      <ul class="chk" data-m="3">
+        <li><input type="checkbox" id="c3a"><label for="c3a">الفرق بين KPI (المقياس) والمستهدف (الرقم المطلوب) والفعلي (المتحقق)</label></li>
+        <li><input type="checkbox" id="c3b"><label for="c3b">كيف تتدرج المستهدفات: خطة سنوية ← شهرية ← أسبوعية ← وردية (Target Cascading)</label></li>
+        <li><input type="checkbox" id="c3c"><label for="c3c">قراءة الانحراف عن المستهدف وتفسيره بالأسباب لا بالتبرير</label></li>
+        <li><input type="checkbox" id="c3d"><label for="c3d">مواضيع الدبلوم: Production Planning · Line Balancing · Waste · Manpower Allocation · Shift Handover</label></li>
+      </ul>
+    </div>
+
+    <div class="sec"><h3>تطبيق عملي — نموذج Excel لمتابعة الخط اليومي</h3>
+      <div class="tbl-scroll"><table>
+        <tr><th>البند</th><th>المطلوب</th></tr>
+        <tr><td>التاريخ</td><td>يوم التشغيل</td></tr>
+        <tr><td>الخط</td><td>اسم الخط</td></tr>
+        <tr><td>المخطط</td><td>الكمية المستهدفة</td></tr>
+        <tr><td>الفعلي</td><td>الكمية المنتجة</td></tr>
+        <tr><td>الفرق</td><td>Actual − Plan</td></tr>
+        <tr><td>التوقفات</td><td>بالدقائق</td></tr>
+        <tr><td>سبب التوقف</td><td>صيانة / مواد / تشغيل / جودة</td></tr>
+        <tr><td>الهدر</td><td>كمية أو نسبة</td></tr>
+        <tr><td>الملاحظات</td><td>ملاحظات المشرف</td></tr>
+      </table></div>
+      <ul class="chk" data-m="3" style="margin-top:10px">
+        <li><input type="checkbox" id="c3e"><label for="c3e">بناء النموذج وتعبئته أسبوعين ببيانات حقيقية أو تقديرية</label></li>
+        <li><input type="checkbox" id="c3f"><label for="c3f">بدء <b>مشروع تحسين موثق</b> على الخط الحالي (تقليل توقفات / تحسين Yield) مع بيانات قبل/بعد — يُستخدم كمشروع Green Belt وكدليل ملموس في مقابلات التوظيف الخارجية</label></li>
+      </ul>
+    </div>
+
+    <div class="output"><h4>مخرج الشهر</h4>
+      <ul><li>إتقان لغة KPI والمستهدفات</li><li>نموذج متابعة يومي معبأ</li><li>شرح أداء الخط بالأرقام</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MONTH 4 ===== -->
+<div class="month" id="m4" data-color="amber">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>4</b><span>أكتوبر</span></div>
+    <div class="mtitle"><h2>حل المشاكل + انطلاق Green Belt</h2><p>CAPA · Deviation · RCA — وبداية التحضير لـ Lean Six Sigma Green Belt</p></div>
+    <span class="mdate">3 أكتوبر – 2 نوفمبر 2026</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>الهدف:</b> التعامل مع مشاكل الإنتاج بطريقة إدارية — وبدء أثقل شهادة في الخطة: <b>Lean Six Sigma Green Belt</b> (تحضير حتى ديسمبر). أدوات RCA هي نفسها أدوات مرحلة Analyze في DMAIC، فالمساران يقوّيان بعضهما.</div>
+
+    <div class="sec"><h3>الشهادات</h3>
+      <div class="chips">
+        <span class="chip critical">Deviation Management</span>
+        <span class="chip warn">CAPA</span>
+        <span class="chip info">Root Cause Analysis</span>
+        <span class="chip rose">Lean Six Sigma Green Belt — بداية التحضير</span>
+      </div>
+    </div>
+
+    <div class="sec"><h3>المهارات المطلوب التركيز عليها</h3>
+      <ul class="chk" data-m="4">
+        <li><input type="checkbox" id="c4a"><label for="c4a">كتابة وصف مشكلة واضح + التفريق بين السبب المباشر والجذري</label></li>
+        <li><input type="checkbox" id="c4b"><label for="c4b">أدوات التحليل: 5 Why / Fishbone / Pareto</label></li>
+        <li><input type="checkbox" id="c4c"><label for="c4c">اقتراح إجراء تصحيحي ووقائي + متى يُرفع للجودة أو الصيانة أو التخطيط</label></li>
+        <li><input type="checkbox" id="c4d"><label for="c4d">Green Belt: التسجيل (التوصية: IASSC — الإنجليزية ليست عائقًا) وبدء وحدتي Define وMeasure</label></li>
+        <li><input type="checkbox" id="c4g"><label for="c4g">إحصاء أساسي قبل مرحلة Measure: المتوسط، الانحراف المعياري، مخططات الضبط (Control Charts)</label></li>
+        <li><input type="checkbox" id="c4e"><label for="c4e">بدء دورة Advanced Excel (منتصف الشهر، تكتمل نوفمبر)</label></li>
+      </ul>
+    </div>
+
+    <div class="sec"><h3>تطبيق عملي — تحليل 3 حالات من الخبرة العملية</h3>
+      <div class="chips" style="margin-bottom:10px">
+        <span class="chip critical">1. توقف خط بسبب عطل</span>
+        <span class="chip warn">2. نقص مواد أو تأخر توريد</span>
+        <span class="chip info">3. خطأ في مستند إنتاج</span>
+      </div>
+      <div class="tbl-scroll"><table>
+        <tr><th>العنصر</th><th>المحتوى</th></tr>
+        <tr><td>المشكلة</td><td>وصف مختصر</td></tr>
+        <tr><td>الأثر</td><td>تأخير / هدر / جودة</td></tr>
+        <tr><td>السبب المحتمل</td><td>السبب</td></tr>
+        <tr><td>الإجراء الفوري</td><td>ماذا حدث فورًا؟</td></tr>
+        <tr><td>الإجراء التصحيحي</td><td>كيف يُمنع التكرار؟</td></tr>
+        <tr><td>الدرس المستفاد</td><td>ما التعلم المكتسب؟</td></tr>
+      </table></div>
+      <ul class="chk" data-m="4" style="margin-top:10px">
+        <li><input type="checkbox" id="c4f"><label for="c4f">كتابة وتحليل الحالات الثلاث — أمثلة جاهزة للمقابلات</label></li>
+      </ul>
+    </div>
+
+    <div class="output"><h4>مخرج الشهر</h4>
+      <ul><li>لغة CAPA وDeviation</li><li>3 حالات محللة للمقابلات</li><li>Green Belt: مرحلتا Define وMeasure</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MONTH 5 ===== -->
+<div class="month" id="m5" data-color="teal">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>5</b><span>نوفمبر</span></div>
+    <div class="mtitle"><h2>ISO 9001 + Dashboard الإنتاج</h2><p>أنظمة إدارة الجودة والتدقيق الداخلي — وتحويل الأرقام إلى Dashboard يُعرض في المقابلة</p></div>
+    <span class="mdate">3 نوفمبر – 2 ديسمبر 2026</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>الهدف:</b> فهم نظام إدارة الجودة ISO 9001:2015 والتدقيق الداخلي، وبناء Dashboard الإنتاج في Excel، وختام الدبلوم المهني — <b>ويبدأ التقديم على الوظائف من منتصف الشهر</b>. (Green Belt مستمر: مرحلتا Analyze وImprove)</div>
+
+    <div class="sec"><h3>الاسم الصحيح في السيرة</h3>
+      <div class="chips">
+        <span class="chip critical">ISO 9001:2015 QMS Awareness</span>
+        <span class="chip info">ISO 9001 Internal Auditor</span>
+        <span class="chip medium">Quality Management Systems</span>
+      </div>
+    </div>
+
+    <div class="sec"><h3>ISO 9001 — ما يجب فهمه</h3>
+      <ul class="chk" data-m="5">
+        <li><input type="checkbox" id="c5a"><label for="c5a">مبادئ إدارة الجودة السبعة والنهج القائم على العمليات (Process Approach)</label></li>
+        <li><input type="checkbox" id="c5b"><label for="c5b">بنود المواصفة الأساسية (4–10): السياق، القيادة، التخطيط، الدعم، التشغيل، تقييم الأداء، التحسين</label></li>
+        <li><input type="checkbox" id="c5c"><label for="c5c">دورة PDCA وعلاقتها بالتحسين المستمر</label></li>
+        <li><input type="checkbox" id="c5d"><label for="c5d">أساسيات التدقيق الداخلي: قائمة التحقق، الملاحظة، عدم المطابقة (NC)، تقرير التدقيق</label></li>
+        <li><input type="checkbox" id="c5e"><label for="c5e">العلاقة بين ISO 9001 وGMP: نظام الجودة العام مقابل المتطلب الدوائي الإلزامي</label></li>
+        <li><input type="checkbox" id="c5i"><label for="c5i"><b>Validation Awareness</b> (ساعتان): مفردات IQ/OQ/PQ وCleaning Validation وProcess Validation — متوقعة في مقابلات الإنتاج الدوائي</label></li>
+      </ul>
+    </div>
+
+    <div class="sec"><h3>Excel وDashboard الإنتاج</h3>
+      <div class="chips" style="margin-bottom:10px">
+        <span class="chip info">Pivot Table</span><span class="chip info">XLOOKUP</span><span class="chip low">SUMIFS</span>
+        <span class="chip medium">Conditional Formatting</span><span class="chip good">Charts</span><span class="chip low">Data Validation</span>
+      </div>
+      <ul class="chk" data-m="5">
+        <li><input type="checkbox" id="c5f"><label for="c5f">Dashboard يعرض: المخطط والفعلي · نسبة تحقيق الخطة · أكثر 5 أسباب توقف · نسبة الهدر · أداء كل وردية · ملاحظات الجودة</label></li>
+        <li><input type="checkbox" id="c5g"><label for="c5g">ختام الدبلوم المهني واستلام الشهادة</label></li>
+        <li><input type="checkbox" id="c5h"><label for="c5h">CV نهائي + بدء التقديم على الوظائف (منتصف نوفمبر)</label></li>
+      </ul>
+    </div>
+
+    <div class="output"><h4>مخرج الشهر</h4>
+      <ul><li>شهادتا ISO 9001</li><li>Dashboard جاهز للمقابلات</li><li>شهادة الدبلوم المهني</li><li>أول دفعة تقديمات مرسلة</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MONTH 6 ===== -->
+<div class="month" id="m6" data-color="purple">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>6</b><span>ديسمبر</span></div>
+    <div class="mtitle"><h2>اختبار Green Belt + التقديم المكثف</h2><p>إغلاق أكبر شهادة في الخطة والتفرغ للمقابلات</p></div>
+    <span class="mdate">3 ديسمبر 2026 – 2 يناير 2027</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>الهدف:</b> اجتياز اختبار Lean Six Sigma Green Belt (مرحلة Control + المراجعة الشاملة)، والتقديم المكثف مع التدرب على المقابلات.</div>
+
+    <div class="sec"><h3>مهام الشهر</h3>
+      <ul class="chk" data-m="6">
+        <li><input type="checkbox" id="c6a"><label for="c6a">Green Belt: إنهاء مرحلة Control + اختبارات تجريبية + الاختبار الرسمي</label></li>
+        <li><input type="checkbox" id="c6b"><label for="c6b">تحديث السيرة وLinkedIn بكامل الشهادات</label></li>
+        <li><input type="checkbox" id="c6c"><label for="c6c">التقديم المستمر على الوظائف المستهدفة</label></li>
+        <li><input type="checkbox" id="c6d"><label for="c6d">تدريب مقابلات (الأسئلة أدناه)</label></li>
+      </ul>
+    </div>
+
+    <div class="sec"><h3>السيرة النهائية — Certifications</h3>
+      <div class="chips">
+        <span class="chip critical">GMP</span><span class="chip info">GDP</span><span class="chip medium">Data Integrity</span>
+        <span class="chip rose">Lean Six Sigma Green Belt</span>
+        <span class="chip good">دبلوم Production &amp; Operations Management</span>
+        <span class="chip warn">CAPA / Deviation</span>
+        <span class="chip medium">ISO 9001 Internal Auditor</span>
+        <span class="chip low">Advanced Excel</span>
+      </div>
+    </div>
+
+    <div class="sec"><h3>السيرة النهائية — Skills</h3>
+      <div class="chips">
+        <span class="chip low">Production Line Management</span><span class="chip low">GMP Compliance</span>
+        <span class="chip low">SOP Development &amp; Compliance</span><span class="chip low">KPI Monitoring &amp; Target Setting</span>
+        <span class="chip low">OEE &amp; Downtime Analysis</span><span class="chip low">Batch Record Documentation</span>
+        <span class="chip low">CAPA Support</span><span class="chip low">Lean Six Sigma (DMAIC)</span>
+        <span class="chip low">Internal Quality Auditing</span><span class="chip low">Shift Supervision</span>
+        <span class="chip low">Daily Production Reporting</span><span class="chip low">Team Supervision</span>
+      </div>
+    </div>
+
+    <div class="sec"><h3>الوظائف المستهدفة (بالأولوية)</h3>
+      <div class="tbl-scroll"><table>
+        <tr><th style="width:60px">#</th><th>الوظيفة</th></tr>
+        <tr><td>1</td><td>Senior Production Supervisor</td></tr>
+        <tr><td>2</td><td>Shift Production Manager / Shift Lead</td></tr>
+        <tr><td>3</td><td>Production Compliance Coordinator</td></tr>
+        <tr><td>4</td><td>Packaging Line Supervisor</td></tr>
+        <tr><td>5</td><td>GMP Documentation Officer</td></tr>
+        <tr><td>6</td><td>Batch Record Reviewer</td></tr>
+        <tr><td>7</td><td>Assistant Production Manager</td></tr>
+        <tr><td>8</td><td>Production Line Manager <span style="font-size:11px;color:var(--muted)">(هدف 12–18 شهر)</span></td></tr>
+      </table></div>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px">منصات التقديم: <a href="https://www.linkedin.com/jobs" target="_blank">LinkedIn Jobs</a> · <a href="https://www.bayt.com" target="_blank">Bayt.com</a> · <a href="https://sa.indeed.com" target="_blank">Indeed السعودية</a> · <a href="https://www.gulftalent.com" target="_blank">GulfTalent</a> · <a href="https://www.naukrigulf.com" target="_blank">Naukrigulf</a> — وصفحات التوظيف المباشرة لشركات الأدوية.</p>
+      <div class="disclaimer" style="margin-top:10px"><b>ملاحظة واقعية:</b> بدون بكالوريوس، أغلب شركات الأدوية تضع سقف "Manager" عند الشهادة الجامعية. الترتيب أعلاه مبني على ذلك — الوصول لـ Senior Supervisor أو Shift Lead خلال هذه الخطة إنجاز قوي، وLine Manager هدف 12–18 شهرًا. <b>بند طويل المدى:</b> بكالوريوس انتساب أو عن بعد (إدارة أعمال / إدارة صناعية) يرفع السقف نهائيًا.</div>
+    </div>
+
+    <div class="sec"><h3>أسئلة مقابلات للتدرب عليها</h3>
+      <ul class="chk" data-m="6">
+        <li><input type="checkbox" id="c6e"><label for="c6e">كيف تُدار عملية إنتاج فيها تأخير؟ وكيف يُتعامل مع توقف مفاجئ؟</label></li>
+        <li><input type="checkbox" id="c6f"><label for="c6f">كيف تُضمن صحة مستندات الإنتاج؟ وما هو GMP؟</label></li>
+        <li><input type="checkbox" id="c6g"><label for="c6g">ما الفرق بين Deviation وCAPA؟ وما الفرق بين السياسة والإجراء وSOP؟</label></li>
+        <li><input type="checkbox" id="c6h"><label for="c6h">كيف يُقاس أداء الخط؟ وكيف يُبنى مستهدف إنتاج واقعي؟</label></li>
+        <li><input type="checkbox" id="c6i"><label for="c6i">اشرح DMAIC — وأعطِ مثالًا لتحسين طبقته أو يمكن تطبيقه على خطك</label></li>
+        <li><input type="checkbox" id="c6j"><label for="c6j">كيف يتم التعامل مع مشغل ضعيف الأداء؟ وكيف تُسلَّم الوردية بشكل صحيح؟</label></li>
+        <li><input type="checkbox" id="c6k"><label for="c6k">كيف يُوازن بين ضغط الإنتاج ومتطلبات الجودة؟</label></li>
+      </ul>
+    </div>
+
+    <div class="output"><h4>مخرج الشهر — بنهاية 2 يناير 2027</h4>
+      <ul><li>شهادة Green Belt</li><li>CV نهائي مكتمل</li><li>تقديمات نشطة ومقابلات</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROFESSIONAL DIPLOMA ===== -->
+<div class="card" style="border-top-color:var(--green)">
+  <h2>الدبلوم المهني — Production &amp; Operations Management</h2>
+  <div class="sub"><b>بدون بكالوريوس، هذا أهم بند تعليمي في الملف كله — ضرورة لا خيار.</b> يبدأ أوائل أغسطس ويمتد حتى نوفمبر كعمل خلفي · 4 خيارات مرتبة من المجاني إلى الاحترافي</div>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>الخيار</th><th>الجهة</th><th>المدة</th><th>التكلفة التقديرية</th><th>ملاحظة</th></tr>
+    <tr>
+      <td><b>دروب</b> <span class="dip-badge sa">سعودي</span> <span class="dip-badge free">مجاني</span></td>
+      <td>صندوق تنمية الموارد البشرية (هدف)</td>
+      <td>مسار تدريبي مرن (عدة دورات)</td>
+      <td>0 ر.س — التعلم والشهادة مجانيان</td>
+      <td>شهادات إتمام معتمدة لدى جهات حكومية وشركات سعودية · مسارات إدارة الأعمال والمهارات الإدارية · تسجيل بالنفاذ الوطني</td>
+    </tr>
+    <tr>
+      <td><b>Alison Diploma</b> <span class="dip-badge free">تعلم مجاني</span></td>
+      <td>Alison — معتمد CPD UK</td>
+      <td>10–15 ساعة (تُوزَّع على 8–12 أسبوعًا)</td>
+      <td>التعلم 0 ر.س · الشهادة ≈ 270–470 ر.س</td>
+      <td>Diploma in Operations Management — عنوان "Diploma" صريح يُكتب في السيرة · بالإنجليزية</td>
+    </tr>
+    <tr>
+      <td><b>Coursera Specialization</b></td>
+      <td>جامعات (Wharton / Illinois وغيرها)</td>
+      <td>1–3 أشهر</td>
+      <td>≈ 220–250 ر.س/شهر (اشتراك)</td>
+      <td>أقوى اسم أكاديمي · يتطلب التزامًا أسبوعيًا · إمكانية طلب إعفاء مالي (Financial Aid)</td>
+    </tr>
+    <tr>
+      <td><b>ASCM CPIM</b> <span class="dip-badge prem">احترافي دولي</span></td>
+      <td>ASCM (APICS سابقًا)</td>
+      <td>3–6 أشهر تحضير + اختبار</td>
+      <td>≈ 4,500–7,500 ر.س (تقديري)</td>
+      <td>أرقى اعتماد عالمي في تخطيط الإنتاج والمخزون — يُؤجَّل لما بعد الحصول على الوظيفة كهدف للسنة التالية</td>
+    </tr>
+  </table></div>
+
+  <div class="cert-grid" style="margin-top:14px">
+    <div class="cert" style="border-top-color:var(--teal)">
+      <h4>التوصية العملية</h4>
+      <div class="when">منتصف أغسطس – نوفمبر 2026 (عمل خلفي)</div>
+      <p><b>المسار المقترح:</b> دبلوم Alison في Operations Management (عنوان Diploma للسيرة) <b>بالتوازي مع</b> مسار إداري من دروب (شهادة سعودية معتمدة مجانية). التكلفة ≈ 270–470 ر.س، والنتيجة شهادتان. أما CPIM فهدف طموح للسنة التي تلي التوظيف.</p>
+      <div class="links">
+        <a class="free" href="https://doroob.sa" target="_blank">دروب (مجاني بالكامل)</a>
+        <a class="free" href="https://alison.com/courses?query=operations%20management" target="_blank">Alison Diploma</a>
+        <a href="https://www.coursera.org/search?query=operations%20management" target="_blank">Coursera</a>
+        <a href="https://www.ascm.org/learning-development/certifications-credentials/cpim/" target="_blank">ASCM CPIM</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CERTIFICATIONS GUIDE ===== -->
+<div class="card">
+  <h2>دليل الشهادات — نبذة وروابط وتكلفة تقديرية</h2>
+  <div class="sub">التعلم على Alison ودروب مجاني بالكامل · دورات Udemy تنزل عليها خصومات متكررة تصل لـ 45–80 ر.س · الأسعار تقديرية وقابلة للتغير</div>
+  <div class="cert-grid">
+
+    <div class="cert" style="border-top-color:var(--gold)">
+      <h4>GMP — Good Manufacturing Practice</h4>
+      <div class="when">يوليو 2026</div>
+      <p>ممارسات التصنيع الجيد: المعيار الإلزامي عالميًا (WHO / FDA / EU) لضمان جودة وسلامة المنتج الدوائي — المرافق، النظافة، منع التلوث، السجلات، وأدوار الإنتاج والجودة. أهم شهادة على الإطلاق في هذا المسار.</p>
+      <div class="meta"><b>المدة:</b> 3–8 ساعات تعلم ذاتي</div>
+      <div class="meta"><b>التكلفة:</b> Alison: تعلم مجاني + شهادة ≈ 90–150 ر.س · Udemy: ≈ 45–80 ر.س وقت الخصم</div>
+      <div class="links">
+        <a class="free" href="https://alison.com/tag/gmp" target="_blank">Alison (مجاني)</a>
+        <a href="https://www.udemy.com/course/good-manufacturing-practices-gmp-certification-course/" target="_blank">Udemy — GMP Certification</a>
+        <a href="https://www.udemy.com/topic/good-manufacturing-practice-gmp/" target="_blank">Udemy — كل دورات GMP</a>
+      </div>
+    </div>
+
+    <div class="cert">
+      <h4>GDP + Data Integrity / ALCOA+</h4>
+      <div class="when">أغسطس – أوائل سبتمبر 2026</div>
+      <p>ممارسات التوثيق الجيد (التوقيع، التاريخ، التصحيح الصحيح) وسلامة البيانات وفق ALCOA+. المصانع تسقط في التفتيش بسبب التوثيق أكثر من أي سبب آخر — وموضوع Data Integrity ساخن في تفتيشات SFDA وهيئات الدواء عالميًا.</p>
+      <div class="meta"><b>المدة:</b> 4–7 ساعات للاثنتين</div>
+      <div class="meta"><b>التكلفة:</b> ≈ 90–300 ر.س للاثنتين حسب المنصة</div>
+      <div class="links">
+        <a class="free" href="https://alison.com/courses?query=good%20documentation%20practice" target="_blank">Alison — GDP</a>
+        <a href="https://www.udemy.com/courses/search/?q=good%20documentation%20practice%20pharmaceutical" target="_blank">Udemy — GDP</a>
+        <a href="https://www.udemy.com/courses/search/?q=data%20integrity%20ALCOA%20pharmaceutical" target="_blank">Udemy — Data Integrity</a>
+      </div>
+    </div>
+
+    <div class="cert" style="border-top-color:var(--rose)">
+      <h4>SOP Development &amp; Document Control</h4>
+      <div class="when">أغسطس 2026</div>
+      <p>هرم الوثائق (Policy ← Procedure ← SOP ← Record)، بنية SOP القياسية، ودورة حياة الوثيقة. مهارة كتابة الإجراءات هي ما يميز المرشح للإدارة — معظم المشرفين ينفذون SOPs ولا يعرفون كتابتها.</p>
+      <div class="meta"><b>المدة:</b> 2–4 ساعات + التطبيق العملي</div>
+      <div class="meta"><b>التكلفة:</b> ≈ 0–80 ر.س (المفاهيم متوفرة مجانًا، ودورات Udemy متخصصة وقت الخصم)</div>
+      <div class="links">
+        <a href="https://www.udemy.com/courses/search/?q=SOP%20writing%20pharmaceutical" target="_blank">Udemy — SOP Writing</a>
+        <a class="free" href="https://alison.com/courses?query=document%20control" target="_blank">Alison — Document Control</a>
+      </div>
+    </div>
+
+    <div class="cert" style="border-top-color:var(--green)">
+      <h4>Production KPIs &amp; Target Setting</h4>
+      <div class="when">سبتمبر 2026</div>
+      <p>مؤشرات الأداء ومستهدفات الإنتاج: عائلة OEE، الفرق بين المقياس والمستهدف والفعلي، تدرج المستهدفات، وبناء تقرير الإنتاج اليومي. تُغطى ضمن الدبلوم المهني وتُعمَّق بدورة KPI متخصصة.</p>
+      <div class="meta"><b>المدة:</b> 3–6 ساعات + التطبيق</div>
+      <div class="meta"><b>التكلفة:</b> ≈ 0–80 ر.س (ضمن الدبلوم، أو دورة KPI مستقلة من Udemy)</div>
+      <div class="links">
+        <a href="https://www.udemy.com/courses/search/?q=KPI%20key%20performance%20indicators" target="_blank">Udemy — KPIs</a>
+        <a href="https://www.udemy.com/courses/search/?q=OEE%20manufacturing" target="_blank">Udemy — OEE</a>
+        <a class="free" href="https://doroob.sa" target="_blank">دروب — مهارات إدارية</a>
+      </div>
+    </div>
+
+    <div class="cert" style="border-top-color:var(--amber)">
+      <h4>CAPA · Deviation · Root Cause Analysis</h4>
+      <div class="when">منتصف سبتمبر – أكتوبر 2026</div>
+      <p>إدارة الانحرافات والإجراءات التصحيحية والوقائية وتحليل السبب الجذري (5 Why / Fishbone / Pareto). لغة إدارة الجودة — إتقانها يعني قيادة تحقيقات المشاكل وليس فقط الإبلاغ عنها، وهي مدخل طبيعي لـ Green Belt.</p>
+      <div class="meta"><b>المدة:</b> 3–6 ساعات لكل موضوع (تُدمج في دورة واحدة غالبًا)</div>
+      <div class="meta"><b>التكلفة:</b> ≈ 90–240 ر.س للمجموعة (2–3 دورات Udemy وقت الخصم)</div>
+      <div class="links">
+        <a href="https://www.udemy.com/courses/search/?q=CAPA%20deviation%20pharmaceutical" target="_blank">Udemy — CAPA/Deviation</a>
+        <a href="https://www.udemy.com/courses/search/?q=root%20cause%20analysis" target="_blank">Udemy — RCA</a>
+        <a class="free" href="https://alison.com/courses?query=root%20cause%20analysis" target="_blank">Alison (مجاني)</a>
+      </div>
+    </div>
+
+    <div class="cert" style="border-top-color:var(--purple)">
+      <h4>Lean Six Sigma Green Belt (LSSGB)</h4>
+      <div class="when">أكتوبر – ديسمبر 2026 (الاختبار في ديسمبر)</div>
+      <p>منهجية DMAIC (تعريف ← قياس ← تحليل ← تحسين ← ضبط) لتقليل الهدر والانحراف في العمليات. أثقل وأقوى شهادة في الخطة — تُفتح بها أبواب أدوار التحسين المستمر (Continuous Improvement) إضافة للإنتاج. تحضير 3–4 ساعات أسبوعيًا لمدة 10–12 أسبوعًا.</p>
+      <div class="meta"><b>جهات الاعتماد:</b> <b>التوصية: IASSC/PeopleCert</b> (مراقَب، أقوى اعترافًا) ≈ 1,100–1,350 ر.س — الإنجليزية ليست عائقًا · البديل الاقتصادي: CSSC (مفتوح الكتاب، دليل مجاني، بلا انتهاء) ≈ 600–800 ر.س · ASQ يشترط 3 سنوات خبرة موثقة ≈ 1,300–1,650 ر.س</div>
+      <div class="meta"><b>التحضير:</b> دليل CSSC المجاني + دورة Udemy شاملة ≈ 60–80 ر.س</div>
+      <div class="links">
+        <a class="free" href="https://www.sixsigmacouncil.org/six-sigma-training-material/" target="_blank">CSSC — دليل مجاني</a>
+        <a href="https://www.sixsigmacouncil.org/lean-six-sigma-green-belt-certification-standard/" target="_blank">CSSC — الاختبار</a>
+        <a href="https://iassc.org/six-sigma-certification/green-belt-certification/" target="_blank">IASSC</a>
+        <a href="https://www.udemy.com/courses/search/?q=lean%20six%20sigma%20green%20belt" target="_blank">Udemy — تحضير</a>
+      </div>
+    </div>
+
+    <div class="cert" style="border-top-color:var(--teal)">
+      <h4>ISO 9001:2015 — Awareness + Internal Auditor</h4>
+      <div class="when">نوفمبر 2026</div>
+      <p>نظام إدارة الجودة الأشهر عالميًا: بنود المواصفة، النهج القائم على العمليات، PDCA، والتدقيق الداخلي. معظم مصانع الأدوية السعودية حاصلة على ISO 9001 إلى جانب ترخيص SFDA — وفهم التدقيق الداخلي يفتح مسار Production Compliance.</p>
+      <div class="meta"><b>المدة:</b> Awareness ساعتان–4 · Internal Auditor يوم–يومان تدريب مكافئ</div>
+      <div class="meta"><b>التكلفة:</b> Awareness (Udemy/Alison) ≈ 45–150 ر.س · Internal Auditor أونلاين ≈ 80–300 ر.س (المعتمد حضوريًا أغلى ويُؤجَّل)</div>
+      <div class="links">
+        <a href="https://www.udemy.com/courses/search/?q=ISO%209001%20internal%20auditor" target="_blank">Udemy — Internal Auditor</a>
+        <a class="free" href="https://alison.com/courses?query=iso%209001" target="_blank">Alison — ISO 9001</a>
+      </div>
+    </div>
+
+    <div class="cert" style="border-top-color:var(--slate)">
+      <h4>Advanced Excel + Dashboard</h4>
+      <div class="when">منتصف أكتوبر – نوفمبر 2026</div>
+      <p>Pivot Tables وXLOOKUP وSUMIFS وبناء Dashboard إنتاج. المهارة التي تحوّل الخبرة التشغيلية إلى تقارير تُعرض أمام الإدارة — وملف الـ Dashboard الناتج يُعرض مباشرة في المقابلات.</p>
+      <div class="meta"><b>المدة:</b> 10–20 ساعة</div>
+      <div class="meta"><b>التكلفة:</b> Microsoft Learn: مجاني بالكامل · Udemy: ≈ 45–80 ر.س · Coursera: ضمن الاشتراك</div>
+      <div class="links">
+        <a class="free" href="https://learn.microsoft.com/training/browse/?terms=excel" target="_blank">Microsoft Learn (مجاني)</a>
+        <a href="https://www.udemy.com/topic/excel/" target="_blank">Udemy — Excel</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== BUDGET ===== -->
+<div class="card" style="border-top-color:var(--gold)">
+  <h2>الميزانية التقديرية للخطة كاملة</h2>
+  <div class="sub">سيناريوهان حسب المنصات — Green Belt هو البند الأكبر، وباقي الشهادات يمكن أن تكون شبه مجانية</div>
+  <div class="tbl-scroll"><table>
+    <tr><th>البند</th><th>التوقيت</th><th>السيناريو الاقتصادي</th><th>السيناريو القياسي</th></tr>
+    <tr><td>GMP</td><td>يوليو</td><td>Udemy خصم ≈ 60 ر.س</td><td>Alison شهادة ≈ 120 ر.س</td></tr>
+    <tr><td>GDP + Data Integrity</td><td>أغسطس</td><td>Udemy ≈ 90 ر.س</td><td>Alison ≈ 240 ر.س</td></tr>
+    <tr><td>SOP / Document Control</td><td>أغسطس</td><td>مصادر مجانية ≈ 0 ر.س</td><td>Udemy ≈ 70 ر.س</td></tr>
+    <tr><td>الدبلوم المهني (Production &amp; Ops)</td><td>أغسطس–نوفمبر</td><td>دروب مجاني ≈ 0 ر.س</td><td>Alison Diploma ≈ 350 ر.س + دروب</td></tr>
+    <tr><td>KPI / OEE</td><td>سبتمبر</td><td>ضمن الدبلوم ≈ 0 ر.س</td><td>دورة Udemy ≈ 70 ر.س</td></tr>
+    <tr><td>CAPA / Deviation / RCA</td><td>سبتمبر–أكتوبر</td><td>دورتان Udemy ≈ 120 ر.س</td><td>3 دورات ≈ 200 ر.س</td></tr>
+    <tr><td><b>Lean Six Sigma Green Belt</b></td><td>أكتوبر–ديسمبر</td><td>CSSC (دليل مجاني + اختبار) ≈ 700 ر.س</td><td>IASSC + دورة تحضير ≈ 1,300 ر.س</td></tr>
+    <tr><td>ISO 9001 Awareness + Internal Auditor</td><td>نوفمبر</td><td>Udemy ≈ 120 ر.س</td><td>دورات أشمل ≈ 300 ر.س</td></tr>
+    <tr><td>Advanced Excel</td><td>أكتوبر–نوفمبر</td><td>Microsoft Learn ≈ 0 ر.س</td><td>Udemy ≈ 70 ر.س</td></tr>
+    <tr><td>احتياطي (LinkedIn Premium شهر / طباعة)</td><td>نوفمبر–ديسمبر</td><td>≈ 0–50 ر.س</td><td>≈ 120–160 ر.س</td></tr>
+  </table></div>
+  <div class="budget-total">
+    <div class="bt"><h4>السيناريو الاقتصادي</h4><div class="amt">≈ 1,090 – 1,140 ر.س</div><p>دروب + المصادر المجانية + CSSC للـ Green Belt — Green Belt وحده ثلثا الميزانية</p></div>
+    <div class="bt std"><h4>السيناريو القياسي</h4><div class="amt">≈ 2,700 – 2,900 ر.س</div><p>شهادات Alison الموثقة + IASSC Green Belt (الأقوى اعترافًا) + ISO أشمل</p></div>
+  </div>
+  <div class="disclaimer">ملاحظة: الأسعار تقديرية بتاريخ يوليو 2026 وتتغير حسب العروض وسعر الصرف. قواعد عملية: لا تُشترى دورة Udemy بالسعر الكامل (الخصومات أسبوعية) · التوصية لهذا الملف: IASSC (لا عائق لغة) — ودليل CSSC الدراسي المجاني يصلح للتحضير في الحالتين · إذا كانت الميزانية ضيقة يمكن تأجيل اختبار Green Belt للربع الأول من 2027 وكتابته في السيرة "In Progress" — القيمة التسويقية تبدأ من بدء التحضير.</div>
+</div>
+
+<!-- SUMMARY TABLE -->
+<div class="card">
+  <h2>الجدول المختصر</h2>
+  <div class="tbl-scroll"><table>
+    <tr><th>الشهر</th><th>الفترة</th><th>محور التركيز</th><th>المخرج</th></tr>
+    <tr><td>1</td><td>يوليو</td><td>GMP / GDP / Data Integrity (+ السيرة في الخلفية)</td><td>شهادات الجودة الدوائية + CV جاهز</td></tr>
+    <tr><td>2</td><td>أغسطس</td><td>السياسات والإجراءات وSOPs + بدء الدبلوم</td><td>SOP مكتوب + فهم هرم الوثائق</td></tr>
+    <tr><td>3</td><td>سبتمبر</td><td>KPIs ومستهدفات الإنتاج + بدء مشروع التحسين الموثق</td><td>نموذج متابعة + لغة الأرقام</td></tr>
+    <tr><td>4</td><td>أكتوبر</td><td>CAPA / RCA + انطلاق Green Belt + Excel</td><td>3 حالات محللة + Define/Measure</td></tr>
+    <tr><td>5</td><td>نوفمبر</td><td>ISO 9001 + Dashboard + ختام الدبلوم + بدء التقديم</td><td>شهادتا ISO + Dashboard + أول تقديمات</td></tr>
+    <tr><td>6</td><td>ديسمبر</td><td>اختبار Green Belt + تقديم مكثف</td><td>شهادة GB + مقابلات</td></tr>
+  </table></div>
+
+  <p style="font-size:13px;margin-top:16px"><b style="color:var(--navy)">الخلاصة:</b> السيرة والبيانات لا تستهلك الخطة — تُبنى في الخلفية. المسار الفني:</p>
+  <div class="flow">
+    <span class="step">GMP / GDP</span><span class="sep">←</span>
+    <span class="step">SOPs والسياسات</span><span class="sep">←</span>
+    <span class="step">KPI والمستهدفات</span><span class="sep">←</span>
+    <span class="step">CAPA + Green Belt</span><span class="sep">←</span>
+    <span class="step">ISO + Dashboard</span><span class="sep">←</span>
+    <span class="step">تقديم وظيفي</span>
+  </div>
+</div>
+
+<!-- FINAL POSITIONING -->
+<div class="final">
+  <h2>الملخص المهني (Professional Summary) بعد إتمام الخطة</h2>
+  <p class="note">نموذج جاهز لأعلى السيرة الذاتية وLinkedIn:</p>
+  <div class="en">Lean Six Sigma Green Belt–certified Production Supervisor with 4 years of pharmaceutical manufacturing experience and 8+ years of cross-industry supervisory experience, strong GMP/GDP documentation knowledge, SOP development, KPI monitoring and target setting, ISO 9001 internal auditing, a professional diploma in Production &amp; Operations Management, and English proficiency developed in the USA (IELTS / TOEFL certified).</div>
+</div>
+
+
+</div><!-- /tab6 -->
+
+<!-- ============ TAB: 5-7 YEAR PLAN ============ -->
+<div id="tab5" style="display:none">
+
+<div class="card" style="border-top-color:var(--gold)">
+  <h2>السلم الوظيفي 2027 – 2033 · معالم لا سنوات</h2>
+  <div class="sub">الترقيات مربوطة بمعالم (التخرج، الأداء الموثق، الفرصة) لا بالتقويم — سيناريو الـ 5 سنوات هو الطموح، والـ 7 هو المتوقع، وكلاهما نجاح: مدير مصنع بعمر 41–42</div>
+  <div class="ladder">
+    <div class="rung"><div class="yr">2027</div><div class="pos">Shift Production Manager</div><div class="cert">CPIM + بدء البكالوريوس</div></div>
+    <div class="rung"><div class="yr">2028</div><div class="pos">Assistant Production Manager</div><div class="cert">Black Belt (قابلة للتأجيل)</div></div>
+    <div class="rung"><div class="yr">2029</div><div class="pos">ترسيخ المنصب — سنة تنفّس</div><div class="cert">بكالوريوس + توثيق مشاريع</div></div>
+    <div class="rung"><div class="yr">2030</div><div class="pos">التخرج ← Production Manager</div><div class="cert">البكالوريوس + PMP</div></div>
+    <div class="rung"><div class="yr">2031</div><div class="pos">Production / Operations Manager</div><div class="cert">NEBOSH (اختيارية)</div></div>
+    <div class="rung last"><div class="yr">2032–33</div><div class="pos">Plant Manager — مدير مصنع</div><div class="cert">بدء MBA</div></div>
+  </div>
+  <div class="disclaimer" style="margin-top:12px"><b>القاعدتان الحاكمتان:</b> (1) <b>البكالوريوس أولوية مطلقة</b> — أي شهادة تزاحمه تتأجل هي، لا هو. (2) الترقية معلم لا موعد: "Production Manager" يعني <b>بعد التخرج</b> أو عبر الانتقال لمصنع جديد — أيهما أسبق. في صناعة الأدوية كل درجة تأخذ عادة 2–3 سنوات؛ ضغطها يتطلب الرافعة السعودية أدناه وانتقالًا خارجيًا ذكيًا أو اثنين.</div>
+</div>
+
+<!-- SAUDI LEVERAGE -->
+<div class="card" style="border-top-color:var(--teal)">
+  <h2>الرافعة السعودية — أكبر مسرّع في الخطة</h2>
+  <div class="sub">ما يجعل سيناريو الـ 5 سنوات ممكنًا أصلًا</div>
+  <div class="tbl-scroll"><table>
+    <tr><th>الرافعة</th><th>لماذا تعمل</th><th>كيف تُستغل</th></tr>
+    <tr><td><b>توطين الصناعات الدوائية</b></td><td>مصانع أدوية جديدة تُبنى وتتوسع في المملكة، والمناصب القيادية الإنتاجية مطلوب فيها سعوديون بشدة — العرض أقل من الطلب</td><td>مراقبة إعلانات المصانع الجديدة والتوسعات من 2027 · مصنع جديد يعني هيكلًا يُبنى من الصفر — لقب أعلى بخبرة أقل</td></tr>
+    <tr><td><b>الانتقال الخارجي كمسرّع ألقاب</b></td><td>الترقية الداخلية تعطي درجة كل 2–3 سنوات؛ الانتقال الذكي يقفز درجة فورًا</td><td>انتقالتان مدروستان خلال المسار (تقريبًا 2027 و2030) — لا أكثر، فكثرة التنقل تصير علامة سلبية</td></tr>
+    <tr><td><b>الشبكة المهنية</b></td><td>مناصب Plant Manager نادرًا ما تُعلن — تُملأ بالترشيح</td><td>من 2027 لا 2031: علاقات مع مديري مصانع القطاع، مجموعات الصناعات الدوائية، LinkedIn نشط بمحتوى مهني</td></tr>
+  </table></div>
+</div>
+
+<!-- 5-7Y GANTT -->
+<div class="card">
+  <h2>مخطط Gantt — المسار الكامل 2027 – 2033</h2>
+  <div class="sub">كل عمود = نصف سنة · الأشرطة الباهتة = جهد جزئي أو نافذة مرنة · يبدأ فور انتهاء خطة الـ 6 أشهر</div>
+  <div class="gantt-scroll"><div class="gantt gantt5">
+    <div class="g-head">
+      <div class="g-corner">المسار</div>
+      <div class="g-mon">2027<small>سنة 1</small></div>
+      <div class="g-mon">2028<small>سنة 2</small></div>
+      <div class="g-mon">2029<small>سنة 3</small></div>
+      <div class="g-mon">2030<small>سنة 4</small></div>
+      <div class="g-mon">2031<small>سنة 5</small></div>
+      <div class="g-mon">2032<small>سنة 6</small></div>
+      <div class="g-mon">2033<small>سنة 7</small></div>
+    </div>
+
+    <div class="g-group">التعليم — العمود الفقري</div>
+    <div class="g-row"><div class="g-label">البكالوريوس (SEU / KAU) — تخرج ≈ 2030–31</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green light">تخرج</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">MBA — بوابة مدير الشركة</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-purple light"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div></div>
+
+    <div class="g-group">الشهادات الاحترافية — واحدة ثقيلة في السنة، والبكالوريوس فوق الجميع</div>
+    <div class="g-row"><div class="g-label">ASCM CPIM</div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue">اختبار</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">LSS Black Belt (IASSC) — نافذة مرنة: تتأجل لو الدراسة ثقيلة</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"><div class="g-bar bg-amber">اختبار</div></div><div class="g-cell"><div class="g-bar bg-amber light">بديل</div></div><div class="g-cell"><div class="g-bar bg-amber light">بديل</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">PMP — بعد التخرج (أهلية 36 شهرًا بلا خطر تدقيق)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"><div class="g-bar bg-rose"></div></div><div class="g-cell"><div class="g-bar bg-rose">اختبار</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">NEBOSH IGC — اختيارية (تسقط لو تدريب السلامة متوفر داخليًا)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+
+    <div class="g-group">المسار الوظيفي — معالم مرنة</div>
+    <div class="g-row"><div class="g-label">Shift Production Manager</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">Assistant Production Manager</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">Production Manager — المعلم: التخرج أو مصنع جديد</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">Plant Manager — نافذة الوصول</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold">الهدف</div></div></div>
+
+    <div class="g-group">مسارات مستمرة</div>
+    <div class="g-row"><div class="g-label">الشبكة المهنية + مراقبة المصانع الجديدة</div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div></div>
+    <div class="g-row"><div class="g-label">مشروع تحسين موثق كل سنة + ملف إنجازات</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div></div>
+  </div></div>
+  <div class="g-legend">
+    <span><i class="bg-green"></i> البكالوريوس</span>
+    <span><i class="bg-blue"></i> CPIM</span>
+    <span><i class="bg-amber"></i> Black Belt</span>
+    <span><i class="bg-rose"></i> PMP</span>
+    <span><i class="bg-teal"></i> NEBOSH / الشبكة</span>
+    <span><i class="bg-purple"></i> MBA</span>
+    <span><i class="bg-slate"></i> المناصب</span>
+    <span><i class="bg-gold"></i> Plant Manager / الإنجازات</span>
+  </div>
+  <div class="disclaimer" style="margin-top:10px"><b>ملاحظتان على القراءة:</b> الانتقالتان الخارجيتان المدروستان (تقريبًا 2027 و2030) هما ما يضغط أشرطة المناصب لليسار — بدونهما تنزاح كلها نصف سنة إلى سنة. وشريط Plant Manager نافذة (2032–2033) لا موعدًا: أول فرصة تستوفي الشروط داخلها تُقتنص.</div>
+</div>
+
+<!-- YEAR 2027 -->
+<div class="month open" data-color="blue">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum" style="background:var(--blue);color:#fff"><b>27</b><span>سنة 1</span></div>
+    <div class="mtitle"><h2>2027 — التثبيت + انطلاق البكالوريوس + CPIM</h2><p>إثبات الذات في الوظيفة الجديدة وبدء أهم استثمارين في الخطة كلها</p></div>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>هدف السنة:</b> ترسيخ الوظيفة الجديدة بأداء موثق، والوصول لـ Shift Production Manager بنهاية السنة (أو مطلع 2028) — مع بدء البكالوريوس وأول شهادة ثقيلة.</div>
+    <div class="sec"><h3>مهام السنة</h3>
+      <ul class="chk" data-m="y1">
+        <li><input type="checkbox" id="y1a"><label for="y1a"><b>البكالوريوس:</b> التقديم في الربيع، البدء خريف 2027 — إدارة أعمال أو سلاسل إمداد (المقارنة أدناه). <b>أولوية مطلقة على كل ما عداه</b></label></li>
+        <li><input type="checkbox" id="y1b"><label for="y1b"><b>ASCM CPIM:</b> التحضير من يناير (قبل بدء الدراسة الجامعية — لهذا هي أول شهادة)، الاختبار قبل نهاية الصيف أو مطلع 2028</label></li>
+        <li><input type="checkbox" id="y1c"><label for="y1c">قيادة مشروع تحسين ثانٍ موثق — بصيغة مشروع (نطاق، جدول، نتيجة) ليُحتسب لاحقًا في PMP</label></li>
+        <li><input type="checkbox" id="y1d"><label for="y1d">خبرة مستهدفة: التعرض لأكثر من قسم (Solid + Liquid + Packaging)</label></li>
+        <li><input type="checkbox" id="y1e"><label for="y1e"><b>الرافعة السعودية:</b> بدء بناء الشبكة من الآن — متابعة إعلانات المصانع الجديدة والتوسعات، وقائمة علاقات تنمو شهريًا</label></li>
+        <li><input type="checkbox" id="y1f"><label for="y1f"><b>معلم السنة:</b> Shift Production Manager أو مسؤولية مكافئة موثقة</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- YEAR 2028 -->
+<div class="month" data-color="amber">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>28</b><span>سنة 2</span></div>
+    <div class="mtitle"><h2>2028 — Black Belt (بشرطها) + مساعد مدير إنتاج</h2><p>أثقل سنة في الخطة — ولها صمام أمان معلن</p></div>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>هدف السنة:</b> Assistant Production Manager + الحزام الأسود. <b>صمام الأمان:</b> لو تعارض تحضير Black Belt مع فصل دراسي ثقيل — تتأجل الشهادة لـ 2029 بلا تردد. البكالوريوس لا يُمس.</div>
+    <div class="sec"><h3>مهام السنة</h3>
+      <ul class="chk" data-m="y2">
+        <li><input type="checkbox" id="y2a"><label for="y2a"><b>LSS Black Belt (IASSC):</b> تحضير 4–6 أشهر فوق الـ Green Belt — إحصاء تطبيقي: اختبار فرضيات، انحدار، DOE — <b>أو تأجيلها لـ 2029 لو الدراسة ثقيلة</b></label></li>
+        <li><input type="checkbox" id="y2b"><label for="y2b">البكالوريوس: إتمام السنة الأولى بمعدل مرتفع (يفتح ماجستير SEU لاحقًا بشروط ميسرة)</label></li>
+        <li><input type="checkbox" id="y2c"><label for="y2c">خبرة مستهدفة: <b>الميزانية والتكاليف</b> — المشاركة في ميزانية القسم وفهم تكلفة الوحدة المنتجة</label></li>
+        <li><input type="checkbox" id="y2d"><label for="y2d">خبرة مستهدفة: <b>تفتيش SFDA / تدقيق GMP</b> — مشاركة فعلية في استقبال تفتيش والرد على الملاحظات</label></li>
+        <li><input type="checkbox" id="y2e"><label for="y2e"><b>معلم السنة:</b> Assistant Production Manager خلال 18–24 شهرًا من بداية 2027 (أي حتى منتصف 2029 مقبول)</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- YEAR 2029 -->
+<div class="month" data-color="teal">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>29</b><span>سنة 3</span></div>
+    <div class="mtitle"><h2>2029 — سنة التنفّس المقصودة</h2><p>لا شهادة ثقيلة جديدة — ترسيخ وبكالوريوس وتوثيق. هذا قرار وليس كسلًا</p></div>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>هدف السنة:</b> منتصف البكالوريوس هو الأصعب (الحماس الأول انتهى والتخرج بعيد) — هذه السنة محمية عمدًا من أي شهادة جديدة لضمان عدم الانهيار. الأداء في المنصب + الدراسة فقط.</div>
+    <div class="sec"><h3>مهام السنة</h3>
+      <ul class="chk" data-m="y3">
+        <li><input type="checkbox" id="y3a"><label for="y3a">البكالوريوس: الحفاظ على الوتيرة — لا فصل مؤجل</label></li>
+        <li><input type="checkbox" id="y3b"><label for="y3b">Black Belt هنا <b>فقط</b> إن تأجلت من 2028</label></li>
+        <li><input type="checkbox" id="y3c"><label for="y3c">خبرة مستهدفة: <b>بناء وتطوير الفريق</b> — تقييم أداء، خطط تطوير للمشرفين (إدارة مشرفين لا مشغلين)</label></li>
+        <li><input type="checkbox" id="y3d"><label for="y3d"><b>توثيق سجل PMP:</b> صياغة كل المشاريع منذ 2022 بصيغة PMI (النطاق، الدور القيادي، الساعات، النتيجة) — جاهزًا للتقديم فور التخرج</label></li>
+        <li><input type="checkbox" id="y3e"><label for="y3e">خبرة مستهدفة: قيادة مشروع رأسمالي (خط / معدة جديدة) من التبرير المالي حتى الـ Validation</label></li>
+        <li><input type="checkbox" id="y3f"><label for="y3f"><b>معلم السنة:</b> تثبيت Assistant PM بأداء موثق + نصف الطريق الجامعي منجز</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- YEAR 2030 -->
+<div class="month" data-color="green">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>30</b><span>سنة 4</span></div>
+    <div class="mtitle"><h2>2030 — سنة المفصل: التخرج ثم PMP ثم Production Manager</h2><p>السقف يُرفع — وكل شيء بعده يتسارع</p></div>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>هدف السنة:</b> التخرج (أو مطلع 2031 حسب الجامعة) هو <b>المعلم</b> الذي يُفعّل ترقية Production Manager — داخليًا أو عبر الانتقالة الخارجية الثانية نحو مصنع جديد/متوسع. وPMP تأتي بعده مباشرة بمسار الأهلية الآمن (بكالوريوس + 36 شهرًا — بلا خطر تدقيق).</div>
+    <div class="sec"><h3>مهام السنة</h3>
+      <ul class="chk" data-m="y4">
+        <li><input type="checkbox" id="y4a"><label for="y4a"><b>التخرج من البكالوريوس</b> — تحديث السيرة والملف بالكامل فور استلام الوثيقة</label></li>
+        <li><input type="checkbox" id="y4b"><label for="y4b"><b>PMP:</b> دورة 35 ساعة + التقديم بالمسار الآمن + التحضير 3–4 أشهر — الاختبار نهاية 2030 أو مطلع 2031</label></li>
+        <li><input type="checkbox" id="y4c"><label for="y4c"><b>الانتقالة الخارجية الثانية</b> (إن لم تتحرك الترقية داخليًا): استهداف المصانع الجديدة تحديدًا — لقب Production Manager في هيكل يُبنى من الصفر</label></li>
+        <li><input type="checkbox" id="y4d"><label for="y4d">خبرة مستهدفة: <b>P&amp;L awareness</b> — قراءة قائمة أرباح وخسائر المصنع وفهم محركات الربحية</label></li>
+        <li><input type="checkbox" id="y4e"><label for="y4e"><b>معلم السنة:</b> بكالوريوس بيد + Production Manager (أو عرض مؤكد به)</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- YEAR 2031 -->
+<div class="month" data-color="rose">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>31</b><span>سنة 5</span></div>
+    <div class="mtitle"><h2>2031 — الاتساع الأفقي نحو Operations</h2><p>مدير المصنع لا يُصنع من الإنتاج وحده</p></div>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>هدف السنة:</b> توسيع النطاق من الإنتاج إلى العمليات: تخطيط، مستودعات، سلسلة إمداد، سلامة — بلقب Operations Manager أو Production Manager بصلاحيات موسعة. هذه سنة بناء عرض "أنا جاهز لمصنع كامل".</div>
+    <div class="sec"><h3>مهام السنة</h3>
+      <ul class="chk" data-m="y5">
+        <li><input type="checkbox" id="y5a"><label for="y5a"><b>NEBOSH IGC</b> — اختيارية: تسقط لو الشركة توفر تدريب سلامة معتمدًا داخليًا، وتُستبدل بساعات MBA مبكرة</label></li>
+        <li><input type="checkbox" id="y5b"><label for="y5b">خبرة مستهدفة: الإلمام العملي بالتخطيط والمستودعات وسلسلة الإمداد (CPIM أعطى النظرية — هنا الممارسة)</label></li>
+        <li><input type="checkbox" id="y5c"><label for="y5c">خبرة مستهدفة: تمثيل المصنع أمام الإدارة العليا — عروض أداء ربع سنوية، لغة مجالس الإدارة</label></li>
+        <li><input type="checkbox" id="y5d"><label for="y5d"><b>معلم السنة:</b> نطاق مسؤولية يتجاوز الإنتاج + PMP بيد + ملف Plant Manager مكتمل الأركان</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- YEARS 2032-33 -->
+<div class="month" data-color="purple">
+  <div class="mhead" onclick="toggle(this)">
+    <div class="mnum"><b>32</b><span>6–7</span></div>
+    <div class="mtitle"><h2>2032 – 2033 — نافذة مدير المصنع + بدء MBA</h2><p>الهدف النهائي — وفتح المسار الأبعد: مدير الشركة</p></div>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="mbody">
+    <div class="goal"><b>هدف النافذة:</b> Plant Manager أو نائبه في شركة دوائية متوسطة — أول فرصة تستوفي الشروط داخل النافذة تُقتنص، داخليًا أو خارجيًا. الملف حينها: بكالوريوس + CPIM + Black Belt + PMP + 10 سنوات دوائية متدرجة + سجل مشاريع موثق.</div>
+    <div class="sec"><h3>مهام النافذة</h3>
+      <ul class="chk" data-m="y6">
+        <li><input type="checkbox" id="y6a"><label for="y6a">التقديم المستهدف على Plant Manager / Deputy Plant Manager — والترشيح عبر الشبكة المبنية منذ 2027</label></li>
+        <li><input type="checkbox" id="y6b"><label for="y6b"><b>بدء MBA</b> (SEU ≈ 750 ر.س/ساعة أو ماجستير تنفيذي) — شرط القبول: بكالوريوس + 3 سنوات قيادية، وكلاهما متوفر</label></li>
+        <li><input type="checkbox" id="y6c"><label for="y6c"><b>معلم نهاية الخطة:</b> مدير مصنع أو نائبه بعمر 41–42 — وMBA قيد الدراسة</label></li>
+      </ul>
+    </div>
+    <div class="output"><h4>ما بعد الخطة — مسار مدير الشركة (GM)</h4>
+      <ul><li>MBA مكتمل ≈ 2034–2035</li><li>خبرة P&amp;L كاملة كمدير مصنع 2–3 سنوات</li><li>التعرض التجاري: تسجيل منتجات، عقود، علاقات SFDA</li><li>GM / مدير عام عمليات ≈ 2036–2038</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- BACHELOR OPTIONS -->
+<div class="card" style="border-top-color:var(--green)">
+  <h2>البكالوريوس — العمود الفقري للخطة</h2>
+  <div class="sub">تخصص مقترح: إدارة أعمال أو إدارة سلاسل الإمداد · دراسة بالتوازي مع العمل · القرار يحتاج تحققًا من شروط القبول والمواعيد وقت التقديم (2027)</div>
+  <div class="tbl-scroll"><table>
+    <tr><th>الخيار</th><th>النمط</th><th>المدة المتوقعة</th><th>التكلفة التقديرية</th><th>ملاحظة</th></tr>
+    <tr>
+      <td><b>الجامعة السعودية الإلكترونية SEU</b> <span class="dip-badge sa">حكومية</span></td>
+      <td>تعليم مدمج (أونلاين + حضور محدود — فرع جدة متوفر)</td>
+      <td>4 – 4.5 سنوات</td>
+      <td>≈ 17,000 – 22,000 ر.س إجمالًا (بنظام الساعات)</td>
+      <td>الخيار الأقوى: حكومية معترف بها بالكامل، تدرّس بالإنجليزية (ميزة له)، وشهادتها تفتح ماجستيرها مباشرة</td>
+    </tr>
+    <tr>
+      <td><b>جامعة الملك عبدالعزيز — انتساب</b> <span class="dip-badge free">الأوفر</span></td>
+      <td>انتساب (اختبارات حضورية بجدة)</td>
+      <td>4 – 5 سنوات</td>
+      <td>رسوم رمزية جدًا مقارنة بالبقية</td>
+      <td>هو في جدة أصلًا — لكن يلزم التحقق من استمرار فتح مقاعد الانتساب وتخصصاتها سنويًا</td>
+    </tr>
+    <tr>
+      <td><b>الجامعة العربية المفتوحة AOU</b></td>
+      <td>مدمج — فرع جدة</td>
+      <td>4 سنوات</td>
+      <td>≈ 30,000+ ر.س إجمالًا</td>
+      <td>مرونة جيدة وشراكة مع OU البريطانية — الأغلى بين الثلاثة</td>
+    </tr>
+  </table></div>
+  <div class="cert-grid" style="margin-top:14px">
+    <div class="cert" style="border-top-color:var(--green)">
+      <h4>التوصية</h4>
+      <div class="when">التقديم ربيع 2027 · البدء خريف 2027 · التخرج ≈ 2030–2031</div>
+      <p><b>SEU إدارة أعمال</b> هي الخيار الافتراضي: حكومية، بالإنجليزية، مصممة أصلًا للموظفين، وتفتح ماجستيرها لاحقًا بشروط ميسرة لخريجيها. KAU انتساب بديل ممتاز لو الميزانية هي الفيصل. القاعدة الذهبية: <b>أي خيار منها أفضل من التأجيل</b> — كل سنة تأخير تدفع السلم الوظيفي كله سنة.</p>
+      <div class="links">
+        <a href="https://seu.edu.sa" target="_blank">SEU</a>
+        <a href="https://www.kau.edu.sa" target="_blank">جامعة الملك عبدالعزيز</a>
+        <a href="https://www.arabou.edu.sa" target="_blank">AOU</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEAVY CERTS -->
+<div class="card">
+  <h2>الشهادات الاحترافية الثقيلة — التسلسل والتكلفة</h2>
+  <div class="sub">واحدة ثقيلة في السنة كحد أقصى — والبكالوريوس فوق الجميع: أي تعارض تُؤجَّل الشهادة لا الدراسة</div>
+  <div class="tbl-scroll"><table>
+    <tr><th>الشهادة</th><th>التوقيت</th><th>الجهة</th><th>ماذا تضيف</th><th>التكلفة التقديرية</th></tr>
+    <tr><td><b>CPIM</b> — Certified in Planning &amp; Inventory Management</td><td>2027 (قبل بدء الدراسة)</td><td>ASCM (APICS سابقًا)</td><td>أرقى اعتماد في تخطيط الإنتاج والمخزون — لغة S&amp;OP وMRP</td><td>≈ 4,500 – 7,500 ر.س</td></tr>
+    <tr><td><b>LSS Black Belt</b></td><td>2028 (نافذة مرنة حتى 2029)</td><td>IASSC</td><td>قيادة برامج التحسين على مستوى المصنع + إحصاء متقدم وDOE</td><td>≈ 1,600 – 2,000 ر.س</td></tr>
+    <tr><td><b>PMP</b> — Project Management Professional</td><td>2030 – مطلع 2031 (بعد التخرج — مسار الأهلية الآمن)</td><td>PMI</td><td>إدارة مشاريع التوسعة والخطوط الجديدة — أشهر شهادة إدارية في السوق السعودي</td><td>≈ 2,400 – 2,900 ر.س</td></tr>
+    <tr><td><b>NEBOSH IGC</b> <span class="dip-badge low" style="background:#EDF1F5;color:#64748B;border:1px solid #DBE2EA">اختيارية</span></td><td>2031</td><td>NEBOSH (بريطانيا)</td><td>السلامة والصحة المهنية — تسقط لو التدريب متوفر داخليًا</td><td>≈ 4,000 – 7,000 ر.س</td></tr>
+    <tr><td><b>MBA</b></td><td>2032 →</td><td>SEU أو ماجستير تنفيذي</td><td>بوابة مسار مدير الشركة (GM)</td><td>SEU ≈ 750 ر.س/ساعة (خارج ميزانية الخطة)</td></tr>
+  </table></div>
+  <div class="cert-grid" style="margin-top:14px">
+    <div class="cert" style="border-top-color:var(--purple)">
+      <h4>روابط الجهات الرسمية</h4>
+      <div class="when">للتحقق من الأسعار والشروط وقت كل شهادة</div>
+      <p><b>لماذا انتقلت PMP لما بعد التخرج:</b> بدون بكالوريوس تشترط PMI توثيق 60 شهر قيادة مشاريع وتدقق عينة من الطلبات — رفض التدقيق انتكاسة مكلفة. بعد البكالوريوس يكفي 36 شهرًا بملف نظيف. التوثيق المستمر للمشاريع منذ الآن يخدم المسارين.</p>
+      <div class="links">
+        <a href="https://www.ascm.org/learning-development/certifications-credentials/cpim/" target="_blank">ASCM CPIM</a>
+        <a href="https://iassc.org/six-sigma-certification/black-belt-certification/" target="_blank">IASSC Black Belt</a>
+        <a href="https://www.pmi.org/certifications/project-management-pmp" target="_blank">PMI — PMP</a>
+        <a href="https://www.nebosh.org.uk" target="_blank">NEBOSH</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BUDGET -->
+<div class="card" style="border-top-color:var(--gold)">
+  <h2>ميزانية المسار الكامل</h2>
+  <div class="sub">موزعة على 5–7 سنوات — البكالوريوس يُدفع بنظام الساعات فصليًا فلا يشكل ضغطًا دفعة واحدة</div>
+  <div class="tbl-scroll"><table>
+    <tr><th>البند</th><th>التوقيت</th><th>سيناريو KAU انتساب</th><th>سيناريو SEU</th></tr>
+    <tr><td>البكالوريوس</td><td>2027–2030/31</td><td>≈ 2,000 – 4,000 ر.س</td><td>≈ 17,000 – 22,000 ر.س</td></tr>
+    <tr><td>CPIM</td><td>2027</td><td colspan="2">≈ 4,500 – 7,500 ر.س</td></tr>
+    <tr><td>LSS Black Belt (IASSC)</td><td>2028–29</td><td colspan="2">≈ 1,600 – 2,000 ر.س</td></tr>
+    <tr><td>PMP</td><td>2030–31</td><td colspan="2">≈ 2,400 – 2,900 ر.س</td></tr>
+    <tr><td>NEBOSH IGC (اختيارية)</td><td>2031</td><td colspan="2">0 أو ≈ 4,000 – 7,000 ر.س</td></tr>
+    <tr><td>احتياطي (كتب، اختبارات تجريبية، تجديدات)</td><td>موزع</td><td colspan="2">≈ 1,500 – 2,500 ر.س</td></tr>
+  </table></div>
+  <div class="budget-total">
+    <div class="bt"><h4>سيناريو KAU انتساب</h4><div class="amt">≈ 12,000 – 26,000 ر.س</div><p>على المسار كاملًا ≈ 180 – 380 ر.س شهريًا</p></div>
+    <div class="bt std"><h4>سيناريو SEU</h4><div class="amt">≈ 27,000 – 44,000 ر.س</div><p>≈ 400 – 640 ر.س شهريًا — يسترده أول فرق راتب بين Supervisor وManager خلال أشهر</p></div>
+  </div>
+  <div class="disclaimer">MBA خارج هذه الميزانية (يبدأ 2032 ويُموَّل من راتب المنصب الأعلى). كثير من شركات الأدوية تدعم أو تسترد رسوم الشهادات المهنية — يُسأل عن سياسة Training Reimbursement في كل وظيفة جديدة قبل التوقيع.</div>
+</div>
+
+<!-- SUCCESS CONDITIONS -->
+<div class="card">
+  <h2>شروط نجاح الخطة — بصراحة</h2>
+  <div class="sub">خطة بهذا الطول لا تفشل بسبب الشهادات — تفشل بسبب هذه الخمسة</div>
+  <div class="tbl-scroll"><table>
+    <tr><th>الخطر</th><th>الواقع</th><th>الوقاية</th></tr>
+    <tr><td>تأجيل البكالوريوس</td><td>أخطر قرار ممكن — كل سنة تأجيل تدفع السلم كله سنة</td><td>التقديم ربيع 2027 مهما كانت الظروف — أي خيار من الثلاثة أفضل من الانتظار</td></tr>
+    <tr><td>التمسك بالتقويم بدل المعالم</td><td>ترقية كل سنة بالضبط غير واقعية في صناعة الأدوية (المعتاد 2–3 سنوات للدرجة)</td><td>النجاح يُقاس بالمعالم لا بالسنة: تخرج ← Production Manager ← نافذة 2032–33 · التأخر سنة ليس فشلًا</td></tr>
+    <tr><td>الترقية لا تأتي بالشهادة وحدها</td><td>الشهادة تفتح الباب، الأداء الموثق يُدخِلك</td><td>مشروع تحسين موثق بالأرقام كل سنة + ملف إنجازات محدث دائمًا</td></tr>
+    <tr><td>الاحتراق (عمل + جامعة + شهادات)</td><td>7 سنوات بوتيرة 8–12 ساعة أسبوعيًا فوق الدوام</td><td>سنة 2029 محمية عمدًا · شهادة ثقيلة واحدة بالسنة كحد أقصى · صمام Black Belt معلن</td></tr>
+    <tr><td>الجمود في شركة لا تُرقّي</td><td>بعض الشركات سقفها منخفض مهما كان أداؤك</td><td>تقييم صادق كل 18 شهرًا + الانتقالتان المدروستان (≈ 2027 و2030) نحو المصانع الجديدة تحديدًا</td></tr>
+  </table></div>
+</div>
+
+<!-- FINAL -->
+<div class="final">
+  <h2>الملف الكامل بنهاية المسار (2032–2033)</h2>
+  <p class="note">كما سيبدو الملخص المهني بعد إتمام الخطتين:</p>
+  <div class="en">Plant Manager–ready operations leader with 10+ years of progressive pharmaceutical manufacturing experience, a bachelor's degree in Business Administration, CPIM, PMP, and Lean Six Sigma Black Belt. Proven track record of documented improvement projects, SFDA inspection readiness, budget ownership, and multi-department operations across solid, liquid, and packaging lines.</div>
+</div>
+
+</div><!-- /tab5 -->
+
+</div>
+
+<script>
+const KEY='pharma_plan_v7';
+let state={};
+try{state=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){state={}}
+
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+
+function toggle(h){h.parentElement.classList.toggle('open')}
+function showTab(n){
+  document.getElementById('tab6').style.display=(n===6?'':'none');
+  document.getElementById('tab5').style.display=(n===5?'':'none');
+  document.getElementById('btn6').classList.toggle('active',n===6);
+  document.getElementById('btn5').classList.toggle('active',n===5);
+  try{localStorage.setItem('plan_tab',n)}catch(e){}
+  window.scrollTo({top:0});
+}
+try{if(localStorage.getItem('plan_tab')==='5')showTab(5)}catch(e){}
+function jump(n){
+  showTab(6);
+  const m=document.getElementById('m'+n);
+  m.classList.add('open');
+  m.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function refresh(){
+  let total=0,done=0;
+  const perM={};
+  document.querySelectorAll('.chk input').forEach(cb=>{
+    const m=cb.closest('.chk').dataset.m;
+    perM[m]=perM[m]||{t:0,d:0};
+    perM[m].t++; total++;
+    if(cb.checked){perM[m].d++; done++;}
+    cb.parentElement.classList.toggle('done',cb.checked);
+  });
+  const pct=total?Math.round(done/total*100):0;
+  document.getElementById('totalBar').style.width=pct+'%';
+  document.getElementById('totalPct').textContent=pct+'%';
+  for(let i=1;i<=6;i++){
+    const p=perM[i]?Math.round(perM[i].d/perM[i].t*100):0;
+    const el=document.getElementById('mini'+i);
+    if(el)el.style.width=p+'%';
+  }
+}
+
+document.querySelectorAll('.chk input').forEach(cb=>{
+  if(state[cb.id])cb.checked=true;
+  cb.addEventListener('change',()=>{
+    state[cb.id]=cb.checked;
+    if(!cb.checked)delete state[cb.id];
+    save();refresh();
+  });
+});
+
+function resetAll(){
+  if(!confirm('إعادة تصفير كل التقدم؟'))return;
+  state={};save();
+  document.querySelectorAll('.chk input').forEach(cb=>cb.checked=false);
+  refresh();
+}
+refresh();
+</script>
+</body>
+</html>
