@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خطة تطوير مهني — 6 أشهر | من تشغيل الخط إلى إدارة الإنتاج الدوائي</title>
+<title>خطة تطوير مهني — من الامتياز إلى البورد السعودي والمسار الاستشاري</title>
 <style>
 :root{
   --navy:#0F172A; --navy2:#1E293B; --navy3:#334155;
@@ -174,7 +174,7 @@ tr:nth-child(even) td{background:#FAFCFE}
 .cert .links a.free{background:#DBEDE1;color:#2D6A4F;border-color:#BFE0CC}
 .cert .links a.free:hover{background:#CBE5D5}
 
-/* Diploma options */
+/* Badges */
 .dip-badge{display:inline-block;font-size:10.5px;font-weight:700;border-radius:12px;padding:2px 10px;margin-inline-start:6px;vertical-align:middle}
 .dip-badge.free{background:#DBEDE1;color:#2D6A4F;border:1px solid #BFE0CC}
 .dip-badge.sa{background:#E0F0F1;color:#0E7C86;border:1px solid #BADEE1}
@@ -223,6 +223,9 @@ tr:nth-child(even) td{background:#FAFCFE}
 .gantt5 .g-head{grid-template-columns:170px repeat(14,1fr)}
 .gantt5 .g-row{grid-template-columns:170px repeat(14,1fr)}
 
+/* placeholder highlight */
+.ph{background:var(--gold-soft);color:var(--gold-deep);border-radius:5px;padding:0 5px;font-weight:700}
+
 @media(max-width:640px){
   .tstrip{grid-template-columns:repeat(3,1fr)}
   .hdr h1{font-size:18px}
@@ -238,24 +241,38 @@ tr:nth-child(even) td{background:#FAFCFE}
 <body>
 <div class="wrap">
 
-<!-- HEADER -->
+<!-- HEADER (dynamic per tab) -->
 <div class="hdr">
-  <span class="pill" id="hp1">المرحلة الأولى — خطة الـ 6 أشهر</span>
-  <span class="pill ghost" id="hp2">3 يوليو 2026 ← 2 يناير 2027</span>
-  <h1 id="hTitle">من تشغيل خط الإنتاج إلى إدارة الإنتاج الدوائي</h1>
-  <p id="hSub">مسار متوازٍ: جودة دوائية ← سياسات وإجراءات ← مؤشرات ومستهدفات ← حل مشاكل ← Green Belt وISO ← انتقال وظيفي — والسيرة تُبنى في الخلفية طوال الوقت</p>
-  <div class="roles" id="hRoles">
-    <span class="role">Senior Production Supervisor</span>
-    <span class="role">Shift Production Manager / Shift Lead</span>
-    <span class="role">Production Compliance Coordinator</span>
-    <span class="role" style="border-color:rgba(201,154,59,.55);color:#EBD9AE">Production Line Manager — هدف 12–18 شهر</span>
+  <div id="hdr6">
+    <span class="pill">خطة تطوير مهني — 6 أشهر</span>
+    <span class="pill ghost">تبدأ: 4 يوليو 2026 — تنتهي: 3 يناير 2027 (فتح تقديم Matching 2027)</span>
+    <h1>سنة الامتياز الحاسمة: من طبيب امتياز إلى ملف Matching تنافسي</h1>
+    <p>مسار متوازٍ: حسم التخصص ← SMLE بدرجة تنافسية (650+) ← إنهاء البحثين ونشرهما ← خطابات توصية تُزرع مبكرًا ← ACLS/ATLS ← ملف تقديم جاهز يوم فتح البوابة — والسيرة الأكاديمية تُبنى في الخلفية طوال الوقت</p>
+    <div class="roles">
+      <span class="role">SMLE ≥ 650 (تنافسي)</span>
+      <span class="role">بحثان منشوران / مقبولان</span>
+      <span class="role">ملف Matching 2027 مكتمل</span>
+      <span class="role" style="border-color:rgba(201,154,59,.55);color:#EBD9AE">قبول إقامة البورد السعودي — يونيو 2027</span>
+    </div>
+  </div>
+  <div id="hdr5" style="display:none">
+    <span class="pill">خطة 5–7 سنوات</span>
+    <span class="pill ghost">2027 – 2033 · الإقامة ← البورد ← ما بعد البورد</span>
+    <h1>من مقيم R1 إلى البورد السعودي وبوابة الاستشارية</h1>
+    <p>العمود الفقري: برنامج البورد السعودي واختباراته (ترقية سنوية ← الجزء الأول ← النهائي الكتابي والإكلينيكي) — ومعه بحث منشور كل سنة، ATLS، مسؤولية Chief Resident، ثم نائب أول وزمالة دقيقة نحو الاستشارية ورئاسة القسم</p>
+    <div class="roles">
+      <span class="role">مقيم بورد سعودي 2027</span>
+      <span class="role">اجتياز الجزء الأول ≈ 2029</span>
+      <span class="role">البورد السعودي ≈ 2031–2032</span>
+      <span class="role" style="border-color:rgba(201,154,59,.55);color:#EBD9AE">نائب أول + زمالة ← استشاري ورئيس قسم (مسار 2034+)</span>
+    </div>
   </div>
 </div>
 
 <!-- TABS -->
 <div class="tabbar" role="tablist">
-  <button class="tabbtn active" id="btn6" onclick="showTab(6)">خطة الـ 6 أشهر<small>يوليو 2026 – يناير 2027 · التأسيس والانتقال</small></button>
-  <button class="tabbtn" id="btn5" onclick="showTab(5)">خطة 5–7 سنوات<small>2027 – 2033 · البكالوريوس والطريق إلى مدير مصنع</small></button>
+  <button class="tabbtn active" id="btn6" onclick="showTab(6)">خطة الـ 6 أشهر<small>يوليو 2026 – يناير 2027 · الامتياز والماتشينق</small></button>
+  <button class="tabbtn" id="btn5" onclick="showTab(5)">خطة 5–7 سنوات<small>2027 – 2033 · الإقامة والبورد والطريق للاستشارية</small></button>
 </div>
 
 <div id="tab6">
@@ -269,471 +286,350 @@ tr:nth-child(even) td{background:#FAFCFE}
 
 <!-- TIMELINE STRIP -->
 <div class="tstrip" id="tstrip">
-  <div class="tstep" onclick="jump(1)"><div class="n">1</div><div class="t">الجودة الدوائية</div><div class="d">يوليو</div><div class="mini"><div id="mini1"></div></div></div>
-  <div class="tstep" onclick="jump(2)"><div class="n">2</div><div class="t">السياسات وSOP</div><div class="d">أغسطس</div><div class="mini"><div id="mini2"></div></div></div>
-  <div class="tstep" onclick="jump(3)"><div class="n">3</div><div class="t">KPI والمستهدفات</div><div class="d">سبتمبر</div><div class="mini"><div id="mini3"></div></div></div>
-  <div class="tstep" onclick="jump(4)"><div class="n">4</div><div class="t">CAPA + بدء Green Belt</div><div class="d">أكتوبر</div><div class="mini"><div id="mini4"></div></div></div>
-  <div class="tstep" onclick="jump(5)"><div class="n">5</div><div class="t">ISO 9001 + Dashboard</div><div class="d">نوفمبر</div><div class="mini"><div id="mini5"></div></div></div>
-  <div class="tstep" onclick="jump(6)"><div class="n">6</div><div class="t">اختبار GB + التقديم</div><div class="d">ديسمبر</div><div class="mini"><div id="mini6"></div></div></div>
+  <div class="tstep" onclick="jump(1)"><div class="n">1</div><div class="t">حسم التخصص + انطلاق SMLE</div><div class="d">يوليو</div><div class="mini"><div id="mini1"></div></div></div>
+  <div class="tstep" onclick="jump(2)"><div class="n">2</div><div class="t">بنك الأسئلة المكثف + البحث الأول</div><div class="d">أغسطس</div><div class="mini"><div id="mini2"></div></div></div>
+  <div class="tstep" onclick="jump(3)"><div class="n">3</div><div class="t">محاكيات + ACLS</div><div class="d">سبتمبر</div><div class="mini"><div id="mini3"></div></div></div>
+  <div class="tstep" onclick="jump(4)"><div class="n">4</div><div class="t">اختبار SMLE</div><div class="d">أكتوبر</div><div class="mini"><div id="mini4"></div></div></div>
+  <div class="tstep" onclick="jump(5)"><div class="n">5</div><div class="t">ملف الماتشينق + ATLS</div><div class="d">نوفمبر</div><div class="mini"><div id="mini5"></div></div></div>
+  <div class="tstep" onclick="jump(6)"><div class="n">6</div><div class="t">جاهزية التقديم + مقابلات</div><div class="d">ديسمبر</div><div class="mini"><div id="mini6"></div></div></div>
 </div>
 
 <!-- BACKGROUND TRACK -->
 <div class="bg-track">
   <h2>المسار الخلفي — لا يأخذ شهرًا من الخطة</h2>
-  <div class="sub">جمع البيانات والسيرة وLinkedIn تُنجز في أول 3 أسابيع بالتوازي مع دورة GMP، ثم تُحدَّث أسبوعيًا بما يُنجز من شهادات — الخطة نفسها مخصصة للمحتوى الفني</div>
+  <div class="sub">الإجراءات الإدارية والسيرة تُنجز في أول أسبوعين بالتوازي مع بدء المذاكرة، ثم تُحدَّث أسبوعيًا — أشهر الخطة نفسها مخصصة للمحتوى: SMLE والبحث والملف</div>
   <ul class="chk" data-m="0">
-    <li><input type="checkbox" id="c0a"><label for="c0a">جمع الأرقام من العمل: سنوات الخبرة · عدد الخطوط · نوع الأقسام (Solid / Liquid / Packaging / Sterile) · عدد الموظفين تحت الإشراف · عدد الدُفعات شهريًا · نسب التوقفات والتحسينات · أنواع المستندات (Batch Record, SOP, Logbook, Deviation, Cleaning Record)</label></li>
-    <li><input type="checkbox" id="c0b"><label for="c0b">تجهيز CV احترافي بالإنجليزي + LinkedIn بنفس التوجه (الأسبوعان 2–3)</label></li>
-    <li><input type="checkbox" id="c0c"><label for="c0c">تحديد 3 مسارات وظيفية: إدارة خطوط الإنتاج / توثيق الإنتاج والامتثال / إشراف الورديات</label></li>
-    <li><input type="checkbox" id="c0d"><label for="c0d">تحديث أسبوعي مستمر: كل شهادة تُنجز تُضاف فورًا للسيرة وLinkedIn</label></li>
+    <li><input type="checkbox" id="c0a"><label for="c0a">فتح/تحديث حساب <b>ممارس بلس</b> فورًا والتقديم على رقم الأحقية لاختبار SMLE — رقم الأحقية صالح سنة ويتيح 4 محاولات حجز، والتأخر فيه يؤخر كل شيء بعده</label></li>
+    <li><input type="checkbox" id="c0b"><label for="c0b">CV أكاديمي إنجليزي بنموذج طبي قياسي: المعدل <span class="ph">[GPA]</span> · مناوبات الامتياز · البحثان · Elmam (عمل تطوعي قيادي 3,000+ متطوع) · المراكز الأولى في المسابقات · الشهادات (BLS، مكافحة العدوى، الإسعافات الأولية، مبادئ البحث الطبي)</label></li>
+    <li><input type="checkbox" id="c0c"><label for="c0c"><b>سجل إجراءات (Logbook)</b> من أول يوم في كل مناوبة امتياز: الحالات، الإجراءات تحت الإشراف، الحضور العلمي — مادة المقابلات لاحقًا</label></li>
+    <li><input type="checkbox" id="c0d"><label for="c0d"><b>زرع خطابات التوصية مبكرًا:</b> في كل مناوبة يُحدَّد استشاري واحد على الأقل تُبنى معه علاقة حقيقية (حضور، مبادرة، عرض حالات) — الطلب الرسمي للخطاب يأتي في نوفمبر لكن الأساس يُبنى من يوليو</label></li>
+    <li><input type="checkbox" id="c0e"><label for="c0e">LinkedIn + حساب أكاديمي (X/ResearchGate) بنفس التوجه، ويُحدَّثان بكل بحث أو شهادة تُنجز</label></li>
   </ul>
 </div>
 
 <!-- GANTT -->
 <div class="card">
   <h2>مخطط Gantt — تنفيذ متوازٍ</h2>
-  <div class="sub">المهام تتداخل ولا تنتظر بعضها · كل عمود = نصف شهر · البداية: 3 يوليو 2026</div>
+  <div class="sub">المهام تتداخل ولا تنتظر بعضها · كل عمود = نصف شهر · البداية: 4 يوليو 2026 — والنهاية عمدًا قبل فتح بوابة التقديم (منتصف يناير 2027) بأيام</div>
   <div class="gantt-scroll"><div class="gantt">
     <div class="g-head">
       <div class="g-corner">المهمة</div>
-      <div class="g-mon">يوليو<small>3/7 – 2/8</small></div>
-      <div class="g-mon">أغسطس<small>3/8 – 2/9</small></div>
-      <div class="g-mon">سبتمبر<small>3/9 – 2/10</small></div>
-      <div class="g-mon">أكتوبر<small>3/10 – 2/11</small></div>
-      <div class="g-mon">نوفمبر<small>3/11 – 2/12</small></div>
-      <div class="g-mon">ديسمبر<small>3/12 – 2/1</small></div>
+      <div class="g-mon">يوليو<small>4/7 – 3/8</small></div>
+      <div class="g-mon">أغسطس<small>4/8 – 3/9</small></div>
+      <div class="g-mon">سبتمبر<small>4/9 – 3/10</small></div>
+      <div class="g-mon">أكتوبر<small>4/10 – 3/11</small></div>
+      <div class="g-mon">نوفمبر<small>4/11 – 3/12</small></div>
+      <div class="g-mon">ديسمبر<small>4/12 – 3/1</small></div>
     </div>
 
     <div class="g-group">المسار الخلفي — بالتوازي، لا يستهلك الخطة</div>
-    <div class="g-row"><div class="g-label">جمع البيانات + CV + LinkedIn</div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">تحديث السيرة بكل شهادة تُنجز</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div></div>
+    <div class="g-row"><div class="g-label">ممارس بلس + رقم الأحقية + CV أكاديمي</div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">Logbook + بناء علاقات خطابات التوصية</div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div></div>
 
-    <div class="g-group">الجودة الدوائية — تبدأ من اليوم الأول</div>
-    <div class="g-row"><div class="g-label">شهادة GMP</div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">شهادتا GDP + Data Integrity</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue light"></div></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-group">حسم التخصص — قرار الشهر الأول</div>
+    <div class="g-row"><div class="g-label">مصفوفة القرار + مقابلة 4–6 مقيمين واستشاريين</div><div class="g-cell"><div class="g-bar bg-rose"></div></div><div class="g-cell"><div class="g-bar bg-rose">قرار</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">توجيه مناوبات الامتياز الاختيارية نحو التخصص</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
 
-    <div class="g-group">السياسات والإجراءات — تكمل التوثيق مباشرة</div>
-    <div class="g-row"><div class="g-label">إطار السياسات والإجراءات وSOPs</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-rose"></div></div><div class="g-cell"><div class="g-bar bg-rose"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">تطبيق: كتابة SOP كامل لعملية معروفة</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-group">SMLE — العمود الفقري للخطة</div>
+    <div class="g-row"><div class="g-label">تأسيس: اختبار تشخيصي + خطة مذاكرة</div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">بنك الأسئلة المكثف (60–80 سؤالًا يوميًا)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">محاكيات كاملة + مراجعة نقاط الضعف</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue light"></div></div><div class="g-cell"><div class="g-bar bg-blue light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">اختبار SMLE — الهدف 650+</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue">اختبار</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">صمام أمان: إعادة الاختبار إن كانت الدرجة أقل من المستهدف</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue light">بديل</div></div><div class="g-cell"><div class="g-bar bg-blue light">بديل</div></div></div>
 
-    <div class="g-group">إدارة الإنتاج — الدبلوم عمل خلفي من منتصف أغسطس</div>
-    <div class="g-row"><div class="g-label">الدبلوم المهني: Production &amp; Operations Mgmt</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">KPIs ومستهدفات الإنتاج + نموذج المتابعة</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-group">البحث العلمي — أقوى ورقة تمييز في الملف</div>
+    <div class="g-row"><div class="g-label">إنهاء المراجعة المنهجية (RATS vs VATS) وتقديمها للنشر</div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green">تقديم</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">إنهاء الدراسة المقطعية (Cubital Tunnel) وتقديمها</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"><div class="g-bar bg-green">تقديم</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">ملصق/عرض في مؤتمر أو يوم بحثي</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"></div><div class="g-cell"></div></div>
 
-    <div class="g-group">حل المشاكل والتحسين</div>
-    <div class="g-row"><div class="g-label">دورات CAPA / Deviation / RCA</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">تحليل 3 حالات من الخبرة العملية</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">مشروع تحسين موثق على الخط (بيانات قبل/بعد — يصبح مشروع GB ودليل المقابلات)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div><div class="g-cell"><div class="g-bar bg-amber light"></div></div></div>
-    <div class="g-row"><div class="g-label">Lean Six Sigma Green Belt — تحضير DMAIC</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple">اختبار</div></div></div>
+    <div class="g-group">دورات الإنعاش — نقاط سريعة في الملف</div>
+    <div class="g-row"><div class="g-label">ACLS (جمعية القلب السعودية)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">ATLS — بعد اختبار SMLE لا قبله</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
 
-    <div class="g-group">أنظمة الجودة وقياس الأداء</div>
-    <div class="g-row"><div class="g-label">ISO 9001:2015 — Awareness + Internal Auditor</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal"></div></div><div class="g-cell"><div class="g-bar bg-teal"></div></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">Validation Awareness (IQ/OQ/PQ + Cleaning Validation)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">دورة Advanced Excel</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">بناء Dashboard الإنتاج</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"></div><div class="g-cell"></div></div>
-
-    <div class="g-group">الانتقال الوظيفي — يبدأ قبل نهاية الخطة بشهر ونصف</div>
-    <div class="g-row"><div class="g-label">CV نهائي + تدريب مقابلات</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">التقديم على الوظائف</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold">مستمر</div></div></div>
+    <div class="g-group">ملف الماتشينق — يبدأ قبل فتح البوابة بشهرين ونصف</div>
+    <div class="g-row"><div class="g-label">الطلب الرسمي لخطابات التوصية (3)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">تجهيز الملف: وثائق + متطلبات التخصص + ترتيب المراكز</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">مقابلات تدريبية + جاهزية التقديم (البوابة تفتح ≈ منتصف يناير)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold">جاهز</div></div></div>
   </div></div>
   <div class="g-legend">
     <span><i class="bg-slate"></i> المسار الخلفي</span>
-    <span><i class="bg-blue"></i> الجودة الدوائية</span>
-    <span><i class="bg-rose"></i> السياسات وSOP</span>
-    <span><i class="bg-green"></i> إدارة الإنتاج وKPI</span>
-    <span><i class="bg-amber"></i> CAPA وRCA</span>
-    <span><i class="bg-purple"></i> Green Belt</span>
-    <span><i class="bg-teal"></i> ISO وExcel</span>
-    <span><i class="bg-gold"></i> الانتقال الوظيفي</span>
+    <span><i class="bg-rose"></i> حسم التخصص</span>
+    <span><i class="bg-blue"></i> SMLE</span>
+    <span><i class="bg-green"></i> البحث العلمي</span>
+    <span><i class="bg-amber"></i> ACLS / ATLS</span>
+    <span><i class="bg-gold"></i> ملف الماتشينق</span>
   </div>
-  <div class="disclaimer" style="margin-top:10px"><b>منطق التوازي:</b> الشهادات القصيرة (GMP + GDP + Data Integrity أقل من 15 ساعة مجتمعة) تُنجز خلال أول 6 أسابيع · الدبلوم المهني وGreen Belt عمل خلفي مستمر (3–4 ساعات أسبوعيًا لكل منهما) · التقديم يبدأ من منتصف نوفمبر — دورة التوظيف نفسها تأخذ أسابيع، وGreen Belt يُضاف للسيرة "قيد الإنجاز — الاختبار ديسمبر 2026".</div>
+  <div class="disclaimer" style="margin-top:10px"><b>منطق التوازي:</b> SMLE هو العمود الفقري (2–3 ساعات مذاكرة يوميًا حول مناوبات الامتياز) والبحث عمل خلفي أسبوعي (4–5 ساعات) · دورتا الإنعاش يومان لكل منهما فلا تستحق شهرًا · الاختبار في أكتوبر عمدًا: يترك نافذتي إعادة (ديسمبر) قبل غلق التقديم — دورة Matching 2026 فتحت التقديم 12–28 يناير وأعلنت النتائج النهائية في يونيو، ويُتوقع جدول مشابه لدورة 2027 (يُتحقق من الجدول الرسمي فور إعلانه في موقع الهيئة).</div>
 </div>
 
 <!-- ===== MONTH 1 ===== -->
-<div class="month open" id="m1" data-color="blue">
+<div class="month open" id="m1" data-color="rose">
   <div class="mhead" onclick="toggle(this)">
-    <div class="mnum" style="background:var(--blue);color:#fff"><b>1</b><span>يوليو</span></div>
-    <div class="mtitle"><h2>أساسيات الجودة الدوائية</h2><p>GMP · GDP · Data Integrity — أهم متطلب في مصانع الأدوية، يبدأ من اليوم الأول</p></div>
-    <span class="mdate">3 يوليو – 2 أغسطس 2026</span>
+    <div class="mnum" style="background:var(--rose);color:#fff"><b>1</b><span>يوليو</span></div>
+    <div class="mtitle"><h2>حسم التخصص + انطلاق SMLE</h2><p>أهم قرار في الخطة كلها يُتخذ هذا الشهر — وكل ما بعده يُبنى عليه</p></div>
+    <span class="mdate">4 يوليو – 3 أغسطس 2026</span>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>الهدف:</b> تقوية أهم نقطة مطلوبة في مصانع الأدوية: الالتزام بالـ GMP والتوثيق — بالتوازي مع بناء السيرة في الخلفية.</div>
+    <div class="goal"><b>الهدف:</b> الخروج من الشهر بقرار تخصص <b>مكتوب ومبرر</b> (السيرة الحالية تميل جراحيًا: مناوبة جراحة أطفال، ورشة عظام، بحث جراحة صدرية — مع فترتي طوارئ)، وانطلاق ماكينة SMLE من اليوم الأول. تأجيل القرار يعني ملفًا مشتتًا: خطابات وأبحاث ومناوبات بلا اتجاه.</div>
 
-    <div class="sec"><h3>الشهادات (تمتد أوائل أغسطس)</h3>
-      <div class="chips">
-        <span class="chip critical">GMP — Good Manufacturing Practice</span>
-        <span class="chip info">GDP — Good Documentation Practice</span>
-        <span class="chip medium">Data Integrity / ALCOA+</span>
-      </div>
+    <div class="sec"><h3>مصفوفة حسم التخصص — تُعبأ كتابة</h3>
+      <div class="tbl-scroll"><table>
+        <tr><th>المعيار</th><th>ماذا يُقيَّم</th></tr>
+        <tr><td>الميل الحقيقي</td><td>أي المناوبات مرّت أسرع؟ أي الحالات تُقرأ عنها طوعًا؟</td></tr>
+        <tr><td>التنافسية</td><td>نسب القبول ودرجات SMLE المعتادة للتخصص (تُسأل من مقيمين حديثين)</td></tr>
+        <tr><td>عدد المقاعد</td><td>مقاعد البرنامج في جدة/المنطقة الغربية مقابل الحاجة للانتقال</td></tr>
+        <tr><td>نمط الحياة</td><td>سنوات الإقامة (جراحة 5+ / طوارئ 4) والمناوبات وطبيعة العمل بعد البورد</td></tr>
+        <tr><td>قوة الملف الحالي</td><td>أين تصب الأبحاث والمناوبات الحالية؟ (الملف الحالي يخدم الجراحة والطوارئ معًا)</td></tr>
+      </table></div>
+      <ul class="chk" data-m="1" style="margin-top:10px">
+        <li><input type="checkbox" id="c1a"><label for="c1a">مقابلة 4–6 أشخاص: مقيمون R2–R4 واستشاريون في التخصصين المرشحين — أسئلة محددة عن الواقع اليومي ونسب القبول</label></li>
+        <li><input type="checkbox" id="c1b"><label for="c1b">تعبئة المصفوفة واتخاذ القرار كتابة قبل نهاية الشهر — مع خيار احتياطي (تخصص ثانٍ) معلن من الآن</label></li>
+        <li><input type="checkbox" id="c1c"><label for="c1c">قراءة متطلبات التخصص المستهدف في دليل القبول والتسجيل بموقع الهيئة (درجة SMLE الدنيا، المفاضلة، المقابلات)</label></li>
+      </ul>
     </div>
 
-    <div class="sec"><h3>المهارات المطلوب التركيز عليها</h3>
+    <div class="sec"><h3>انطلاق SMLE</h3>
       <ul class="chk" data-m="1">
-        <li><input type="checkbox" id="c1a"><label for="c1a">كيف تتم تعبئة سجلات الإنتاج بشكل صحيح</label></li>
-        <li><input type="checkbox" id="c1b"><label for="c1b">أخطاء التوثيق الشائعة</label></li>
-        <li><input type="checkbox" id="c1c"><label for="c1c">الفرق بين الخطأ التشغيلي والانحراف</label></li>
-        <li><input type="checkbox" id="c1d"><label for="c1d">أهمية التوقيع، التاريخ، التصحيح، واعتماد السجلات</label></li>
-        <li><input type="checkbox" id="c1e"><label for="c1e">أساسيات النظافة، التلوث، والمطابقة في بيئة الأدوية</label></li>
-        <li><input type="checkbox" id="c1f"><label for="c1f">الحصول على شهادة GMP</label></li>
-        <li><input type="checkbox" id="c1g"><label for="c1g">الحصول على شهادتي GDP وData Integrity (أوائل أغسطس)</label></li>
+        <li><input type="checkbox" id="c1d"><label for="c1d">اختبار تشخيصي كامل (Mock) لتحديد خط الأساس — الدرجة تُسجَّل: <span class="ph">[درجة البداية]</span></label></li>
+        <li><input type="checkbox" id="c1e"><label for="c1e">اختيار بنك أسئلة رئيسي واحد (المقارنة في قسم بنوك الأسئلة أدناه) + خطة أسبوعية: توزيع الوزن حسب تركيبة الاختبار — الباطنة الحصة الأكبر ثم بقية التخصصات الأربعة الكبرى</label></li>
+        <li><input type="checkbox" id="c1f"><label for="c1f">إيقاع يومي ثابت: 40–50 سؤالًا + مراجعة الشروحات، يرتفع لاحقًا إلى 60–80</label></li>
+        <li><input type="checkbox" id="c1g"><label for="c1g">من المسار الخلفي: رقم الأحقية صدر وCV الأكاديمي اكتمل</label></li>
       </ul>
     </div>
 
     <div class="sec"><h3>تطبيق عملي</h3>
-      <div class="practice"><b>كتابة صفحة واحدة عن:</b> كيف أضمن أن مستندات خط الإنتاج مكتملة وصحيحة قبل تسليمها للجودة؟</div>
+      <div class="practice"><b>وثيقة صفحة واحدة:</b> "لماذا هذا التخصص؟" — تُكتب بالإنجليزية بصيغة إجابة مقابلة. هذه الصفحة نفسها ستكون جواب أول سؤال في مقابلات الماتشينق بعد 10 أشهر.</div>
     </div>
 
     <div class="output"><h4>مخرج الشهر</h4>
-      <ul><li>شهادة GMP</li><li>GDP + Data Integrity قيد الإنهاء</li><li>CV وLinkedIn جاهزان (من المسار الخلفي)</li></ul>
+      <ul><li>قرار تخصص مكتوب + بديل</li><li>خط أساس SMLE معروف</li><li>رقم الأحقية + CV جاهزان (من المسار الخلفي)</li></ul>
     </div>
   </div>
 </div>
 
 <!-- ===== MONTH 2 ===== -->
-<div class="month" id="m2" data-color="rose">
+<div class="month" id="m2" data-color="blue">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum"><b>2</b><span>أغسطس</span></div>
-    <div class="mtitle"><h2>السياسات والإجراءات وSOPs</h2><p>Policies, Procedures &amp; SOP Framework — فهم هرم الوثائق والقدرة على كتابته</p></div>
-    <span class="mdate">3 أغسطس – 2 سبتمبر 2026</span>
+    <div class="mtitle"><h2>بنك الأسئلة المكثف + دفعة البحث الأول</h2><p>الشهر الذي يُبنى فيه الفارق بين درجة نجاح ودرجة تنافسية</p></div>
+    <span class="mdate">4 أغسطس – 3 سبتمبر 2026</span>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>الهدف:</b> الانتقال من "منفّذ للإجراء" إلى شخص يفهم <b>لماذا</b> كُتب الإجراء، ويعرف هرم الوثائق كاملًا، ويستطيع كتابة SOP بنفسه — مهارة تميّز المدير عن المشرف. <b>(يبدأ الدبلوم المهني منتصف هذا الشهر كعمل خلفي)</b></div>
+    <div class="goal"><b>الهدف:</b> الدخول في الإيقاع الكامل: 60–80 سؤالًا يوميًا مع مراجعة منهجية للأخطاء — وبالتوازي إنهاء تحليل ومسودة المراجعة المنهجية (RATS vs VATS) لأنها أثقل ورقة في الملف البحثي.</div>
 
-    <div class="sec"><h3>الاسم الصحيح في السيرة</h3>
-      <div class="chips">
-        <span class="chip critical">SOP Development &amp; Compliance</span>
-        <span class="chip info">Document Control Awareness</span>
-        <span class="chip medium">Quality Management Documentation</span>
-      </div>
-    </div>
-
-    <div class="sec"><h3>المفاهيم الأساسية — هرم الوثائق</h3>
-      <div class="tbl-scroll"><table>
-        <tr><th>المستوى</th><th>الوثيقة</th><th>وظيفتها</th></tr>
-        <tr><td>1</td><td>Policy — السياسة</td><td>لماذا؟ التوجه العام والالتزام (مثال: سياسة الجودة)</td></tr>
-        <tr><td>2</td><td>Procedure — الإجراء</td><td>من يفعل ماذا ومتى؟ تسلسل المسؤوليات بين الأقسام</td></tr>
-        <tr><td>3</td><td>SOP / Work Instruction</td><td>كيف بالضبط؟ خطوات التنفيذ التفصيلية على الخط</td></tr>
-        <tr><td>4</td><td>Form / Record — النموذج والسجل</td><td>الدليل: ما تم تعبئته أثناء التنفيذ (Batch Record, Logbook)</td></tr>
-      </table></div>
-    </div>
-
-    <div class="sec"><h3>المهارات المطلوب التركيز عليها</h3>
+    <div class="sec"><h3>منهجية المذاكرة (لا تُخالف)</h3>
       <ul class="chk" data-m="2">
-        <li><input type="checkbox" id="c2a"><label for="c2a">الفرق بين السياسة والإجراء وSOP والنموذج — ومتى يُستخدم كل منها</label></li>
-        <li><input type="checkbox" id="c2b"><label for="c2b">بنية SOP القياسية: الهدف، النطاق، المسؤوليات، الخطوات، السجلات، المراجع</label></li>
-        <li><input type="checkbox" id="c2c"><label for="c2c">دورة حياة الوثيقة: إعداد ← مراجعة ← اعتماد ← تدريب ← تطبيق ← مراجعة دورية (Document Control)</label></li>
-        <li><input type="checkbox" id="c2d"><label for="c2d">لماذا يُمنع العمل بنسخة غير معتمدة أو منتهية (Obsolete)</label></li>
-        <li><input type="checkbox" id="c2e"><label for="c2e">العلاقة بين SOP والتدريب: لا تنفيذ قبل التدريب الموثق</label></li>
+        <li><input type="checkbox" id="c2a"><label for="c2a">دفتر أخطاء: كل سؤال خاطئ يُسجَّل مفهومه لا نصه — ويُراجع أسبوعيًا</label></li>
+        <li><input type="checkbox" id="c2b"><label for="c2b">التركيز بالوزن: الباطنة أولًا (الحصة الأكبر في الاختبار) ثم الجراحة والنساء والأطفال</label></li>
+        <li><input type="checkbox" id="c2c"><label for="c2c">وضع الاختبار الموقوت (Timed mode) من هذا الشهر — إدارة الوقت مهارة تُبنى لا تُرتجل</label></li>
+        <li><input type="checkbox" id="c2d"><label for="c2d">محاكٍ كامل نهاية الشهر — الدرجة تُقارن بخط الأساس: <span class="ph">[درجة المحاكي 1]</span></label></li>
+      </ul>
+    </div>
+
+    <div class="sec"><h3>البحث بالتوازي (4–5 ساعات أسبوعيًا)</h3>
+      <ul class="chk" data-m="2">
+        <li><input type="checkbox" id="c2e"><label for="c2e">إغلاق تحليل المراجعة المنهجية RATS vs VATS وكتابة المسودة الكاملة مع الفريق</label></li>
+        <li><input type="checkbox" id="c2f"><label for="c2f">تحديد مجلة مستهدفة (ومجلة بديلة) وتجهيز الورقة حسب اشتراطاتها</label></li>
       </ul>
     </div>
 
     <div class="sec"><h3>تطبيق عملي</h3>
-      <div class="practice"><b>كتابة SOP كامل</b> لعملية مألوفة من الخط (مثل تسليم الوردية أو تصفية الخط Line Clearance) بالبنية القياسية — هذا المستند يُعرض في المقابلات كدليل عملي.</div>
+      <div class="practice"><b>لوحة متابعة أسبوعية</b> (Excel أو Notion): أسئلة محلولة، نسبة الصحة لكل تخصص، ساعات البحث — نفس عقلية إدارة المؤشرات التي ستُطلب لاحقًا كمقيم ثم استشاري.</div>
     </div>
 
     <div class="output"><h4>مخرج الشهر</h4>
-      <ul><li>فهم هرم الوثائق كاملًا</li><li>SOP مكتوب بيد المتقدم</li><li>GDP + Data Integrity مكتملتان</li><li>الدبلوم المهني بدأ</li></ul>
+      <ul><li>إيقاع 60–80 سؤالًا يوميًا مستقر</li><li>مسودة المراجعة المنهجية مكتملة</li><li>محاكٍ أول بدرجة موثقة</li></ul>
     </div>
   </div>
 </div>
 
 <!-- ===== MONTH 3 ===== -->
-<div class="month" id="m3" data-color="green">
+<div class="month" id="m3" data-color="teal">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum"><b>3</b><span>سبتمبر</span></div>
-    <div class="mtitle"><h2>مؤشرات الأداء ومستهدفات الإنتاج</h2><p>Production KPIs &amp; Target Setting — لغة الأرقام التي يتكلم بها المدير</p></div>
-    <span class="mdate">3 سبتمبر – 2 أكتوبر 2026</span>
+    <div class="mtitle"><h2>محاكيات + ACLS + تقديم البحث الأول</h2><p>رفع الدرجة من "ناجح" إلى "تنافسي" — وحجز موعد الاختبار رسميًا</p></div>
+    <span class="mdate">4 سبتمبر – 3 أكتوبر 2026</span>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>الهدف:</b> فهم كيف تُبنى مستهدفات الإنتاج وكيف تُقاس — الفرق بين KPI والمستهدف (Target) والفعلي (Actual)، وكيف تتدرج المستهدفات من خطة المصنع السنوية إلى الخط إلى الوردية. <b>(الدبلوم المهني مستمر بالتوازي)</b></div>
+    <div class="goal"><b>الهدف:</b> حجز موعد SMLE (منتصف أكتوبر) عبر بروميتريك، ورفع درجات المحاكيات فوق 650، وإرسال المراجعة المنهجية للمجلة، وقطع دورة ACLS في يومين (جدة ≈ 770–900 ر.س).</div>
 
-    <div class="sec"><h3>الاسم الصحيح في السيرة</h3>
-      <div class="chips">
-        <span class="chip critical">KPI Monitoring &amp; Target Setting</span>
-        <span class="chip info">OEE &amp; Downtime Analysis</span>
-        <span class="chip medium">Daily Production Reporting</span>
-      </div>
-    </div>
-
-    <div class="sec"><h3>مؤشرات يجب إتقانها</h3>
-      <div class="tbl-scroll"><table>
-        <tr><th>المؤشر</th><th>معناه</th></tr>
-        <tr><td>OEE</td><td>كفاءة المعدات العامة (توافر × أداء × جودة)</td></tr>
-        <tr><td>Downtime %</td><td>نسبة التوقف</td></tr>
-        <tr><td>Yield %</td><td>نسبة الإنتاج المقبول</td></tr>
-        <tr><td>Rejection %</td><td>نسبة المرفوض</td></tr>
-        <tr><td>Plan Achievement %</td><td>نسبة تحقيق الخطة</td></tr>
-        <tr><td>Manpower Productivity</td><td>إنتاجية الموظفين</td></tr>
-        <tr><td>Batch Documentation Accuracy</td><td>دقة مستندات الدفعات</td></tr>
-        <tr><td>Line Clearance Compliance</td><td>الالتزام بتصفية الخط</td></tr>
-      </table></div>
-    </div>
-
-    <div class="sec"><h3>مفاهيم المستهدفات</h3>
+    <div class="sec"><h3>مهام الشهر</h3>
       <ul class="chk" data-m="3">
-        <li><input type="checkbox" id="c3a"><label for="c3a">الفرق بين KPI (المقياس) والمستهدف (الرقم المطلوب) والفعلي (المتحقق)</label></li>
-        <li><input type="checkbox" id="c3b"><label for="c3b">كيف تتدرج المستهدفات: خطة سنوية ← شهرية ← أسبوعية ← وردية (Target Cascading)</label></li>
-        <li><input type="checkbox" id="c3c"><label for="c3c">قراءة الانحراف عن المستهدف وتفسيره بالأسباب لا بالتبرير</label></li>
-        <li><input type="checkbox" id="c3d"><label for="c3d">مواضيع الدبلوم: Production Planning · Line Balancing · Waste · Manpower Allocation · Shift Handover</label></li>
+        <li><input type="checkbox" id="c3a"><label for="c3a">حجز موعد الاختبار رسميًا في بروميتريك برقم الأحقية — المقاعد تمتلئ سريعًا فالحجز مبكرًا</label></li>
+        <li><input type="checkbox" id="c3b"><label for="c3b">محاكيان كاملان (منتصف الشهر ونهايته) بظروف اختبار حقيقية — الدرجتان: <span class="ph">[محاكي 2]</span> · <span class="ph">[محاكي 3]</span></label></li>
+        <li><input type="checkbox" id="c3c"><label for="c3c">إعادة حل دفتر الأخطاء كاملًا — المفاهيم المتكررة الخطأ تُدرس من مصدر مرجعي لا من الشروحات فقط</label></li>
+        <li><input type="checkbox" id="c3d"><label for="c3d"><b>تقديم المراجعة المنهجية للنشر</b> — وتوثيق حالة "Submitted" في الـ CV فورًا</label></li>
+        <li><input type="checkbox" id="c3e"><label for="c3e">دورة ACLS (جمعية القلب السعودية) — يومان، تُحجز في إجازة مناوبة</label></li>
+        <li><input type="checkbox" id="c3f"><label for="c3f">بدء تحليل بيانات الدراسة المقطعية (Cubital Tunnel) بالتوازي</label></li>
       </ul>
     </div>
 
-    <div class="sec"><h3>تطبيق عملي — نموذج Excel لمتابعة الخط اليومي</h3>
-      <div class="tbl-scroll"><table>
-        <tr><th>البند</th><th>المطلوب</th></tr>
-        <tr><td>التاريخ</td><td>يوم التشغيل</td></tr>
-        <tr><td>الخط</td><td>اسم الخط</td></tr>
-        <tr><td>المخطط</td><td>الكمية المستهدفة</td></tr>
-        <tr><td>الفعلي</td><td>الكمية المنتجة</td></tr>
-        <tr><td>الفرق</td><td>Actual − Plan</td></tr>
-        <tr><td>التوقفات</td><td>بالدقائق</td></tr>
-        <tr><td>سبب التوقف</td><td>صيانة / مواد / تشغيل / جودة</td></tr>
-        <tr><td>الهدر</td><td>كمية أو نسبة</td></tr>
-        <tr><td>الملاحظات</td><td>ملاحظات المشرف</td></tr>
-      </table></div>
-      <ul class="chk" data-m="3" style="margin-top:10px">
-        <li><input type="checkbox" id="c3e"><label for="c3e">بناء النموذج وتعبئته أسبوعين ببيانات حقيقية أو تقديرية</label></li>
-        <li><input type="checkbox" id="c3f"><label for="c3f">بدء <b>مشروع تحسين موثق</b> على الخط الحالي (تقليل توقفات / تحسين Yield) مع بيانات قبل/بعد — يُستخدم كمشروع Green Belt وكدليل ملموس في مقابلات التوظيف الخارجية</label></li>
-      </ul>
+    <div class="sec"><h3>تطبيق عملي</h3>
+      <div class="practice"><b>قاعدة الأسبوعين الأخيرين قبل الاختبار:</b> لا مصادر جديدة إطلاقًا — فقط بنك الأسئلة ودفتر الأخطاء والمحاكيات. المصدر الجديد في النهاية يهدم الثقة ولا يضيف درجات.</div>
     </div>
 
     <div class="output"><h4>مخرج الشهر</h4>
-      <ul><li>إتقان لغة KPI والمستهدفات</li><li>نموذج متابعة يومي معبأ</li><li>شرح أداء الخط بالأرقام</li></ul>
+      <ul><li>موعد اختبار محجوز</li><li>محاكيات فوق المستهدف</li><li>بحث أول Submitted</li><li>شهادة ACLS</li></ul>
     </div>
   </div>
 </div>
 
 <!-- ===== MONTH 4 ===== -->
-<div class="month" id="m4" data-color="amber">
+<div class="month" id="m4" data-color="purple">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum"><b>4</b><span>أكتوبر</span></div>
-    <div class="mtitle"><h2>حل المشاكل + انطلاق Green Belt</h2><p>CAPA · Deviation · RCA — وبداية التحضير لـ Lean Six Sigma Green Belt</p></div>
-    <span class="mdate">3 أكتوبر – 2 نوفمبر 2026</span>
+    <div class="mtitle"><h2>اختبار SMLE — الهدف 650+</h2><p>أثقل رقم في ملف المفاضلة يُحسم هذا الشهر</p></div>
+    <span class="mdate">4 أكتوبر – 3 نوفمبر 2026</span>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>الهدف:</b> التعامل مع مشاكل الإنتاج بطريقة إدارية — وبدء أثقل شهادة في الخطة: <b>Lean Six Sigma Green Belt</b> (تحضير حتى ديسمبر). أدوات RCA هي نفسها أدوات مرحلة Analyze في DMAIC، فالمساران يقوّيان بعضهما.</div>
+    <div class="goal"><b>الهدف:</b> أداء الاختبار منتصف الشهر بذروة الجاهزية. النجاح من 536، لكن المنافسة على برامج الإقامة تبدأ عمليًا من 650+ — وفي التخصصات الجراحية عالية الطلب كلما زادت الدرجة اتسعت الخيارات. الاختبار في أكتوبر عمدًا: يُبقي نافذتي إعادة قبل التقديم.</div>
 
-    <div class="sec"><h3>الشهادات</h3>
-      <div class="chips">
-        <span class="chip critical">Deviation Management</span>
-        <span class="chip warn">CAPA</span>
-        <span class="chip info">Root Cause Analysis</span>
-        <span class="chip rose">Lean Six Sigma Green Belt — بداية التحضير</span>
-      </div>
-    </div>
-
-    <div class="sec"><h3>المهارات المطلوب التركيز عليها</h3>
+    <div class="sec"><h3>مهام الشهر</h3>
       <ul class="chk" data-m="4">
-        <li><input type="checkbox" id="c4a"><label for="c4a">كتابة وصف مشكلة واضح + التفريق بين السبب المباشر والجذري</label></li>
-        <li><input type="checkbox" id="c4b"><label for="c4b">أدوات التحليل: 5 Why / Fishbone / Pareto</label></li>
-        <li><input type="checkbox" id="c4c"><label for="c4c">اقتراح إجراء تصحيحي ووقائي + متى يُرفع للجودة أو الصيانة أو التخطيط</label></li>
-        <li><input type="checkbox" id="c4d"><label for="c4d">Green Belt: التسجيل (التوصية: IASSC — الإنجليزية ليست عائقًا) وبدء وحدتي Define وMeasure</label></li>
-        <li><input type="checkbox" id="c4g"><label for="c4g">إحصاء أساسي قبل مرحلة Measure: المتوسط، الانحراف المعياري، مخططات الضبط (Control Charts)</label></li>
-        <li><input type="checkbox" id="c4e"><label for="c4e">بدء دورة Advanced Excel (منتصف الشهر، تكتمل نوفمبر)</label></li>
+        <li><input type="checkbox" id="c4a"><label for="c4a">الأسبوعان الأولان: تثبيت — محاكٍ أخير + دفتر الأخطاء فقط + نوم منتظم</label></li>
+        <li><input type="checkbox" id="c4b"><label for="c4b"><b>أداء اختبار SMLE</b> — الدرجة: <span class="ph">[الدرجة]</span></label></li>
+        <li><input type="checkbox" id="c4c"><label for="c4c">قرار فوري بعد النتيجة: ≥ 650 → إغلاق الملف والتفرغ للماتشينق · 536–649 → تقييم كفايتها للتخصص المستهدف وحجز إعادة في ديسمبر إن لزم · &lt; 536 → إعادة في ديسمبر إلزامية (رقم الأحقية يتيح ذلك)</label></li>
+        <li><input type="checkbox" id="c4d"><label for="c4d">استئناف البحث الثاني بكامل الطاقة بعد الاختبار: إنهاء تحليل وكتابة الدراسة المقطعية وتقديمها</label></li>
+        <li><input type="checkbox" id="c4e"><label for="c4e">بدء الطلب الرسمي لخطابات التوصية من الاستشاريين الثلاثة (العلاقات بُنيت منذ يوليو)</label></li>
       </ul>
     </div>
 
-    <div class="sec"><h3>تطبيق عملي — تحليل 3 حالات من الخبرة العملية</h3>
-      <div class="chips" style="margin-bottom:10px">
-        <span class="chip critical">1. توقف خط بسبب عطل</span>
-        <span class="chip warn">2. نقص مواد أو تأخر توريد</span>
-        <span class="chip info">3. خطأ في مستند إنتاج</span>
-      </div>
-      <div class="tbl-scroll"><table>
-        <tr><th>العنصر</th><th>المحتوى</th></tr>
-        <tr><td>المشكلة</td><td>وصف مختصر</td></tr>
-        <tr><td>الأثر</td><td>تأخير / هدر / جودة</td></tr>
-        <tr><td>السبب المحتمل</td><td>السبب</td></tr>
-        <tr><td>الإجراء الفوري</td><td>ماذا حدث فورًا؟</td></tr>
-        <tr><td>الإجراء التصحيحي</td><td>كيف يُمنع التكرار؟</td></tr>
-        <tr><td>الدرس المستفاد</td><td>ما التعلم المكتسب؟</td></tr>
-      </table></div>
-      <ul class="chk" data-m="4" style="margin-top:10px">
-        <li><input type="checkbox" id="c4f"><label for="c4f">كتابة وتحليل الحالات الثلاث — أمثلة جاهزة للمقابلات</label></li>
-      </ul>
+    <div class="sec"><h3>تطبيق عملي</h3>
+      <div class="practice"><b>بعد النتيجة مباشرة:</b> تُحدَّث السيرة وLinkedIn بالدرجة إن كانت تنافسية — درجة SMLE القوية تُكتب صراحة في CV الماتشينق ولا تُترك للنموذج فقط.</div>
     </div>
 
     <div class="output"><h4>مخرج الشهر</h4>
-      <ul><li>لغة CAPA وDeviation</li><li>3 حالات محللة للمقابلات</li><li>Green Belt: مرحلتا Define وMeasure</li></ul>
+      <ul><li>درجة SMLE موثقة</li><li>بحث ثانٍ Submitted</li><li>خطابات التوصية قيد الإصدار</li></ul>
     </div>
   </div>
 </div>
 
 <!-- ===== MONTH 5 ===== -->
-<div class="month" id="m5" data-color="teal">
+<div class="month" id="m5" data-color="green">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum"><b>5</b><span>نوفمبر</span></div>
-    <div class="mtitle"><h2>ISO 9001 + Dashboard الإنتاج</h2><p>أنظمة إدارة الجودة والتدقيق الداخلي — وتحويل الأرقام إلى Dashboard يُعرض في المقابلة</p></div>
-    <span class="mdate">3 نوفمبر – 2 ديسمبر 2026</span>
+    <div class="mtitle"><h2>ملف الماتشينق + ATLS</h2><p>تحويل سنة كاملة من العمل إلى ملف تقديم لا تُرد له طلبات ناقصة</p></div>
+    <span class="mdate">4 نوفمبر – 3 ديسمبر 2026</span>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>الهدف:</b> فهم نظام إدارة الجودة ISO 9001:2015 والتدقيق الداخلي، وبناء Dashboard الإنتاج في Excel، وختام الدبلوم المهني — <b>ويبدأ التقديم على الوظائف من منتصف الشهر</b>. (Green Belt مستمر: مرحلتا Analyze وImprove)</div>
+    <div class="goal"><b>الهدف:</b> اكتمال كل عناصر ملف Matching 2027 قبل فتح البوابة بشهرين: الوثائق، الخطابات، استراتيجية ترتيب المراكز التدريبية — ودورة ATLS التي تزن كثيرًا في ملفات الجراحة والطوارئ.</div>
 
-    <div class="sec"><h3>الاسم الصحيح في السيرة</h3>
-      <div class="chips">
-        <span class="chip critical">ISO 9001:2015 QMS Awareness</span>
-        <span class="chip info">ISO 9001 Internal Auditor</span>
-        <span class="chip medium">Quality Management Systems</span>
-      </div>
-    </div>
-
-    <div class="sec"><h3>ISO 9001 — ما يجب فهمه</h3>
+    <div class="sec"><h3>عناصر الملف</h3>
       <ul class="chk" data-m="5">
-        <li><input type="checkbox" id="c5a"><label for="c5a">مبادئ إدارة الجودة السبعة والنهج القائم على العمليات (Process Approach)</label></li>
-        <li><input type="checkbox" id="c5b"><label for="c5b">بنود المواصفة الأساسية (4–10): السياق، القيادة، التخطيط، الدعم، التشغيل، تقييم الأداء، التحسين</label></li>
-        <li><input type="checkbox" id="c5c"><label for="c5c">دورة PDCA وعلاقتها بالتحسين المستمر</label></li>
-        <li><input type="checkbox" id="c5d"><label for="c5d">أساسيات التدقيق الداخلي: قائمة التحقق، الملاحظة، عدم المطابقة (NC)، تقرير التدقيق</label></li>
-        <li><input type="checkbox" id="c5e"><label for="c5e">العلاقة بين ISO 9001 وGMP: نظام الجودة العام مقابل المتطلب الدوائي الإلزامي</label></li>
-        <li><input type="checkbox" id="c5i"><label for="c5i"><b>Validation Awareness</b> (ساعتان): مفردات IQ/OQ/PQ وCleaning Validation وProcess Validation — متوقعة في مقابلات الإنتاج الدوائي</label></li>
+        <li><input type="checkbox" id="c5a"><label for="c5a">الوثائق الرسمية: وثيقة التخرج + السجل الأكاديمي + ما يُطلب لإثبات الامتياز (شهادة إتمام الامتياز تصدر عند اكتماله — يُتحقق من آلية قبولها أثناء الامتياز في دليل Matching 2027 فور صدوره)</label></li>
+        <li><input type="checkbox" id="c5b"><label for="c5b">استلام خطابات التوصية الثلاثة موقعة — من استشاريين في التخصص المستهدف تحديدًا</label></li>
+        <li><input type="checkbox" id="c5c"><label for="c5c">استراتيجية ترتيب المراكز: قائمة البرامج المعتمدة للتخصص في المنطقة الغربية ثم بقية المناطق، مرتبة بواقعية حسب الدرجة والملف — مع سؤال مقيمين حاليين عن ثقافة كل برنامج</label></li>
+        <li><input type="checkbox" id="c5d"><label for="c5d">دورة ATLS (يومان — المعتمدة من كلية الجراحين الأمريكية ≈ 3,000–3,300 ر.س، وبدائل معتمدة من الهيئة أقل كلفة)</label></li>
+        <li><input type="checkbox" id="c5e"><label for="c5e">متابعة حالة البحثين مع المجلات والرد على ملاحظات المراجعين فورًا</label></li>
+        <li><input type="checkbox" id="c5f"><label for="c5f">صمام الأمان: إن تقررت إعادة SMLE — حجز موعد ديسمبر الآن والعودة لإيقاع الأسئلة اليومي</label></li>
       </ul>
     </div>
 
-    <div class="sec"><h3>Excel وDashboard الإنتاج</h3>
-      <div class="chips" style="margin-bottom:10px">
-        <span class="chip info">Pivot Table</span><span class="chip info">XLOOKUP</span><span class="chip low">SUMIFS</span>
-        <span class="chip medium">Conditional Formatting</span><span class="chip good">Charts</span><span class="chip low">Data Validation</span>
-      </div>
-      <ul class="chk" data-m="5">
-        <li><input type="checkbox" id="c5f"><label for="c5f">Dashboard يعرض: المخطط والفعلي · نسبة تحقيق الخطة · أكثر 5 أسباب توقف · نسبة الهدر · أداء كل وردية · ملاحظات الجودة</label></li>
-        <li><input type="checkbox" id="c5g"><label for="c5g">ختام الدبلوم المهني واستلام الشهادة</label></li>
-        <li><input type="checkbox" id="c5h"><label for="c5h">CV نهائي + بدء التقديم على الوظائف (منتصف نوفمبر)</label></li>
-      </ul>
+    <div class="sec"><h3>تطبيق عملي</h3>
+      <div class="practice"><b>قائمة تحقق الملف (Checklist) بصفحة واحدة</b> تُطابق حرفيًا متطلبات دليل القبول والتسجيل في موقع الهيئة — نسبة مؤسفة من المتقدمين تسقط إداريًا لا تنافسيًا (وثيقة ناقصة، صيغة خاطئة، موعد فائت).</div>
     </div>
 
     <div class="output"><h4>مخرج الشهر</h4>
-      <ul><li>شهادتا ISO 9001</li><li>Dashboard جاهز للمقابلات</li><li>شهادة الدبلوم المهني</li><li>أول دفعة تقديمات مرسلة</li></ul>
+      <ul><li>ملف وثائق مكتمل</li><li>3 خطابات توصية بيد</li><li>شهادة ATLS</li><li>قائمة برامج مرتبة</li></ul>
     </div>
   </div>
 </div>
 
 <!-- ===== MONTH 6 ===== -->
-<div class="month" id="m6" data-color="purple">
+<div class="month" id="m6" data-color="amber">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum"><b>6</b><span>ديسمبر</span></div>
-    <div class="mtitle"><h2>اختبار Green Belt + التقديم المكثف</h2><p>إغلاق أكبر شهادة في الخطة والتفرغ للمقابلات</p></div>
-    <span class="mdate">3 ديسمبر 2026 – 2 يناير 2027</span>
+    <div class="mtitle"><h2>جاهزية التقديم + التدرب على المقابلات</h2><p>البوابة تفتح منتصف يناير — والملف يجب أن يكون جاهزًا قبلها لا معها</p></div>
+    <span class="mdate">4 ديسمبر 2026 – 3 يناير 2027</span>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>الهدف:</b> اجتياز اختبار Lean Six Sigma Green Belt (مرحلة Control + المراجعة الشاملة)، والتقديم المكثف مع التدرب على المقابلات.</div>
+    <div class="goal"><b>الهدف:</b> إغلاق كل الأطراف المفتوحة (إعادة SMLE إن لزمت)، والتدرب الفعلي على مقابلات القبول، والاستعداد لرفع الطلب في أول أيام فتح البوابة (دورة 2026 فتحت 12–28 يناير — نافذة قصيرة لا تحتمل التأجيل).</div>
 
     <div class="sec"><h3>مهام الشهر</h3>
       <ul class="chk" data-m="6">
-        <li><input type="checkbox" id="c6a"><label for="c6a">Green Belt: إنهاء مرحلة Control + اختبارات تجريبية + الاختبار الرسمي</label></li>
-        <li><input type="checkbox" id="c6b"><label for="c6b">تحديث السيرة وLinkedIn بكامل الشهادات</label></li>
-        <li><input type="checkbox" id="c6c"><label for="c6c">التقديم المستمر على الوظائف المستهدفة</label></li>
-        <li><input type="checkbox" id="c6d"><label for="c6d">تدريب مقابلات (الأسئلة أدناه)</label></li>
+        <li><input type="checkbox" id="c6a"><label for="c6a">مراقبة إعلان الهيئة لجدول Matching 2027 الرسمي وضبط منبّه ليوم فتح التقديم</label></li>
+        <li><input type="checkbox" id="c6b"><label for="c6b">إعادة SMLE (إن تقررت) في النصف الأول من الشهر — بعدها الملف يُغلق نهائيًا</label></li>
+        <li><input type="checkbox" id="c6c"><label for="c6c">3 مقابلات تدريبية (Mock interviews) مع مقيمين أو استشاريين — واحدة على الأقل بالإنجليزية</label></li>
+        <li><input type="checkbox" id="c6d"><label for="c6d">تحديث نهائي للسيرة وLinkedIn بكل ما أُنجز: SMLE، ACLS، ATLS، حالة البحثين</label></li>
       </ul>
-    </div>
-
-    <div class="sec"><h3>السيرة النهائية — Certifications</h3>
-      <div class="chips">
-        <span class="chip critical">GMP</span><span class="chip info">GDP</span><span class="chip medium">Data Integrity</span>
-        <span class="chip rose">Lean Six Sigma Green Belt</span>
-        <span class="chip good">دبلوم Production &amp; Operations Management</span>
-        <span class="chip warn">CAPA / Deviation</span>
-        <span class="chip medium">ISO 9001 Internal Auditor</span>
-        <span class="chip low">Advanced Excel</span>
-      </div>
-    </div>
-
-    <div class="sec"><h3>السيرة النهائية — Skills</h3>
-      <div class="chips">
-        <span class="chip low">Production Line Management</span><span class="chip low">GMP Compliance</span>
-        <span class="chip low">SOP Development &amp; Compliance</span><span class="chip low">KPI Monitoring &amp; Target Setting</span>
-        <span class="chip low">OEE &amp; Downtime Analysis</span><span class="chip low">Batch Record Documentation</span>
-        <span class="chip low">CAPA Support</span><span class="chip low">Lean Six Sigma (DMAIC)</span>
-        <span class="chip low">Internal Quality Auditing</span><span class="chip low">Shift Supervision</span>
-        <span class="chip low">Daily Production Reporting</span><span class="chip low">Team Supervision</span>
-      </div>
-    </div>
-
-    <div class="sec"><h3>الوظائف المستهدفة (بالأولوية)</h3>
-      <div class="tbl-scroll"><table>
-        <tr><th style="width:60px">#</th><th>الوظيفة</th></tr>
-        <tr><td>1</td><td>Senior Production Supervisor</td></tr>
-        <tr><td>2</td><td>Shift Production Manager / Shift Lead</td></tr>
-        <tr><td>3</td><td>Production Compliance Coordinator</td></tr>
-        <tr><td>4</td><td>Packaging Line Supervisor</td></tr>
-        <tr><td>5</td><td>GMP Documentation Officer</td></tr>
-        <tr><td>6</td><td>Batch Record Reviewer</td></tr>
-        <tr><td>7</td><td>Assistant Production Manager</td></tr>
-        <tr><td>8</td><td>Production Line Manager <span style="font-size:11px;color:var(--muted)">(هدف 12–18 شهر)</span></td></tr>
-      </table></div>
-      <p style="font-size:12px;color:var(--muted);margin-top:8px">منصات التقديم: <a href="https://www.linkedin.com/jobs" target="_blank">LinkedIn Jobs</a> · <a href="https://www.bayt.com" target="_blank">Bayt.com</a> · <a href="https://sa.indeed.com" target="_blank">Indeed السعودية</a> · <a href="https://www.gulftalent.com" target="_blank">GulfTalent</a> · <a href="https://www.naukrigulf.com" target="_blank">Naukrigulf</a> — وصفحات التوظيف المباشرة لشركات الأدوية.</p>
-      <div class="disclaimer" style="margin-top:10px"><b>ملاحظة واقعية:</b> بدون بكالوريوس، أغلب شركات الأدوية تضع سقف "Manager" عند الشهادة الجامعية. الترتيب أعلاه مبني على ذلك — الوصول لـ Senior Supervisor أو Shift Lead خلال هذه الخطة إنجاز قوي، وLine Manager هدف 12–18 شهرًا. <b>بند طويل المدى:</b> بكالوريوس انتساب أو عن بعد (إدارة أعمال / إدارة صناعية) يرفع السقف نهائيًا.</div>
     </div>
 
     <div class="sec"><h3>أسئلة مقابلات للتدرب عليها</h3>
       <ul class="chk" data-m="6">
-        <li><input type="checkbox" id="c6e"><label for="c6e">كيف تُدار عملية إنتاج فيها تأخير؟ وكيف يُتعامل مع توقف مفاجئ؟</label></li>
-        <li><input type="checkbox" id="c6f"><label for="c6f">كيف تُضمن صحة مستندات الإنتاج؟ وما هو GMP؟</label></li>
-        <li><input type="checkbox" id="c6g"><label for="c6g">ما الفرق بين Deviation وCAPA؟ وما الفرق بين السياسة والإجراء وSOP؟</label></li>
-        <li><input type="checkbox" id="c6h"><label for="c6h">كيف يُقاس أداء الخط؟ وكيف يُبنى مستهدف إنتاج واقعي؟</label></li>
-        <li><input type="checkbox" id="c6i"><label for="c6i">اشرح DMAIC — وأعطِ مثالًا لتحسين طبقته أو يمكن تطبيقه على خطك</label></li>
-        <li><input type="checkbox" id="c6j"><label for="c6j">كيف يتم التعامل مع مشغل ضعيف الأداء؟ وكيف تُسلَّم الوردية بشكل صحيح؟</label></li>
-        <li><input type="checkbox" id="c6k"><label for="c6k">كيف يُوازن بين ضغط الإنتاج ومتطلبات الجودة؟</label></li>
+        <li><input type="checkbox" id="c6e"><label for="c6e">لماذا هذا التخصص؟ ولماذا هذا البرنامج تحديدًا؟ (وثيقة يوليو هي الأساس)</label></li>
+        <li><input type="checkbox" id="c6f"><label for="c6f">اعرض حالة سريرية أدرتها في الامتياز وماذا تعلمت منها (من الـ Logbook)</label></li>
+        <li><input type="checkbox" id="c6g"><label for="c6g">حدثنا عن بحثك: منهجية المراجعة المنهجية ولماذا RATS مقابل VATS سؤال مهم</label></li>
+        <li><input type="checkbox" id="c6h"><label for="c6h">موقف تعارضت فيه مع زميل أو مشرف — كيف تصرفت؟ (أسئلة سلوكية)</label></li>
+        <li><input type="checkbox" id="c6i"><label for="c6i">قيادة عمل تطوعي بحجم 3,000+ متطوع (Elmam): ماذا تقول عن مهاراتك الإدارية؟</label></li>
+        <li><input type="checkbox" id="c6j"><label for="c6j">أين ترى نفسك بعد 10 سنوات؟ (الإجابة موجودة في تبويب الخطة الطويلة)</label></li>
       </ul>
     </div>
 
-    <div class="output"><h4>مخرج الشهر — بنهاية 2 يناير 2027</h4>
-      <ul><li>شهادة Green Belt</li><li>CV نهائي مكتمل</li><li>تقديمات نشطة ومقابلات</li></ul>
+    <div class="sec"><h3>السيرة النهائية — كما ستظهر في الملف</h3>
+      <div class="chips">
+        <span class="chip critical">SMLE <span class="ph">[الدرجة]</span></span>
+        <span class="chip info">بحثان (منشور/مقبول/Submitted)</span>
+        <span class="chip warn">ACLS</span>
+        <span class="chip warn">ATLS</span>
+        <span class="chip medium">BLS + مكافحة العدوى</span>
+        <span class="chip good">قيادة تطوعية (Elmam — 3,000+ متطوع)</span>
+        <span class="chip rose">مراكز أولى في مسابقات علمية</span>
+        <span class="chip low">4 مناوبات مستشفيات كبرى بجدة</span>
+      </div>
+    </div>
+
+    <div class="output"><h4>مخرج الشهر — بنهاية 3 يناير 2027</h4>
+      <ul><li>ملف Matching جاهز 100%</li><li>مقابلات مُتدرَّب عليها</li><li>التقديم يوم فتح البوابة (≈ 12 يناير)</li></ul>
     </div>
   </div>
 </div>
 
-<!-- ===== PROFESSIONAL DIPLOMA ===== -->
+<!-- ===== QBANK COMPARISON (middle credential) ===== -->
 <div class="card" style="border-top-color:var(--green)">
-  <h2>الدبلوم المهني — Production &amp; Operations Management</h2>
-  <div class="sub"><b>بدون بكالوريوس، هذا أهم بند تعليمي في الملف كله — ضرورة لا خيار.</b> يبدأ أوائل أغسطس ويمتد حتى نوفمبر كعمل خلفي · 4 خيارات مرتبة من المجاني إلى الاحترافي</div>
-
+  <h2>بنك أسئلة SMLE — أهم استثمار تعليمي في الخطة</h2>
+  <div class="sub"><b>درجة SMLE هي أثقل رقم في المفاضلة</b> — والفارق بين بنك أسئلة جيد وضعيف قد يساوي عشرات النقاط · 4 خيارات مرتبة من المجاني إلى الأشمل (الأسعار تقديرية وتتغير — تُراجع قبل الاشتراك)</div>
   <div class="tbl-scroll"><table>
-    <tr><th>الخيار</th><th>الجهة</th><th>المدة</th><th>التكلفة التقديرية</th><th>ملاحظة</th></tr>
+    <tr><th>الخيار</th><th>طبيعته</th><th>التكلفة التقديرية</th><th>ملاحظة</th></tr>
     <tr>
-      <td><b>دروب</b> <span class="dip-badge sa">سعودي</span> <span class="dip-badge free">مجاني</span></td>
-      <td>صندوق تنمية الموارد البشرية (هدف)</td>
-      <td>مسار تدريبي مرن (عدة دورات)</td>
-      <td>0 ر.س — التعلم والشهادة مجانيان</td>
-      <td>شهادات إتمام معتمدة لدى جهات حكومية وشركات سعودية · مسارات إدارة الأعمال والمهارات الإدارية · تسجيل بالنفاذ الوطني</td>
+      <td><b>التجميعات والمصادر المجانية</b> <span class="dip-badge free">مجاني</span></td>
+      <td>تجميعات متداولة بين الدفعات + ملخصات + قنوات مراجعة</td>
+      <td>0 ر.س</td>
+      <td>مفيدة كإضافة لا كأساس — بلا شروحات منهجية ولا تتبع أداء، وجودتها متفاوتة</td>
     </tr>
     <tr>
-      <td><b>Alison Diploma</b> <span class="dip-badge free">تعلم مجاني</span></td>
-      <td>Alison — معتمد CPD UK</td>
-      <td>10–15 ساعة (تُوزَّع على 8–12 أسبوعًا)</td>
-      <td>التعلم 0 ر.س · الشهادة ≈ 270–470 ر.س</td>
-      <td>Diploma in Operations Management — عنوان "Diploma" صريح يُكتب في السيرة · بالإنجليزية</td>
+      <td><b>بنك أسئلة سعودي متخصص بالـ SMLE</b> <span class="dip-badge sa">موجه للاختبار</span></td>
+      <td>منصات مبنية على نمط SMLE تحديدًا (مثل YourMedPass وأشباهها) مع تتبع أداء لكل تخصص</td>
+      <td>≈ 200 – 500 ر.س لاشتراك 3–6 أشهر</td>
+      <td>الأقرب لنمط الأسئلة الفعلي — يُسأل زملاء الدفعات الأحدث عن الأدق حاليًا قبل الدفع</td>
     </tr>
     <tr>
-      <td><b>Coursera Specialization</b></td>
-      <td>جامعات (Wharton / Illinois وغيرها)</td>
-      <td>1–3 أشهر</td>
-      <td>≈ 220–250 ر.س/شهر (اشتراك)</td>
-      <td>أقوى اسم أكاديمي · يتطلب التزامًا أسبوعيًا · إمكانية طلب إعفاء مالي (Financial Aid)</td>
+      <td><b>CanadaQBank (SMLE)</b></td>
+      <td>بنك دولي له نسخة مخصصة للـ SMLE</td>
+      <td>≈ 200 – 400 ر.س حسب مدة الاشتراك</td>
+      <td>شروحات جيدة وحجم أسئلة كبير — واجهته إنجليزية بالكامل (ليست عائقًا هنا)</td>
     </tr>
     <tr>
-      <td><b>ASCM CPIM</b> <span class="dip-badge prem">احترافي دولي</span></td>
-      <td>ASCM (APICS سابقًا)</td>
-      <td>3–6 أشهر تحضير + اختبار</td>
-      <td>≈ 4,500–7,500 ر.س (تقديري)</td>
-      <td>أرقى اعتماد عالمي في تخطيط الإنتاج والمخزون — يُؤجَّل لما بعد الحصول على الوظيفة كهدف للسنة التالية</td>
+      <td><b>UWorld Step 2 CK</b> <span class="dip-badge prem">الأشمل</span></td>
+      <td>المعيار الذهبي عالميًا في الأسئلة السريرية</td>
+      <td>≈ 1,300 – 2,000 ر.س حسب المدة</td>
+      <td>أعمق شروحات — لكنه أوسع من SMLE ويستهلك وقتًا أطول؛ خيار لمن يريد درجة قصوى ولديه انضباط</td>
     </tr>
   </table></div>
-
   <div class="cert-grid" style="margin-top:14px">
     <div class="cert" style="border-top-color:var(--teal)">
       <h4>التوصية العملية</h4>
-      <div class="when">منتصف أغسطس – نوفمبر 2026 (عمل خلفي)</div>
-      <p><b>المسار المقترح:</b> دبلوم Alison في Operations Management (عنوان Diploma للسيرة) <b>بالتوازي مع</b> مسار إداري من دروب (شهادة سعودية معتمدة مجانية). التكلفة ≈ 270–470 ر.س، والنتيجة شهادتان. أما CPIM فهدف طموح للسنة التي تلي التوظيف.</p>
+      <div class="when">يوليو – أكتوبر 2026</div>
+      <p><b>بنك رئيسي واحد يُنهى بالكامل</b> خير من ثلاثة تُقضم أطرافها: بنك سعودي متخصص بالـ SMLE كأساس + التجميعات المجانية في الشهر الأخير كمعايرة. UWorld فقط إن كان الهدف درجة قصوى لتخصص شديد التنافسية والوقت يسمح. القاعدة: <b>حل الأسئلة يتفوق على القراءة</b> — والمحاكيات الدورية هي مقياس التقدم الوحيد الموثوق.</p>
       <div class="links">
-        <a class="free" href="https://doroob.sa" target="_blank">دروب (مجاني بالكامل)</a>
-        <a class="free" href="https://alison.com/courses?query=operations%20management" target="_blank">Alison Diploma</a>
-        <a href="https://www.coursera.org/search?query=operations%20management" target="_blank">Coursera</a>
-        <a href="https://www.ascm.org/learning-development/certifications-credentials/cpim/" target="_blank">ASCM CPIM</a>
+        <a href="https://yourmedpass.com" target="_blank">YourMedPass</a>
+        <a href="https://www.canadaqbank.com" target="_blank">CanadaQBank</a>
+        <a href="https://www.uworld.com" target="_blank">UWorld</a>
       </div>
     </div>
   </div>
@@ -741,109 +637,78 @@ tr:nth-child(even) td{background:#FAFCFE}
 
 <!-- ===== CERTIFICATIONS GUIDE ===== -->
 <div class="card">
-  <h2>دليل الشهادات — نبذة وروابط وتكلفة تقديرية</h2>
-  <div class="sub">التعلم على Alison ودروب مجاني بالكامل · دورات Udemy تنزل عليها خصومات متكررة تصل لـ 45–80 ر.س · الأسعار تقديرية وقابلة للتغير</div>
+  <h2>دليل الاختبارات والدورات — نبذة وروابط وتكلفة تقديرية</h2>
+  <div class="sub">الأسعار تقديرية بتاريخ يوليو 2026 وقابلة للتغير · الروابط الرسمية أولًا · يُسأل المستشفى دائمًا عن دورات مجانية أو مدعومة لمنسوبيه (كثير من المستشفيات الحكومية تقدم ACLS/ATLS بأسعار رمزية لأطباء الامتياز)</div>
   <div class="cert-grid">
 
     <div class="cert" style="border-top-color:var(--gold)">
-      <h4>GMP — Good Manufacturing Practice</h4>
-      <div class="when">يوليو 2026</div>
-      <p>ممارسات التصنيع الجيد: المعيار الإلزامي عالميًا (WHO / FDA / EU) لضمان جودة وسلامة المنتج الدوائي — المرافق، النظافة، منع التلوث، السجلات، وأدوار الإنتاج والجودة. أهم شهادة على الإطلاق في هذا المسار.</p>
-      <div class="meta"><b>المدة:</b> 3–8 ساعات تعلم ذاتي</div>
-      <div class="meta"><b>التكلفة:</b> Alison: تعلم مجاني + شهادة ≈ 90–150 ر.س · Udemy: ≈ 45–80 ر.س وقت الخصم</div>
+      <h4>SMLE — اختبار الترخيص الطبي السعودي</h4>
+      <div class="when">التحضير يوليو–أكتوبر · الاختبار منتصف أكتوبر 2026</div>
+      <p>اختبار محوسب عبر بروميتريك يقيس المعرفة السريرية، ودرجته من 200–800 هي أثقل عنصر في مفاضلة القبول ببرامج البورد: النجاح من 536 والتنافسية تبدأ عمليًا من 650+. يُحجز برقم أحقية من ممارس بلس (صالح سنة، يتيح 4 حجوزات).</p>
+      <div class="meta"><b>المدة:</b> جلسة واحدة (ساعات متصلة عبر بروميتريك)</div>
+      <div class="meta"><b>التكلفة:</b> ≈ 1,100 ر.س للمحاولة + رسوم إدارية لرقم الأحقية عبر ممارس بلس</div>
       <div class="links">
-        <a class="free" href="https://alison.com/tag/gmp" target="_blank">Alison (مجاني)</a>
-        <a href="https://www.udemy.com/course/good-manufacturing-practices-gmp-certification-course/" target="_blank">Udemy — GMP Certification</a>
-        <a href="https://www.udemy.com/topic/good-manufacturing-practice-gmp/" target="_blank">Udemy — كل دورات GMP</a>
-      </div>
-    </div>
-
-    <div class="cert">
-      <h4>GDP + Data Integrity / ALCOA+</h4>
-      <div class="when">أغسطس – أوائل سبتمبر 2026</div>
-      <p>ممارسات التوثيق الجيد (التوقيع، التاريخ، التصحيح الصحيح) وسلامة البيانات وفق ALCOA+. المصانع تسقط في التفتيش بسبب التوثيق أكثر من أي سبب آخر — وموضوع Data Integrity ساخن في تفتيشات SFDA وهيئات الدواء عالميًا.</p>
-      <div class="meta"><b>المدة:</b> 4–7 ساعات للاثنتين</div>
-      <div class="meta"><b>التكلفة:</b> ≈ 90–300 ر.س للاثنتين حسب المنصة</div>
-      <div class="links">
-        <a class="free" href="https://alison.com/courses?query=good%20documentation%20practice" target="_blank">Alison — GDP</a>
-        <a href="https://www.udemy.com/courses/search/?q=good%20documentation%20practice%20pharmaceutical" target="_blank">Udemy — GDP</a>
-        <a href="https://www.udemy.com/courses/search/?q=data%20integrity%20ALCOA%20pharmaceutical" target="_blank">Udemy — Data Integrity</a>
-      </div>
-    </div>
-
-    <div class="cert" style="border-top-color:var(--rose)">
-      <h4>SOP Development &amp; Document Control</h4>
-      <div class="when">أغسطس 2026</div>
-      <p>هرم الوثائق (Policy ← Procedure ← SOP ← Record)، بنية SOP القياسية، ودورة حياة الوثيقة. مهارة كتابة الإجراءات هي ما يميز المرشح للإدارة — معظم المشرفين ينفذون SOPs ولا يعرفون كتابتها.</p>
-      <div class="meta"><b>المدة:</b> 2–4 ساعات + التطبيق العملي</div>
-      <div class="meta"><b>التكلفة:</b> ≈ 0–80 ر.س (المفاهيم متوفرة مجانًا، ودورات Udemy متخصصة وقت الخصم)</div>
-      <div class="links">
-        <a href="https://www.udemy.com/courses/search/?q=SOP%20writing%20pharmaceutical" target="_blank">Udemy — SOP Writing</a>
-        <a class="free" href="https://alison.com/courses?query=document%20control" target="_blank">Alison — Document Control</a>
-      </div>
-    </div>
-
-    <div class="cert" style="border-top-color:var(--green)">
-      <h4>Production KPIs &amp; Target Setting</h4>
-      <div class="when">سبتمبر 2026</div>
-      <p>مؤشرات الأداء ومستهدفات الإنتاج: عائلة OEE، الفرق بين المقياس والمستهدف والفعلي، تدرج المستهدفات، وبناء تقرير الإنتاج اليومي. تُغطى ضمن الدبلوم المهني وتُعمَّق بدورة KPI متخصصة.</p>
-      <div class="meta"><b>المدة:</b> 3–6 ساعات + التطبيق</div>
-      <div class="meta"><b>التكلفة:</b> ≈ 0–80 ر.س (ضمن الدبلوم، أو دورة KPI مستقلة من Udemy)</div>
-      <div class="links">
-        <a href="https://www.udemy.com/courses/search/?q=KPI%20key%20performance%20indicators" target="_blank">Udemy — KPIs</a>
-        <a href="https://www.udemy.com/courses/search/?q=OEE%20manufacturing" target="_blank">Udemy — OEE</a>
-        <a class="free" href="https://doroob.sa" target="_blank">دروب — مهارات إدارية</a>
+        <a href="https://mumaris.scfhs.org.sa" target="_blank">ممارس بلس</a>
+        <a href="https://www.prometric.com/exams/schs/" target="_blank">بروميتريك — SCFHS</a>
+        <a class="free" href="https://scfhs.org.sa" target="_blank">موقع الهيئة</a>
       </div>
     </div>
 
     <div class="cert" style="border-top-color:var(--amber)">
-      <h4>CAPA · Deviation · Root Cause Analysis</h4>
-      <div class="when">منتصف سبتمبر – أكتوبر 2026</div>
-      <p>إدارة الانحرافات والإجراءات التصحيحية والوقائية وتحليل السبب الجذري (5 Why / Fishbone / Pareto). لغة إدارة الجودة — إتقانها يعني قيادة تحقيقات المشاكل وليس فقط الإبلاغ عنها، وهي مدخل طبيعي لـ Green Belt.</p>
-      <div class="meta"><b>المدة:</b> 3–6 ساعات لكل موضوع (تُدمج في دورة واحدة غالبًا)</div>
-      <div class="meta"><b>التكلفة:</b> ≈ 90–240 ر.س للمجموعة (2–3 دورات Udemy وقت الخصم)</div>
+      <h4>ACLS — دعم الحياة القلبي المتقدم</h4>
+      <div class="when">سبتمبر 2026</div>
+      <p>معتمدة من جمعية القلب السعودية (صالحة سنتين). متطلب فعلي لأي مقيم — تُظهر في الملف جاهزية سريرية وتُطلب في أول أسابيع الإقامة على أي حال، فإنجازها الآن يكسب نقاطًا ويوفر وقتًا لاحقًا.</p>
+      <div class="meta"><b>المدة:</b> يومان (أو مدمج HeartCode: أونلاين + جلسة عملية)</div>
+      <div class="meta"><b>التكلفة:</b> ≈ 770 – 900 ر.س في جدة شاملة رسوم الجمعية والشهادة</div>
       <div class="links">
-        <a href="https://www.udemy.com/courses/search/?q=CAPA%20deviation%20pharmaceutical" target="_blank">Udemy — CAPA/Deviation</a>
-        <a href="https://www.udemy.com/courses/search/?q=root%20cause%20analysis" target="_blank">Udemy — RCA</a>
-        <a class="free" href="https://alison.com/courses?query=root%20cause%20analysis" target="_blank">Alison (مجاني)</a>
+        <a href="https://clinicalsim.com" target="_blank">ClinicalSim جدة</a>
+        <a href="https://shopcpr.heart.org/ar/courses/acls" target="_blank">AHA — ACLS</a>
       </div>
     </div>
 
-    <div class="cert" style="border-top-color:var(--purple)">
-      <h4>Lean Six Sigma Green Belt (LSSGB)</h4>
-      <div class="when">أكتوبر – ديسمبر 2026 (الاختبار في ديسمبر)</div>
-      <p>منهجية DMAIC (تعريف ← قياس ← تحليل ← تحسين ← ضبط) لتقليل الهدر والانحراف في العمليات. أثقل وأقوى شهادة في الخطة — تُفتح بها أبواب أدوار التحسين المستمر (Continuous Improvement) إضافة للإنتاج. تحضير 3–4 ساعات أسبوعيًا لمدة 10–12 أسبوعًا.</p>
-      <div class="meta"><b>جهات الاعتماد:</b> <b>التوصية: IASSC/PeopleCert</b> (مراقَب، أقوى اعترافًا) ≈ 1,100–1,350 ر.س — الإنجليزية ليست عائقًا · البديل الاقتصادي: CSSC (مفتوح الكتاب، دليل مجاني، بلا انتهاء) ≈ 600–800 ر.س · ASQ يشترط 3 سنوات خبرة موثقة ≈ 1,300–1,650 ر.س</div>
-      <div class="meta"><b>التحضير:</b> دليل CSSC المجاني + دورة Udemy شاملة ≈ 60–80 ر.س</div>
+    <div class="cert" style="border-top-color:var(--rose)">
+      <h4>ATLS — دعم الحياة المتقدم في الإصابات</h4>
+      <div class="when">نوفمبر 2026 — بعد اختبار SMLE عمدًا</div>
+      <p>الدورة الأثقل وزنًا في ملفات الجراحة والطوارئ تحديدًا (التخصصان المرشحان). النسخة المعتمدة من كلية الجراحين الأمريكية (ACS) هي الأقوى اعترافًا، وتوجد نسخ معتمدة من الهيئة أقل كلفة.</p>
+      <div class="meta"><b>المدة:</b> يومان مكثفان</div>
+      <div class="meta"><b>التكلفة:</b> نسخة ACS ≈ 3,000 – 3,300 ر.س · نسخ معتمدة من الهيئة أقل (تُقارن الجهة قبل الدفع)</div>
       <div class="links">
-        <a class="free" href="https://www.sixsigmacouncil.org/six-sigma-training-material/" target="_blank">CSSC — دليل مجاني</a>
-        <a href="https://www.sixsigmacouncil.org/lean-six-sigma-green-belt-certification-standard/" target="_blank">CSSC — الاختبار</a>
-        <a href="https://iassc.org/six-sigma-certification/green-belt-certification/" target="_blank">IASSC</a>
-        <a href="https://www.udemy.com/courses/search/?q=lean%20six%20sigma%20green%20belt" target="_blank">Udemy — تحضير</a>
+        <a href="https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support/" target="_blank">ACS — ATLS</a>
+        <a href="https://clinicalsim.com" target="_blank">مراكز جدة/الرياض</a>
       </div>
     </div>
 
-    <div class="cert" style="border-top-color:var(--teal)">
-      <h4>ISO 9001:2015 — Awareness + Internal Auditor</h4>
-      <div class="when">نوفمبر 2026</div>
-      <p>نظام إدارة الجودة الأشهر عالميًا: بنود المواصفة، النهج القائم على العمليات، PDCA، والتدقيق الداخلي. معظم مصانع الأدوية السعودية حاصلة على ISO 9001 إلى جانب ترخيص SFDA — وفهم التدقيق الداخلي يفتح مسار Production Compliance.</p>
-      <div class="meta"><b>المدة:</b> Awareness ساعتان–4 · Internal Auditor يوم–يومان تدريب مكافئ</div>
-      <div class="meta"><b>التكلفة:</b> Awareness (Udemy/Alison) ≈ 45–150 ر.س · Internal Auditor أونلاين ≈ 80–300 ر.س (المعتمد حضوريًا أغلى ويُؤجَّل)</div>
+    <div class="cert" style="border-top-color:var(--green)">
+      <h4>تجديد BLS + دورة GCP البحثية</h4>
+      <div class="when">حسب تاريخ انتهاء BLS الحالية · GCP في أي وقت</div>
+      <p>BLS الحالية (جمعية القلب السعودية) صالحة سنتين — يُتحقق من تاريخها ويُجدَّد قبل انتهائها. ودورة Good Clinical Practice المجانية (NIDA/NIH) شهادة بحثية معترف بها تُضاف للـ CV وتخدم البحثين الجاريين.</p>
+      <div class="meta"><b>المدة:</b> BLS نصف يوم · GCP ≈ 3 ساعات أونلاين</div>
+      <div class="meta"><b>التكلفة:</b> BLS ≈ 150 – 250 ر.س · GCP مجانية بالكامل</div>
       <div class="links">
-        <a href="https://www.udemy.com/courses/search/?q=ISO%209001%20internal%20auditor" target="_blank">Udemy — Internal Auditor</a>
-        <a class="free" href="https://alison.com/courses?query=iso%209001" target="_blank">Alison — ISO 9001</a>
+        <a class="free" href="https://gcp.nidatraining.org" target="_blank">GCP — NIDA (مجاني)</a>
+        <a href="https://sha.org.sa" target="_blank">جمعية القلب السعودية</a>
+      </div>
+    </div>
+
+    <div class="cert" style="border-top-color:var(--blue)">
+      <h4>ملف Matching 2027 — رسوم ومتطلبات الهيئة</h4>
+      <div class="when">التقديم ≈ 12 – 28 يناير 2027 (قياسًا على دورة 2026)</div>
+      <p>التقديم على برامج البورد السعودي عبر بوابة القبول والمطابقة الإلكترونية: المفاضلة تشمل درجة SMLE والمعدل والمقابلات الشخصية (دورة 2026: النتائج في أبريل، المقابلات أبريل–مايو، النتيجة النهائية يونيو). المتطلبات: بكالوريوس تخصص صحي + إثبات الامتياز + السجل الأكاديمي + اللياقة الطبية.</p>
+      <div class="meta"><b>التكلفة:</b> رسوم تقديم/تسجيل تُعلن في دليل كل دورة — تُرصد في الميزانية كمبلغ احتياطي</div>
+      <div class="links">
+        <a class="free" href="https://scfhs.org.sa/ar/saudi-board" target="_blank">البورد السعودي</a>
+        <a class="free" href="https://scfhs.org.sa/en/applying-postgraduate-programs" target="_blank">دليل التقديم</a>
       </div>
     </div>
 
     <div class="cert" style="border-top-color:var(--slate)">
-      <h4>Advanced Excel + Dashboard</h4>
-      <div class="when">منتصف أكتوبر – نوفمبر 2026</div>
-      <p>Pivot Tables وXLOOKUP وSUMIFS وبناء Dashboard إنتاج. المهارة التي تحوّل الخبرة التشغيلية إلى تقارير تُعرض أمام الإدارة — وملف الـ Dashboard الناتج يُعرض مباشرة في المقابلات.</p>
-      <div class="meta"><b>المدة:</b> 10–20 ساعة</div>
-      <div class="meta"><b>التكلفة:</b> Microsoft Learn: مجاني بالكامل · Udemy: ≈ 45–80 ر.س · Coursera: ضمن الاشتراك</div>
+      <h4>مهارات المقابلات والعرض العلمي</h4>
+      <div class="when">ديسمبر 2026</div>
+      <p>مقابلات القبول تزن كثيرًا في المفاضلة بعد الفرز الأولي بالدرجات. التدريب هنا مجاني بالكامل: مقابلات تجريبية مع مقيمين، وتسجيل الذات بالفيديو ومراجعته، وصياغة قصص من الـ Logbook بصيغة STAR (موقف ← مهمة ← تصرف ← نتيجة).</p>
+      <div class="meta"><b>المدة:</b> 3 جلسات تدريبية على الأقل</div>
+      <div class="meta"><b>التكلفة:</b> 0 ر.س — العملة هنا العلاقات لا المال</div>
       <div class="links">
-        <a class="free" href="https://learn.microsoft.com/training/browse/?terms=excel" target="_blank">Microsoft Learn (مجاني)</a>
-        <a href="https://www.udemy.com/topic/excel/" target="_blank">Udemy — Excel</a>
+        <a class="free" href="https://www.youtube.com/results?search_query=residency+interview+questions" target="_blank">نماذج مقابلات (مجاني)</a>
       </div>
     </div>
 
@@ -853,25 +718,24 @@ tr:nth-child(even) td{background:#FAFCFE}
 <!-- ===== BUDGET ===== -->
 <div class="card" style="border-top-color:var(--gold)">
   <h2>الميزانية التقديرية للخطة كاملة</h2>
-  <div class="sub">سيناريوهان حسب المنصات — Green Belt هو البند الأكبر، وباقي الشهادات يمكن أن تكون شبه مجانية</div>
+  <div class="sub">سيناريوهان — SMLE وATLS هما البندان الأكبر، والباقي يمكن ضغطه كثيرًا</div>
   <div class="tbl-scroll"><table>
     <tr><th>البند</th><th>التوقيت</th><th>السيناريو الاقتصادي</th><th>السيناريو القياسي</th></tr>
-    <tr><td>GMP</td><td>يوليو</td><td>Udemy خصم ≈ 60 ر.س</td><td>Alison شهادة ≈ 120 ر.س</td></tr>
-    <tr><td>GDP + Data Integrity</td><td>أغسطس</td><td>Udemy ≈ 90 ر.س</td><td>Alison ≈ 240 ر.س</td></tr>
-    <tr><td>SOP / Document Control</td><td>أغسطس</td><td>مصادر مجانية ≈ 0 ر.س</td><td>Udemy ≈ 70 ر.س</td></tr>
-    <tr><td>الدبلوم المهني (Production &amp; Ops)</td><td>أغسطس–نوفمبر</td><td>دروب مجاني ≈ 0 ر.س</td><td>Alison Diploma ≈ 350 ر.س + دروب</td></tr>
-    <tr><td>KPI / OEE</td><td>سبتمبر</td><td>ضمن الدبلوم ≈ 0 ر.س</td><td>دورة Udemy ≈ 70 ر.س</td></tr>
-    <tr><td>CAPA / Deviation / RCA</td><td>سبتمبر–أكتوبر</td><td>دورتان Udemy ≈ 120 ر.س</td><td>3 دورات ≈ 200 ر.س</td></tr>
-    <tr><td><b>Lean Six Sigma Green Belt</b></td><td>أكتوبر–ديسمبر</td><td>CSSC (دليل مجاني + اختبار) ≈ 700 ر.س</td><td>IASSC + دورة تحضير ≈ 1,300 ر.س</td></tr>
-    <tr><td>ISO 9001 Awareness + Internal Auditor</td><td>نوفمبر</td><td>Udemy ≈ 120 ر.س</td><td>دورات أشمل ≈ 300 ر.س</td></tr>
-    <tr><td>Advanced Excel</td><td>أكتوبر–نوفمبر</td><td>Microsoft Learn ≈ 0 ر.س</td><td>Udemy ≈ 70 ر.س</td></tr>
-    <tr><td>احتياطي (LinkedIn Premium شهر / طباعة)</td><td>نوفمبر–ديسمبر</td><td>≈ 0–50 ر.س</td><td>≈ 120–160 ر.س</td></tr>
+    <tr><td>رقم الأحقية + رسوم إدارية (ممارس بلس)</td><td>يوليو</td><td colspan="2">≈ 300 – 1,100 ر.س (حسب فئة الطلب — يُتحقق عند التقديم)</td></tr>
+    <tr><td>بنك أسئلة SMLE</td><td>يوليو–أكتوبر</td><td>بنك سعودي 3 أشهر ≈ 250 ر.س</td><td>بنك سعودي + UWorld ≈ 1,600 ر.س</td></tr>
+    <tr><td>اختبار SMLE (بروميتريك)</td><td>أكتوبر</td><td>≈ 1,100 ر.س</td><td>≈ 1,100 ر.س</td></tr>
+    <tr><td>احتياطي إعادة SMLE (صمام الأمان)</td><td>ديسمبر</td><td>0 (لا يُدفع إلا عند الحاجة)</td><td>≈ 1,100 ر.س</td></tr>
+    <tr><td>ACLS</td><td>سبتمبر</td><td>≈ 770 ر.س (أو مدعومة من المستشفى)</td><td>≈ 900 ر.س</td></tr>
+    <tr><td>ATLS</td><td>نوفمبر</td><td>نسخة معتمدة من الهيئة ≈ 1,500 ر.س</td><td>نسخة ACS ≈ 3,300 ر.س</td></tr>
+    <tr><td>تجديد BLS + GCP</td><td>حسب الانتهاء</td><td>GCP مجانية + BLS ≈ 150 ر.س</td><td>≈ 250 ر.س</td></tr>
+    <tr><td>رسوم نشر/معالجة الأبحاث (إن وُجدت)</td><td>سبتمبر–ديسمبر</td><td>مجلات بلا رسوم ≈ 0 ر.س</td><td>≈ 500 ر.س</td></tr>
+    <tr><td>احتياطي (رسوم تقديم الماتشينق / طباعة / تنقل)</td><td>ديسمبر–يناير</td><td>≈ 200 ر.س</td><td>≈ 500 ر.س</td></tr>
   </table></div>
   <div class="budget-total">
-    <div class="bt"><h4>السيناريو الاقتصادي</h4><div class="amt">≈ 1,090 – 1,140 ر.س</div><p>دروب + المصادر المجانية + CSSC للـ Green Belt — Green Belt وحده ثلثا الميزانية</p></div>
-    <div class="bt std"><h4>السيناريو القياسي</h4><div class="amt">≈ 2,700 – 2,900 ر.س</div><p>شهادات Alison الموثقة + IASSC Green Belt (الأقوى اعترافًا) + ISO أشمل</p></div>
+    <div class="bt"><h4>السيناريو الاقتصادي</h4><div class="amt">≈ 3,200 – 4,000 ر.س</div><p>بنك أسئلة واحد + دورات مدعومة/معتمدة محليًا — SMLE ورسومه ثلث الميزانية</p></div>
+    <div class="bt std"><h4>السيناريو القياسي</h4><div class="amt">≈ 8,300 – 9,400 ر.س</div><p>بنكا أسئلة + ATLS نسخة ACS + احتياطي إعادة الاختبار كامل</p></div>
   </div>
-  <div class="disclaimer">ملاحظة: الأسعار تقديرية بتاريخ يوليو 2026 وتتغير حسب العروض وسعر الصرف. قواعد عملية: لا تُشترى دورة Udemy بالسعر الكامل (الخصومات أسبوعية) · التوصية لهذا الملف: IASSC (لا عائق لغة) — ودليل CSSC الدراسي المجاني يصلح للتحضير في الحالتين · إذا كانت الميزانية ضيقة يمكن تأجيل اختبار Green Belt للربع الأول من 2027 وكتابته في السيرة "In Progress" — القيمة التسويقية تبدأ من بدء التحضير.</div>
+  <div class="disclaimer">الأسعار تقديرية بتاريخ يوليو 2026 وتتغير حسب المراكز والعروض وسعر الصرف. قواعد عملية: يُسأل مستشفى الامتياز أولًا — كثير من الدورات تُقدَّم لأطباء الامتياز مجانًا أو مدعومة · لا يُشترى اشتراك بنك أسئلة طويل بلا داعٍ (3–4 أشهر تكفي) · إن ضاقت الميزانية: ATLS هو البند الوحيد القابل للتأجيل إلى أول سنة إقامة دون أثر جوهري على الملف — SMLE والبحث لا يُمسان.</div>
 </div>
 
 <!-- SUMMARY TABLE -->
@@ -879,32 +743,31 @@ tr:nth-child(even) td{background:#FAFCFE}
   <h2>الجدول المختصر</h2>
   <div class="tbl-scroll"><table>
     <tr><th>الشهر</th><th>الفترة</th><th>محور التركيز</th><th>المخرج</th></tr>
-    <tr><td>1</td><td>يوليو</td><td>GMP / GDP / Data Integrity (+ السيرة في الخلفية)</td><td>شهادات الجودة الدوائية + CV جاهز</td></tr>
-    <tr><td>2</td><td>أغسطس</td><td>السياسات والإجراءات وSOPs + بدء الدبلوم</td><td>SOP مكتوب + فهم هرم الوثائق</td></tr>
-    <tr><td>3</td><td>سبتمبر</td><td>KPIs ومستهدفات الإنتاج + بدء مشروع التحسين الموثق</td><td>نموذج متابعة + لغة الأرقام</td></tr>
-    <tr><td>4</td><td>أكتوبر</td><td>CAPA / RCA + انطلاق Green Belt + Excel</td><td>3 حالات محللة + Define/Measure</td></tr>
-    <tr><td>5</td><td>نوفمبر</td><td>ISO 9001 + Dashboard + ختام الدبلوم + بدء التقديم</td><td>شهادتا ISO + Dashboard + أول تقديمات</td></tr>
-    <tr><td>6</td><td>ديسمبر</td><td>اختبار Green Belt + تقديم مكثف</td><td>شهادة GB + مقابلات</td></tr>
+    <tr><td>1</td><td>يوليو</td><td>حسم التخصص + انطلاق SMLE (+ ممارس بلس والسيرة في الخلفية)</td><td>قرار تخصص مكتوب + خط أساس</td></tr>
+    <tr><td>2</td><td>أغسطس</td><td>بنك الأسئلة المكثف + مسودة المراجعة المنهجية</td><td>إيقاع يومي مستقر + مسودة بحث</td></tr>
+    <tr><td>3</td><td>سبتمبر</td><td>محاكيات + حجز الاختبار + ACLS + تقديم البحث الأول</td><td>جاهزية اختبار + Submitted + ACLS</td></tr>
+    <tr><td>4</td><td>أكتوبر</td><td>اختبار SMLE + استئناف البحث الثاني</td><td>درجة موثقة + بحث ثانٍ Submitted</td></tr>
+    <tr><td>5</td><td>نوفمبر</td><td>ملف الماتشينق + خطابات التوصية + ATLS</td><td>ملف مكتمل + ATLS</td></tr>
+    <tr><td>6</td><td>ديسمبر</td><td>مقابلات تدريبية + جاهزية يوم فتح البوابة</td><td>تقديم Matching 2027</td></tr>
   </table></div>
 
-  <p style="font-size:13px;margin-top:16px"><b style="color:var(--navy)">الخلاصة:</b> السيرة والبيانات لا تستهلك الخطة — تُبنى في الخلفية. المسار الفني:</p>
+  <p style="font-size:13px;margin-top:16px"><b style="color:var(--navy)">الخلاصة:</b> الإجراءات الإدارية والسيرة لا تستهلك الخطة — تُبنى في الخلفية. المسار الفني:</p>
   <div class="flow">
-    <span class="step">GMP / GDP</span><span class="sep">←</span>
-    <span class="step">SOPs والسياسات</span><span class="sep">←</span>
-    <span class="step">KPI والمستهدفات</span><span class="sep">←</span>
-    <span class="step">CAPA + Green Belt</span><span class="sep">←</span>
-    <span class="step">ISO + Dashboard</span><span class="sep">←</span>
-    <span class="step">تقديم وظيفي</span>
+    <span class="step">حسم التخصص</span><span class="sep">←</span>
+    <span class="step">SMLE 650+</span><span class="sep">←</span>
+    <span class="step">بحثان Submitted</span><span class="sep">←</span>
+    <span class="step">ACLS / ATLS</span><span class="sep">←</span>
+    <span class="step">ملف + خطابات</span><span class="sep">←</span>
+    <span class="step">Matching 2027</span>
   </div>
 </div>
 
 <!-- FINAL POSITIONING -->
 <div class="final">
   <h2>الملخص المهني (Professional Summary) بعد إتمام الخطة</h2>
-  <p class="note">نموذج جاهز لأعلى السيرة الذاتية وLinkedIn:</p>
-  <div class="en">Lean Six Sigma Green Belt–certified Production Supervisor with 4 years of pharmaceutical manufacturing experience and 8+ years of cross-industry supervisory experience, strong GMP/GDP documentation knowledge, SOP development, KPI monitoring and target setting, ISO 9001 internal auditing, a professional diploma in Production &amp; Operations Management, and English proficiency developed in the USA (IELTS / TOEFL certified).</div>
+  <p class="note">نموذج جاهز لأعلى السيرة الأكاديمية — تُعبأ الأرقام بين الأقواس بعد تحققها:</p>
+  <div class="en">Medical intern (MBBS, University of Jeddah) with an SMLE score of [score], two research projects (a systematic review &amp; meta-analysis on robot-assisted vs. video-assisted thoracic surgery, and a cross-sectional study — [publication status]), rotations across four major Jeddah hospitals including Emergency Medicine and Pediatric Surgery, ACLS and ATLS certified, and proven leadership as co-founder of a smart health volunteering initiative coordinating 3,000+ volunteers, with multiple first-place awards in scientific competitions.</div>
 </div>
-
 
 </div><!-- /tab6 -->
 
@@ -912,35 +775,35 @@ tr:nth-child(even) td{background:#FAFCFE}
 <div id="tab5" style="display:none">
 
 <div class="card" style="border-top-color:var(--gold)">
-  <h2>السلم الوظيفي 2027 – 2033 · معالم لا سنوات</h2>
-  <div class="sub">الترقيات مربوطة بمعالم (التخرج، الأداء الموثق، الفرصة) لا بالتقويم — سيناريو الـ 5 سنوات هو الطموح، والـ 7 هو المتوقع، وكلاهما نجاح: مدير مصنع بعمر 41–42</div>
+  <h2>السلم المهني 2027 – 2033 · معالم لا سنوات</h2>
+  <div class="sub">في الطب الترقّي محكوم بهيكل البورد لا بالطموح وحده — سيناريو الـ 5 سنوات: بورد بلا رسوب ولا إعادة سنة، وسيناريو الـ 7: مع إعادة اختبار أو سنة، وكلاهما طبيعي. الاستشارية نفسها معلم ما بعد الخطة (≈ 2034–2035) — والقول بغير ذلك مجاملة لا تخطيط</div>
   <div class="ladder">
-    <div class="rung"><div class="yr">2027</div><div class="pos">Shift Production Manager</div><div class="cert">CPIM + بدء البكالوريوس</div></div>
-    <div class="rung"><div class="yr">2028</div><div class="pos">Assistant Production Manager</div><div class="cert">Black Belt (قابلة للتأجيل)</div></div>
-    <div class="rung"><div class="yr">2029</div><div class="pos">ترسيخ المنصب — سنة تنفّس</div><div class="cert">بكالوريوس + توثيق مشاريع</div></div>
-    <div class="rung"><div class="yr">2030</div><div class="pos">التخرج ← Production Manager</div><div class="cert">البكالوريوس + PMP</div></div>
-    <div class="rung"><div class="yr">2031</div><div class="pos">Production / Operations Manager</div><div class="cert">NEBOSH (اختيارية)</div></div>
-    <div class="rung last"><div class="yr">2032–33</div><div class="pos">Plant Manager — مدير مصنع</div><div class="cert">بدء MBA</div></div>
+    <div class="rung"><div class="yr">2027</div><div class="pos">قبول الإقامة — R1</div><div class="cert">Matching يناير · بدء التدريب</div></div>
+    <div class="rung"><div class="yr">2028</div><div class="pos">R2</div><div class="cert">ATLS + أول بحث منشور كمقيم</div></div>
+    <div class="rung"><div class="yr">2029</div><div class="pos">R3 — سنة الجزء الأول</div><div class="cert">اجتياز Part I (محمية من أي إضافات)</div></div>
+    <div class="rung"><div class="yr">2030</div><div class="pos">R4 + Chief Resident</div><div class="cert">مشروع تحسين جودة موثق</div></div>
+    <div class="rung"><div class="yr">2031–32</div><div class="pos">البورد السعودي</div><div class="cert">النهائي الكتابي + الإكلينيكي ← نائب أول</div></div>
+    <div class="rung last"><div class="yr">2032–33</div><div class="pos">نائب أول + زمالة دقيقة</div><div class="cert">بوابة الاستشارية ورئاسة القسم 2034+</div></div>
   </div>
-  <div class="disclaimer" style="margin-top:12px"><b>القاعدتان الحاكمتان:</b> (1) <b>البكالوريوس أولوية مطلقة</b> — أي شهادة تزاحمه تتأجل هي، لا هو. (2) الترقية معلم لا موعد: "Production Manager" يعني <b>بعد التخرج</b> أو عبر الانتقال لمصنع جديد — أيهما أسبق. في صناعة الأدوية كل درجة تأخذ عادة 2–3 سنوات؛ ضغطها يتطلب الرافعة السعودية أدناه وانتقالًا خارجيًا ذكيًا أو اثنين.</div>
+  <div class="disclaimer" style="margin-top:12px"><b>القاعدتان الحاكمتان:</b> (1) <b>اختبارات البورد أولوية مطلقة</b> — أي دورة أو بحث أو مسؤولية تزاحم سنة اختبار (الجزء الأول 2029، النهائي 2031–32) تتأجل هي لا الاختبار. (2) الترقية معلم لا موعد: "نائب أول" يعني اجتياز النهائي، و"استشاري" يعني نائب أول لسنوات + زمالة أو خبرة معتمدة — التواريخ أعلاه نوافذ. مدة الإقامة نفسها تختلف بالتخصص (الطوارئ 4 سنوات، الجراحة العامة 5+) فالسلم يُعاير بعد قرار التخصص وقبوله.</div>
 </div>
 
 <!-- SAUDI LEVERAGE -->
 <div class="card" style="border-top-color:var(--teal)">
-  <h2>الرافعة السعودية — أكبر مسرّع في الخطة</h2>
-  <div class="sub">ما يجعل سيناريو الـ 5 سنوات ممكنًا أصلًا</div>
+  <h2>الرافعة السعودية — أكبر مسرّع في المسار</h2>
+  <div class="sub">ما يميز هذا الجيل من الأطباء السعوديين عن كل من سبقه</div>
   <div class="tbl-scroll"><table>
     <tr><th>الرافعة</th><th>لماذا تعمل</th><th>كيف تُستغل</th></tr>
-    <tr><td><b>توطين الصناعات الدوائية</b></td><td>مصانع أدوية جديدة تُبنى وتتوسع في المملكة، والمناصب القيادية الإنتاجية مطلوب فيها سعوديون بشدة — العرض أقل من الطلب</td><td>مراقبة إعلانات المصانع الجديدة والتوسعات من 2027 · مصنع جديد يعني هيكلًا يُبنى من الصفر — لقب أعلى بخبرة أقل</td></tr>
-    <tr><td><b>الانتقال الخارجي كمسرّع ألقاب</b></td><td>الترقية الداخلية تعطي درجة كل 2–3 سنوات؛ الانتقال الذكي يقفز درجة فورًا</td><td>انتقالتان مدروستان خلال المسار (تقريبًا 2027 و2030) — لا أكثر، فكثرة التنقل تصير علامة سلبية</td></tr>
-    <tr><td><b>الشبكة المهنية</b></td><td>مناصب Plant Manager نادرًا ما تُعلن — تُملأ بالترشيح</td><td>من 2027 لا 2031: علاقات مع مديري مصانع القطاع، مجموعات الصناعات الدوائية، LinkedIn نشط بمحتوى مهني</td></tr>
+    <tr><td><b>التوسع الصحي (التخصيص والمدن الطبية)</b></td><td>مستشفيات ومجمعات جديدة تفتح وتتوسع ضمن تحول القطاع الصحي، والكوادر السعودية المتخصصة مطلوبة بشدة في المناصب السريرية والقيادية</td><td>مراقبة المنشآت الجديدة من سنوات الإقامة الأخيرة — منشأة تُبنى من الصفر تعني وصولًا أسرع لمناصب نائب أول ثم استشاري ورئيس وحدة</td></tr>
+    <tr><td><b>البحث كعملة تنافسية</b></td><td>النشر العلمي يفرز المرشحين في كل بوابة: الماتشينق، الزمالات، الترقيات الأكاديمية — وقلة من المقيمين ينشرون بانتظام</td><td>بحث منشور واحد على الأقل كل سنة (القاعدة من الخطة القصيرة تستمر) + الانضمام لمجموعة بحثية في البرنامج من R1</td></tr>
+    <tr><td><b>الشبكة العلمية والجمعيات</b></td><td>الزمالات والفرص القيادية تُملأ غالبًا بالترشيح والسمعة داخل التخصص لا بالإعلانات</td><td>عضوية الجمعية العلمية السعودية للتخصص من R1 · حضور مؤتمر التخصص السنوي بعرض أو ملصق لا كمستمع · علاقات مع رؤساء البرامج</td></tr>
   </table></div>
 </div>
 
 <!-- 5-7Y GANTT -->
 <div class="card">
   <h2>مخطط Gantt — المسار الكامل 2027 – 2033</h2>
-  <div class="sub">كل عمود = نصف سنة · الأشرطة الباهتة = جهد جزئي أو نافذة مرنة · يبدأ فور انتهاء خطة الـ 6 أشهر</div>
+  <div class="sub">كل عمود = نصف سنة · الأشرطة الباهتة = جهد جزئي أو نافذة مرنة · يبدأ فور انتهاء خطة الـ 6 أشهر · المدد معايرة على إقامة 5 سنوات (تُضغط سنة لو كان التخصص 4 سنوات)</div>
   <div class="gantt-scroll"><div class="gantt gantt5">
     <div class="g-head">
       <div class="g-corner">المسار</div>
@@ -953,56 +816,56 @@ tr:nth-child(even) td{background:#FAFCFE}
       <div class="g-mon">2033<small>سنة 7</small></div>
     </div>
 
-    <div class="g-group">التعليم — العمود الفقري</div>
-    <div class="g-row"><div class="g-label">البكالوريوس (SEU / KAU) — تخرج ≈ 2030–31</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green"></div></div><div class="g-cell"><div class="g-bar bg-green light">تخرج</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">MBA — بوابة مدير الشركة</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-purple light"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div></div>
+    <div class="g-group">التدريب — العمود الفقري</div>
+    <div class="g-row"><div class="g-label">إتمام الامتياز + نتيجة الماتشينق (يونيو)</div><div class="g-cell"><div class="g-bar bg-slate">قبول</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">الإقامة R1 ← R5 (بورد سعودي)</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">Chief Resident — نافذة الترشح</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
 
-    <div class="g-group">الشهادات الاحترافية — واحدة ثقيلة في السنة، والبكالوريوس فوق الجميع</div>
-    <div class="g-row"><div class="g-label">ASCM CPIM</div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue">اختبار</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">LSS Black Belt (IASSC) — نافذة مرنة: تتأجل لو الدراسة ثقيلة</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"><div class="g-bar bg-amber">اختبار</div></div><div class="g-cell"><div class="g-bar bg-amber light">بديل</div></div><div class="g-cell"><div class="g-bar bg-amber light">بديل</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">PMP — بعد التخرج (أهلية 36 شهرًا بلا خطر تدقيق)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-rose light"></div></div><div class="g-cell"><div class="g-bar bg-rose"></div></div><div class="g-cell"><div class="g-bar bg-rose">اختبار</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">NEBOSH IGC — اختيارية (تسقط لو تدريب السلامة متوفر داخليًا)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-group">اختبارات البورد — فوق كل شيء آخر</div>
+    <div class="g-row"><div class="g-label">اختبارات الترقية السنوية (التقويم المستمر)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue light"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">اختبار الجزء الأول (Part I)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-blue"></div></div><div class="g-cell"><div class="g-bar bg-blue">اختبار</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">النهائي الكتابي + الإكلينيكي (البورد)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-rose"></div></div><div class="g-cell"><div class="g-bar bg-rose">اختبار</div></div><div class="g-cell"><div class="g-bar bg-rose light">بديل</div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
 
-    <div class="g-group">المسار الوظيفي — معالم مرنة</div>
-    <div class="g-row"><div class="g-label">Shift Production Manager</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">Assistant Production Manager</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">Production Manager — المعلم: التخرج أو مصنع جديد</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-slate light"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"><div class="g-bar bg-slate"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
-    <div class="g-row"><div class="g-label">Plant Manager — نافذة الوصول</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold">الهدف</div></div></div>
+    <div class="g-group">الدورات والبحث — واحدة ثقيلة في السنة والاختبارات فوق الجميع</div>
+    <div class="g-row"><div class="g-label">ATLS (إن لم تُنجز في الخطة القصيرة)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-amber"></div></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+    <div class="g-row"><div class="g-label">بحث منشور + عرض مؤتمر كل سنة</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-green light"></div></div></div>
+    <div class="g-row"><div class="g-label">دبلوم/ماجستير مساند (تعليم طبي أو إدارة صحية) — اختياري بعد البورد</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div></div>
 
-    <div class="g-group">مسارات مستمرة</div>
-    <div class="g-row"><div class="g-label">الشبكة المهنية + مراقبة المصانع الجديدة</div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div></div>
-    <div class="g-row"><div class="g-label">مشروع تحسين موثق كل سنة + ملف إنجازات</div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div></div>
+    <div class="g-group">ما بعد البورد — بوابة الاستشارية</div>
+    <div class="g-row"><div class="g-label">نائب أول (Senior Registrar)</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-gold light"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div><div class="g-cell"><div class="g-bar bg-gold"></div></div></div>
+    <div class="g-row"><div class="g-label">الزمالة الدقيقة — نافذة التقديم والبدء</div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"><div class="g-bar bg-purple light"></div></div><div class="g-cell"><div class="g-bar bg-purple"></div></div><div class="g-cell"><div class="g-bar bg-purple">الهدف</div></div></div>
+    <div class="g-row"><div class="g-label">الشبكة العلمية + الجمعيات + المؤتمرات</div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div><div class="g-cell"><div class="g-bar bg-teal light"></div></div></div>
   </div></div>
   <div class="g-legend">
-    <span><i class="bg-green"></i> البكالوريوس</span>
-    <span><i class="bg-blue"></i> CPIM</span>
-    <span><i class="bg-amber"></i> Black Belt</span>
-    <span><i class="bg-rose"></i> PMP</span>
-    <span><i class="bg-teal"></i> NEBOSH / الشبكة</span>
-    <span><i class="bg-purple"></i> MBA</span>
-    <span><i class="bg-slate"></i> المناصب</span>
-    <span><i class="bg-gold"></i> Plant Manager / الإنجازات</span>
+    <span><i class="bg-slate"></i> التدريب والمناصب</span>
+    <span><i class="bg-blue"></i> اختبارات الترقية والجزء الأول</span>
+    <span><i class="bg-rose"></i> النهائي (البورد)</span>
+    <span><i class="bg-amber"></i> ATLS</span>
+    <span><i class="bg-green"></i> البحث السنوي</span>
+    <span><i class="bg-purple"></i> الزمالة</span>
+    <span><i class="bg-teal"></i> الشبكة / الدراسات المساندة</span>
+    <span><i class="bg-gold"></i> نائب أول</span>
   </div>
-  <div class="disclaimer" style="margin-top:10px"><b>ملاحظتان على القراءة:</b> الانتقالتان الخارجيتان المدروستان (تقريبًا 2027 و2030) هما ما يضغط أشرطة المناصب لليسار — بدونهما تنزاح كلها نصف سنة إلى سنة. وشريط Plant Manager نافذة (2032–2033) لا موعدًا: أول فرصة تستوفي الشروط داخلها تُقتنص.</div>
+  <div class="disclaimer" style="margin-top:10px"><b>ملاحظتان على القراءة:</b> شريط "بديل" في النهائي يعني أن إعادة الاختبار مرة واحدة سيناريو عادي إحصائيًا لا كارثة — وهو الفرق بين مسار الـ 5 والـ 7 سنوات. وشريط الزمالة نافذة لا موعدًا: بعض التخصصات تتيح التقديم فور البورد وبعضها يشترط سنة نائب أول — أول فرصة تستوفي الشروط تُقتنص، داخل المملكة أو خارجها (كندا/أستراليا للزمالات السريرية).</div>
 </div>
 
 <!-- YEAR 2027 -->
 <div class="month open" data-color="blue">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum" style="background:var(--blue);color:#fff"><b>27</b><span>سنة 1</span></div>
-    <div class="mtitle"><h2>2027 — التثبيت + انطلاق البكالوريوس + CPIM</h2><p>إثبات الذات في الوظيفة الجديدة وبدء أهم استثمارين في الخطة كلها</p></div>
+    <div class="mtitle"><h2>2027 — القبول وبداية R1: سنة إثبات الوجود</h2><p>من نتيجة الماتشينق (يونيو) إلى ترسيخ سمعة "المقيم الذي يُعتمد عليه"</p></div>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>هدف السنة:</b> ترسيخ الوظيفة الجديدة بأداء موثق، والوصول لـ Shift Production Manager بنهاية السنة (أو مطلع 2028) — مع بدء البكالوريوس وأول شهادة ثقيلة.</div>
+    <div class="goal"><b>هدف السنة:</b> قبول في البرنامج المستهدف (النتيجة النهائية ≈ يونيو 2027)، ثم أول 6 أشهر إقامة بسمعة نظيفة: حضور، موثوقية، ومبادرة — السمعة في R1 تلاحق المقيم حتى الزمالة.</div>
     <div class="sec"><h3>مهام السنة</h3>
       <ul class="chk" data-m="y1">
-        <li><input type="checkbox" id="y1a"><label for="y1a"><b>البكالوريوس:</b> التقديم في الربيع، البدء خريف 2027 — إدارة أعمال أو سلاسل إمداد (المقارنة أدناه). <b>أولوية مطلقة على كل ما عداه</b></label></li>
-        <li><input type="checkbox" id="y1b"><label for="y1b"><b>ASCM CPIM:</b> التحضير من يناير (قبل بدء الدراسة الجامعية — لهذا هي أول شهادة)، الاختبار قبل نهاية الصيف أو مطلع 2028</label></li>
-        <li><input type="checkbox" id="y1c"><label for="y1c">قيادة مشروع تحسين ثانٍ موثق — بصيغة مشروع (نطاق، جدول، نتيجة) ليُحتسب لاحقًا في PMP</label></li>
-        <li><input type="checkbox" id="y1d"><label for="y1d">خبرة مستهدفة: التعرض لأكثر من قسم (Solid + Liquid + Packaging)</label></li>
-        <li><input type="checkbox" id="y1e"><label for="y1e"><b>الرافعة السعودية:</b> بدء بناء الشبكة من الآن — متابعة إعلانات المصانع الجديدة والتوسعات، وقائمة علاقات تنمو شهريًا</label></li>
-        <li><input type="checkbox" id="y1f"><label for="y1f"><b>معلم السنة:</b> Shift Production Manager أو مسؤولية مكافئة موثقة</label></li>
+        <li><input type="checkbox" id="y1a"><label for="y1a"><b>يناير:</b> رفع طلب الماتشينق في أول أيام الفتح + متابعة مراحل الفرز والمقابلات (أبريل–مايو) حتى النتيجة النهائية (يونيو)</label></li>
+        <li><input type="checkbox" id="y1b"><label for="y1b">صمام الأمان: إن لم يتحقق القبول — التقديم على وظيفة طبيب مقيم غير مصنف/فترة بحثية في التخصص نفسه فورًا، والاستعداد لدورة الماتشينق التالية بملف أقوى (لا سنة فراغ في السيرة)</label></li>
+        <li><input type="checkbox" id="y1c"><label for="y1c">إتمام الامتياز بتقييمات موثقة واستلام شهادة إتمامه — وإغلاق ملف التصنيف والتسجيل المهني في ممارس بلس</label></li>
+        <li><input type="checkbox" id="y1d"><label for="y1d">أول 6 أشهر R1: إتقان الأساسيات قبل أي طموح إضافي — نظام مناوبات مستدام يمنع الاحتراق المبكر</label></li>
+        <li><input type="checkbox" id="y1e"><label for="y1e">الانضمام لمجموعة بحثية في البرنامج + عضوية الجمعية العلمية السعودية للتخصص</label></li>
+        <li><input type="checkbox" id="y1f"><label for="y1f"><b>معلم السنة:</b> مقيم R1 في التخصص المستهدف بتقييم أول دورة تدريبية ممتاز</label></li>
       </ul>
     </div>
   </div>
@@ -1012,18 +875,18 @@ tr:nth-child(even) td{background:#FAFCFE}
 <div class="month" data-color="amber">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum"><b>28</b><span>سنة 2</span></div>
-    <div class="mtitle"><h2>2028 — Black Belt (بشرطها) + مساعد مدير إنتاج</h2><p>أثقل سنة في الخطة — ولها صمام أمان معلن</p></div>
+    <div class="mtitle"><h2>2028 — R2: بناء الملف داخل الإقامة</h2><p>ATLS + أول بحث منشور كمقيم + اختبار الترقية الأول</p></div>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>هدف السنة:</b> Assistant Production Manager + الحزام الأسود. <b>صمام الأمان:</b> لو تعارض تحضير Black Belt مع فصل دراسي ثقيل — تتأجل الشهادة لـ 2029 بلا تردد. البكالوريوس لا يُمس.</div>
+    <div class="goal"><b>هدف السنة:</b> اجتياز اختبار الترقية الأول بمرتبة مريحة، وإنجاز "الثقيلة الواحدة" للسنة: ATLS (إن أُجّلت من الخطة القصيرة) + نشر أول بحث بصفة "مقيم" — البحثان القديمان يُفترض نشرهما بحلول الآن.</div>
     <div class="sec"><h3>مهام السنة</h3>
       <ul class="chk" data-m="y2">
-        <li><input type="checkbox" id="y2a"><label for="y2a"><b>LSS Black Belt (IASSC):</b> تحضير 4–6 أشهر فوق الـ Green Belt — إحصاء تطبيقي: اختبار فرضيات، انحدار، DOE — <b>أو تأجيلها لـ 2029 لو الدراسة ثقيلة</b></label></li>
-        <li><input type="checkbox" id="y2b"><label for="y2b">البكالوريوس: إتمام السنة الأولى بمعدل مرتفع (يفتح ماجستير SEU لاحقًا بشروط ميسرة)</label></li>
-        <li><input type="checkbox" id="y2c"><label for="y2c">خبرة مستهدفة: <b>الميزانية والتكاليف</b> — المشاركة في ميزانية القسم وفهم تكلفة الوحدة المنتجة</label></li>
-        <li><input type="checkbox" id="y2d"><label for="y2d">خبرة مستهدفة: <b>تفتيش SFDA / تدقيق GMP</b> — مشاركة فعلية في استقبال تفتيش والرد على الملاحظات</label></li>
-        <li><input type="checkbox" id="y2e"><label for="y2e"><b>معلم السنة:</b> Assistant Production Manager خلال 18–24 شهرًا من بداية 2027 (أي حتى منتصف 2029 مقبول)</label></li>
+        <li><input type="checkbox" id="y2a"><label for="y2a">اختبار الترقية (التقويم المستمر) — المذاكرة له مستمرة على مدار السنة لا قبله بأسبوعين</label></li>
+        <li><input type="checkbox" id="y2b"><label for="y2b">ATLS إن لم تُنجز 2026 — وتجديد ACLS في موعده (صلاحيتها سنتان)</label></li>
+        <li><input type="checkbox" id="y2c"><label for="y2c">بحث جديد من داخل البرنامج (سلسلة حالات / دراسة استعادية) — بدور قيادي لا مشاركة هامشية</label></li>
+        <li><input type="checkbox" id="y2d"><label for="y2d">خبرة مستهدفة: تعليم طلاب الامتياز والطلبة — التدريس يثبت المعرفة ويبني سمعة أكاديمية مبكرة</label></li>
+        <li><input type="checkbox" id="y2e"><label for="y2e"><b>معلم السنة:</b> R2 مجتاز + بحث منشور بصفة مقيم + عرض في مؤتمر التخصص</label></li>
       </ul>
     </div>
   </div>
@@ -1033,19 +896,17 @@ tr:nth-child(even) td{background:#FAFCFE}
 <div class="month" data-color="teal">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum"><b>29</b><span>سنة 3</span></div>
-    <div class="mtitle"><h2>2029 — سنة التنفّس المقصودة</h2><p>لا شهادة ثقيلة جديدة — ترسيخ وبكالوريوس وتوثيق. هذا قرار وليس كسلًا</p></div>
+    <div class="mtitle"><h2>2029 — سنة الجزء الأول: محمية عمدًا</h2><p>لا دورة ثقيلة ولا مسؤولية جديدة — اختبار Part I فقط. هذا قرار وليس كسلًا</p></div>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>هدف السنة:</b> منتصف البكالوريوس هو الأصعب (الحماس الأول انتهى والتخرج بعيد) — هذه السنة محمية عمدًا من أي شهادة جديدة لضمان عدم الانهيار. الأداء في المنصب + الدراسة فقط.</div>
+    <div class="goal"><b>هدف السنة:</b> اجتياز اختبار الجزء الأول من أول محاولة — هو أثقل حاجز معرفي في الإقامة، ورسوبه يؤخر المسار كله. كل شيء آخر (بحث جديد، دورات، لجان) يُخفَّض للحد الأدنى هذه السنة.</div>
     <div class="sec"><h3>مهام السنة</h3>
       <ul class="chk" data-m="y3">
-        <li><input type="checkbox" id="y3a"><label for="y3a">البكالوريوس: الحفاظ على الوتيرة — لا فصل مؤجل</label></li>
-        <li><input type="checkbox" id="y3b"><label for="y3b">Black Belt هنا <b>فقط</b> إن تأجلت من 2028</label></li>
-        <li><input type="checkbox" id="y3c"><label for="y3c">خبرة مستهدفة: <b>بناء وتطوير الفريق</b> — تقييم أداء، خطط تطوير للمشرفين (إدارة مشرفين لا مشغلين)</label></li>
-        <li><input type="checkbox" id="y3d"><label for="y3d"><b>توثيق سجل PMP:</b> صياغة كل المشاريع منذ 2022 بصيغة PMI (النطاق، الدور القيادي، الساعات، النتيجة) — جاهزًا للتقديم فور التخرج</label></li>
-        <li><input type="checkbox" id="y3e"><label for="y3e">خبرة مستهدفة: قيادة مشروع رأسمالي (خط / معدة جديدة) من التبرير المالي حتى الـ Validation</label></li>
-        <li><input type="checkbox" id="y3f"><label for="y3f"><b>معلم السنة:</b> تثبيت Assistant PM بأداء موثق + نصف الطريق الجامعي منجز</label></li>
+        <li><input type="checkbox" id="y3a"><label for="y3a">خطة مذاكرة الجزء الأول من 6–9 أشهر قبل الموعد — بنفس منهجية SMLE الناجحة: بنك أسئلة + دفتر أخطاء + محاكيات</label></li>
+        <li><input type="checkbox" id="y3b"><label for="y3b">لا بحث جديد هذه السنة — فقط إنهاء ما هو معلق من 2028 (مراجعات المجلات لا تنتظر)</label></li>
+        <li><input type="checkbox" id="y3c"><label for="y3c">الحفاظ على تقييمات التدريب السريري — الجزء الأول لا يبرر التراخي في الأجنحة</label></li>
+        <li><input type="checkbox" id="y3d"><label for="y3d"><b>معلم السنة:</b> Part I مجتاز من المحاولة الأولى + R3 مكتمل</label></li>
       </ul>
     </div>
   </div>
@@ -1055,129 +916,128 @@ tr:nth-child(even) td{background:#FAFCFE}
 <div class="month" data-color="green">
   <div class="mhead" onclick="toggle(this)">
     <div class="mnum"><b>30</b><span>سنة 4</span></div>
-    <div class="mtitle"><h2>2030 — سنة المفصل: التخرج ثم PMP ثم Production Manager</h2><p>السقف يُرفع — وكل شيء بعده يتسارع</p></div>
+    <div class="mtitle"><h2>2030 — R4: سنة القيادة داخل البرنامج</h2><p>Chief Resident + مشروع تحسين جودة موثق — أول اختبار إداري حقيقي</p></div>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>هدف السنة:</b> التخرج (أو مطلع 2031 حسب الجامعة) هو <b>المعلم</b> الذي يُفعّل ترقية Production Manager — داخليًا أو عبر الانتقالة الخارجية الثانية نحو مصنع جديد/متوسع. وPMP تأتي بعده مباشرة بمسار الأهلية الآمن (بكالوريوس + 36 شهرًا — بلا خطر تدقيق).</div>
+    <div class="goal"><b>هدف السنة:</b> الترشح لـ Chief Resident (أو مسؤولية مكافئة: جداول المناوبات، تنسيق التعليم) وقيادة مشروع تحسين جودة ببيانات قبل/بعد — هذان البندان هما ما يفصل لاحقًا بين استشاري "سريري فقط" واستشاري مرشح لرئاسة قسم.</div>
     <div class="sec"><h3>مهام السنة</h3>
       <ul class="chk" data-m="y4">
-        <li><input type="checkbox" id="y4a"><label for="y4a"><b>التخرج من البكالوريوس</b> — تحديث السيرة والملف بالكامل فور استلام الوثيقة</label></li>
-        <li><input type="checkbox" id="y4b"><label for="y4b"><b>PMP:</b> دورة 35 ساعة + التقديم بالمسار الآمن + التحضير 3–4 أشهر — الاختبار نهاية 2030 أو مطلع 2031</label></li>
-        <li><input type="checkbox" id="y4c"><label for="y4c"><b>الانتقالة الخارجية الثانية</b> (إن لم تتحرك الترقية داخليًا): استهداف المصانع الجديدة تحديدًا — لقب Production Manager في هيكل يُبنى من الصفر</label></li>
-        <li><input type="checkbox" id="y4d"><label for="y4d">خبرة مستهدفة: <b>P&amp;L awareness</b> — قراءة قائمة أرباح وخسائر المصنع وفهم محركات الربحية</label></li>
-        <li><input type="checkbox" id="y4e"><label for="y4e"><b>معلم السنة:</b> بكالوريوس بيد + Production Manager (أو عرض مؤكد به)</label></li>
+        <li><input type="checkbox" id="y4a"><label for="y4a">الترشح لـ Chief Resident — القرار يُبنى على سمعة 2027–2029، لا على طلب اللحظة الأخيرة</label></li>
+        <li><input type="checkbox" id="y4b"><label for="y4b">مشروع تحسين جودة (QI) موثق بالأرقام: تقليل زمن انتظار / التزام ببروتوكول / سلامة مرضى — يُعرض داخليًا ويُنشر إن أمكن</label></li>
+        <li><input type="checkbox" id="y4c"><label for="y4c">خبرة مستهدفة: المشاركة في لجنة قسمية (جودة، مواعيد أكاديمية، سلامة مرضى) — لغة الإدارة الصحية تُتعلم بالممارسة</label></li>
+        <li><input type="checkbox" id="y4d"><label for="y4d">استكشاف الزمالات الدقيقة المستهدفة مبكرًا: متطلباتها، مراكزها (داخل المملكة/كندا/أستراليا)، وشروط التقديم</label></li>
+        <li><input type="checkbox" id="y4e"><label for="y4e"><b>معلم السنة:</b> Chief Resident أو مسؤولية قيادية موثقة + مشروع QI بالأرقام</label></li>
       </ul>
     </div>
   </div>
 </div>
 
-<!-- YEAR 2031 -->
+<!-- YEAR 2031-32 -->
 <div class="month" data-color="rose">
   <div class="mhead" onclick="toggle(this)">
-    <div class="mnum"><b>31</b><span>سنة 5</span></div>
-    <div class="mtitle"><h2>2031 — الاتساع الأفقي نحو Operations</h2><p>مدير المصنع لا يُصنع من الإنتاج وحده</p></div>
+    <div class="mnum"><b>31</b><span>5–6</span></div>
+    <div class="mtitle"><h2>2031 – 2032 — النهائي: البورد السعودي</h2><p>الاختباران الكتابي والإكلينيكي — ومعهما الانتقال من متدرب إلى نائب أول</p></div>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>هدف السنة:</b> توسيع النطاق من الإنتاج إلى العمليات: تخطيط، مستودعات، سلسلة إمداد، سلامة — بلقب Operations Manager أو Production Manager بصلاحيات موسعة. هذه سنة بناء عرض "أنا جاهز لمصنع كامل".</div>
-    <div class="sec"><h3>مهام السنة</h3>
+    <div class="goal"><b>هدف النافذة:</b> اجتياز الاختبار النهائي الكتابي ثم الإكلينيكي (OSCE) والحصول على شهادة البورد السعودي — ثم أول وظيفة نائب أول (Senior Registrar). إعادة أحدهما مرة سيناريو عادي إحصائيًا: خطة الـ 7 سنوات تستوعبه بلا انهيار.</div>
+    <div class="sec"><h3>مهام النافذة</h3>
       <ul class="chk" data-m="y5">
-        <li><input type="checkbox" id="y5a"><label for="y5a"><b>NEBOSH IGC</b> — اختيارية: تسقط لو الشركة توفر تدريب سلامة معتمدًا داخليًا، وتُستبدل بساعات MBA مبكرة</label></li>
-        <li><input type="checkbox" id="y5b"><label for="y5b">خبرة مستهدفة: الإلمام العملي بالتخطيط والمستودعات وسلسلة الإمداد (CPIM أعطى النظرية — هنا الممارسة)</label></li>
-        <li><input type="checkbox" id="y5c"><label for="y5c">خبرة مستهدفة: تمثيل المصنع أمام الإدارة العليا — عروض أداء ربع سنوية، لغة مجالس الإدارة</label></li>
-        <li><input type="checkbox" id="y5d"><label for="y5d"><b>معلم السنة:</b> نطاق مسؤولية يتجاوز الإنتاج + PMP بيد + ملف Plant Manager مكتمل الأركان</label></li>
+        <li><input type="checkbox" id="y5a"><label for="y5a">سنة R5 الأخيرة تُدار كسنة اختبار: مجموعات مذاكرة + محاكيات إكلينيكية (OSCE) منتظمة مع الاستشاريين</label></li>
+        <li><input type="checkbox" id="y5b"><label for="y5b">اجتياز النهائي الكتابي ثم الإكلينيكي — <b>شهادة البورد السعودي</b></label></li>
+        <li><input type="checkbox" id="y5c"><label for="y5c">التسجيل المهني بدرجة "نائب أول" في ممارس بلس فور صدور الشهادة</label></li>
+        <li><input type="checkbox" id="y5d"><label for="y5d">اختيار وظيفة النائب الأول بعين الزمالة والاستشارية: مركز يملك التخصص الدقيق المستهدف أو منشأة جديدة تنمو بسرعة</label></li>
+        <li><input type="checkbox" id="y5e"><label for="y5e">التقديم على الزمالة الدقيقة (بورد الزمالة السعودي أو زمالة خارجية) — ملف البحث المتراكم منذ 2026 هو ورقة الفرز هنا</label></li>
+        <li><input type="checkbox" id="y5f"><label for="y5f"><b>معلم النافذة:</b> بورد سعودي بيد + وظيفة نائب أول + طلب زمالة مقدَّم</label></li>
       </ul>
     </div>
   </div>
 </div>
 
-<!-- YEARS 2032-33 -->
+<!-- YEAR 2032-33 -->
 <div class="month" data-color="purple">
   <div class="mhead" onclick="toggle(this)">
-    <div class="mnum"><b>32</b><span>6–7</span></div>
-    <div class="mtitle"><h2>2032 – 2033 — نافذة مدير المصنع + بدء MBA</h2><p>الهدف النهائي — وفتح المسار الأبعد: مدير الشركة</p></div>
+    <div class="mnum"><b>33</b><span>6–7</span></div>
+    <div class="mtitle"><h2>2032 – 2033 — نائب أول + الزمالة: بوابة الاستشارية</h2><p>نهاية الخطة — وفتح المسار الأبعد: استشاري ثم رئيس قسم</p></div>
     <span class="arrow">▼</span>
   </div>
   <div class="mbody">
-    <div class="goal"><b>هدف النافذة:</b> Plant Manager أو نائبه في شركة دوائية متوسطة — أول فرصة تستوفي الشروط داخل النافذة تُقتنص، داخليًا أو خارجيًا. الملف حينها: بكالوريوس + CPIM + Black Belt + PMP + 10 سنوات دوائية متدرجة + سجل مشاريع موثق.</div>
+    <div class="goal"><b>هدف النافذة:</b> سنة/سنتان كنائب أول مع بدء الزمالة الدقيقة — الملف حينها: بورد سعودي + 8+ أبحاث منشورة + Chief Resident + مشروع QI + ATLS/ACLS. الاستشارية معلم ما بعد الخطة (≈ 2034–2035: نائب أول لسنوات + زمالة أو خبرة معتمدة حسب لائحة التصنيف) — وقولها بغير ذلك مجاملة.</div>
     <div class="sec"><h3>مهام النافذة</h3>
       <ul class="chk" data-m="y6">
-        <li><input type="checkbox" id="y6a"><label for="y6a">التقديم المستهدف على Plant Manager / Deputy Plant Manager — والترشيح عبر الشبكة المبنية منذ 2027</label></li>
-        <li><input type="checkbox" id="y6b"><label for="y6b"><b>بدء MBA</b> (SEU ≈ 750 ر.س/ساعة أو ماجستير تنفيذي) — شرط القبول: بكالوريوس + 3 سنوات قيادية، وكلاهما متوفر</label></li>
-        <li><input type="checkbox" id="y6c"><label for="y6c"><b>معلم نهاية الخطة:</b> مدير مصنع أو نائبه بعمر 41–42 — وMBA قيد الدراسة</label></li>
+        <li><input type="checkbox" id="y6a"><label for="y6a">بدء الزمالة الدقيقة (داخل المملكة أو خارجها) — أو مسار الخبرة المعتمدة كنائب أول إن كان التخصص لا يستلزم زمالة</label></li>
+        <li><input type="checkbox" id="y6b"><label for="y6b">دراسة مساندة اختيارية بعد استقرار الزمالة: دبلوم/ماجستير تعليم طبي أو إدارة صحية (SEU وغيرها) — لمن يستهدف رئاسة القسم والمناصب الأكاديمية، وتسقط إن زاحمت الزمالة</label></li>
+        <li><input type="checkbox" id="y6c"><label for="y6c">الاستمرار في قاعدة البحث السنوي + التحكيم للمجلات — بناء الاسم العلمي في التخصص الدقيق</label></li>
+        <li><input type="checkbox" id="y6d"><label for="y6d"><b>معلم نهاية الخطة:</b> نائب أول معتمد + زمالة قيد الإنجاز — على مسار استشاري 2034–2035</label></li>
       </ul>
     </div>
-    <div class="output"><h4>ما بعد الخطة — مسار مدير الشركة (GM)</h4>
-      <ul><li>MBA مكتمل ≈ 2034–2035</li><li>خبرة P&amp;L كاملة كمدير مصنع 2–3 سنوات</li><li>التعرض التجاري: تسجيل منتجات، عقود، علاقات SFDA</li><li>GM / مدير عام عمليات ≈ 2036–2038</li></ul>
+    <div class="output"><h4>ما بعد الخطة — مسار الاستشارية والقيادة</h4>
+      <ul><li>استشاري ≈ 2034–2035 (زمالة مكتملة + تصنيف الهيئة)</li><li>رئيس وحدة/قسم ≈ 2036–2038</li><li>مسار موازٍ: أستاذ مساعد سريري + إشراف على المقيمين</li><li>المدى الأبعد: مدير إدارة طبية / برنامج تدريبي</li></ul>
     </div>
   </div>
 </div>
 
-<!-- BACHELOR OPTIONS -->
+<!-- FELLOWSHIP / POSTGRAD OPTIONS -->
 <div class="card" style="border-top-color:var(--green)">
-  <h2>البكالوريوس — العمود الفقري للخطة</h2>
-  <div class="sub">تخصص مقترح: إدارة أعمال أو إدارة سلاسل الإمداد · دراسة بالتوازي مع العمل · القرار يحتاج تحققًا من شروط القبول والمواعيد وقت التقديم (2027)</div>
+  <h2>ما بعد البورد — خيارات الزمالة والدراسات المساندة</h2>
+  <div class="sub">البكالوريوس (MBBS) موجود أصلًا فلا سقف جامعيًا هنا — العمود الفقري هو البورد ثم الزمالة · القرار النهائي يُتخذ في R4 بعد وضوح الميول الدقيقة</div>
   <div class="tbl-scroll"><table>
-    <tr><th>الخيار</th><th>النمط</th><th>المدة المتوقعة</th><th>التكلفة التقديرية</th><th>ملاحظة</th></tr>
+    <tr><th>الخيار</th><th>طبيعته</th><th>المدة</th><th>ملاحظة</th></tr>
     <tr>
-      <td><b>الجامعة السعودية الإلكترونية SEU</b> <span class="dip-badge sa">حكومية</span></td>
-      <td>تعليم مدمج (أونلاين + حضور محدود — فرع جدة متوفر)</td>
-      <td>4 – 4.5 سنوات</td>
-      <td>≈ 17,000 – 22,000 ر.س إجمالًا (بنظام الساعات)</td>
-      <td>الخيار الأقوى: حكومية معترف بها بالكامل، تدرّس بالإنجليزية (ميزة له)، وشهادتها تفتح ماجستيرها مباشرة</td>
+      <td><b>زمالة سعودية دقيقة</b> <span class="dip-badge sa">المسار الافتراضي</span></td>
+      <td>برامج زمالة الهيئة في التخصصات الدقيقة داخل المملكة</td>
+      <td>1 – 3 سنوات حسب التخصص</td>
+      <td>براتب كامل وبلا اغتراب — والقبول تنافسي بالملف البحثي والسمعة</td>
     </tr>
     <tr>
-      <td><b>جامعة الملك عبدالعزيز — انتساب</b> <span class="dip-badge free">الأوفر</span></td>
-      <td>انتساب (اختبارات حضورية بجدة)</td>
-      <td>4 – 5 سنوات</td>
-      <td>رسوم رمزية جدًا مقارنة بالبقية</td>
-      <td>هو في جدة أصلًا — لكن يلزم التحقق من استمرار فتح مقاعد الانتساب وتخصصاتها سنويًا</td>
+      <td><b>زمالة خارجية (كندا / أستراليا)</b> <span class="dip-badge prem">الأقوى اسمًا</span></td>
+      <td>Clinical Fellowship في مراكز مرجعية</td>
+      <td>1 – 2 سنة</td>
+      <td>ترفع الملف للاستشارية والمناصب الأكاديمية بقوة — تتطلب ابتعاثًا/تفرغًا وترتيبًا مبكرًا من R4</td>
     </tr>
     <tr>
-      <td><b>الجامعة العربية المفتوحة AOU</b></td>
-      <td>مدمج — فرع جدة</td>
-      <td>4 سنوات</td>
-      <td>≈ 30,000+ ر.س إجمالًا</td>
-      <td>مرونة جيدة وشراكة مع OU البريطانية — الأغلى بين الثلاثة</td>
+      <td><b>ماجستير تعليم طبي / إدارة صحية</b> <span class="dip-badge free">مساند اختياري</span></td>
+      <td>دراسة جزئية عن بعد أو مدمجة (SEU وغيرها)</td>
+      <td>1.5 – 2 سنة بالتوازي</td>
+      <td>لمسار رئاسة القسم والقيادة الأكاديمية — يبدأ فقط بعد البورد ولا يزاحم الزمالة أبدًا</td>
     </tr>
   </table></div>
   <div class="cert-grid" style="margin-top:14px">
     <div class="cert" style="border-top-color:var(--green)">
       <h4>التوصية</h4>
-      <div class="when">التقديم ربيع 2027 · البدء خريف 2027 · التخرج ≈ 2030–2031</div>
-      <p><b>SEU إدارة أعمال</b> هي الخيار الافتراضي: حكومية، بالإنجليزية، مصممة أصلًا للموظفين، وتفتح ماجستيرها لاحقًا بشروط ميسرة لخريجيها. KAU انتساب بديل ممتاز لو الميزانية هي الفيصل. القاعدة الذهبية: <b>أي خيار منها أفضل من التأجيل</b> — كل سنة تأخير تدفع السلم الوظيفي كله سنة.</p>
+      <div class="when">القرار في R4 (2030) · التنفيذ 2032–2034</div>
+      <p><b>زمالة أولًا، إدارة ثانيًا:</b> الزمالة الدقيقة هي ما يصنع الاستشاري المطلوب، والدراسات الإدارية تُبنى فوقها لا بدلًا منها. الترتيب: بورد ← زمالة ← (اختياريًا) ماجستير مساند أثناء سنوات الاستشارية الأولى. أي عكس لهذا الترتيب يؤخر الهدفين معًا.</p>
       <div class="links">
+        <a href="https://scfhs.org.sa/ar/saudi-board" target="_blank">برامج الهيئة</a>
         <a href="https://seu.edu.sa" target="_blank">SEU</a>
-        <a href="https://www.kau.edu.sa" target="_blank">جامعة الملك عبدالعزيز</a>
-        <a href="https://www.arabou.edu.sa" target="_blank">AOU</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- HEAVY CERTS -->
+<!-- HEAVY MILESTONES -->
 <div class="card">
-  <h2>الشهادات الاحترافية الثقيلة — التسلسل والتكلفة</h2>
-  <div class="sub">واحدة ثقيلة في السنة كحد أقصى — والبكالوريوس فوق الجميع: أي تعارض تُؤجَّل الشهادة لا الدراسة</div>
+  <h2>المحطات الثقيلة — التسلسل والتكلفة</h2>
+  <div class="sub">محطة ثقيلة واحدة في السنة كحد أقصى — واختبارات البورد فوق الجميع: أي تعارض تُؤجَّل الدورة/الدراسة لا الاختبار</div>
   <div class="tbl-scroll"><table>
-    <tr><th>الشهادة</th><th>التوقيت</th><th>الجهة</th><th>ماذا تضيف</th><th>التكلفة التقديرية</th></tr>
-    <tr><td><b>CPIM</b> — Certified in Planning &amp; Inventory Management</td><td>2027 (قبل بدء الدراسة)</td><td>ASCM (APICS سابقًا)</td><td>أرقى اعتماد في تخطيط الإنتاج والمخزون — لغة S&amp;OP وMRP</td><td>≈ 4,500 – 7,500 ر.س</td></tr>
-    <tr><td><b>LSS Black Belt</b></td><td>2028 (نافذة مرنة حتى 2029)</td><td>IASSC</td><td>قيادة برامج التحسين على مستوى المصنع + إحصاء متقدم وDOE</td><td>≈ 1,600 – 2,000 ر.س</td></tr>
-    <tr><td><b>PMP</b> — Project Management Professional</td><td>2030 – مطلع 2031 (بعد التخرج — مسار الأهلية الآمن)</td><td>PMI</td><td>إدارة مشاريع التوسعة والخطوط الجديدة — أشهر شهادة إدارية في السوق السعودي</td><td>≈ 2,400 – 2,900 ر.س</td></tr>
-    <tr><td><b>NEBOSH IGC</b> <span class="dip-badge low" style="background:#EDF1F5;color:#64748B;border:1px solid #DBE2EA">اختيارية</span></td><td>2031</td><td>NEBOSH (بريطانيا)</td><td>السلامة والصحة المهنية — تسقط لو التدريب متوفر داخليًا</td><td>≈ 4,000 – 7,000 ر.س</td></tr>
-    <tr><td><b>MBA</b></td><td>2032 →</td><td>SEU أو ماجستير تنفيذي</td><td>بوابة مسار مدير الشركة (GM)</td><td>SEU ≈ 750 ر.س/ساعة (خارج ميزانية الخطة)</td></tr>
+    <tr><th>المحطة</th><th>التوقيت</th><th>الجهة</th><th>ماذا تضيف</th><th>التكلفة التقديرية</th></tr>
+    <tr><td><b>اختبارات الترقية السنوية</b></td><td>كل سنة تدريبية</td><td>الهيئة (SCFHS)</td><td>شرط الانتقال بين السنوات — رسوبها يعيد السنة</td><td>ضمن رسوم التدريب — تُسجَّل عبر استمارة الهيئة</td></tr>
+    <tr><td><b>اختبار الجزء الأول (Part I)</b></td><td>2029 (R3)</td><td>الهيئة (SCFHS)</td><td>أثقل حاجز معرفي في الإقامة — بوابته للسنوات العليا</td><td>رسوم اختبار الهيئة + بنك أسئلة ≈ 500 – 1,500 ر.س</td></tr>
+    <tr><td><b>النهائي الكتابي + الإكلينيكي</b></td><td>2031 – 2032</td><td>الهيئة (SCFHS)</td><td>شهادة البورد السعودي — بوابة نائب أول</td><td>رسوم الاختبارين + دورات مراجعة ≈ 2,000 – 5,000 ر.س</td></tr>
+    <tr><td><b>ATLS + تجديد ACLS/BLS</b></td><td>2028 ثم كل سنتين</td><td>ACS / جمعية القلب السعودية</td><td>جاهزية سريرية إلزامية عمليًا</td><td>ATLS ≈ 1,500 – 3,300 ر.س · التجديدات ≈ 300 – 900 ر.س/دورة</td></tr>
+    <tr><td><b>الزمالة الدقيقة</b></td><td>2032 →</td><td>الهيئة أو مراكز خارجية</td><td>بوابة الاستشارية والتميز الدقيق</td><td>داخلية: براتب · خارجية: حسب الابتعاث/التمويل</td></tr>
+    <tr><td><b>ماجستير مساند (اختياري)</b></td><td>2033 →</td><td>SEU / جامعات</td><td>مسار رئاسة القسم والقيادة الأكاديمية</td><td>خارج ميزانية الخطة — يُموَّل من راتب النائب الأول</td></tr>
   </table></div>
   <div class="cert-grid" style="margin-top:14px">
     <div class="cert" style="border-top-color:var(--purple)">
       <h4>روابط الجهات الرسمية</h4>
-      <div class="when">للتحقق من الأسعار والشروط وقت كل شهادة</div>
-      <p><b>لماذا انتقلت PMP لما بعد التخرج:</b> بدون بكالوريوس تشترط PMI توثيق 60 شهر قيادة مشاريع وتدقق عينة من الطلبات — رفض التدقيق انتكاسة مكلفة. بعد البكالوريوس يكفي 36 شهرًا بملف نظيف. التوثيق المستمر للمشاريع منذ الآن يخدم المسارين.</p>
+      <div class="when">للتحقق من الرسوم والمواعيد وقت كل محطة</div>
+      <p><b>لماذا لا توجد شهادات "زينة" في هذا المسار:</b> في الطب، هيكل البورد نفسه هو سلسلة الاعتمادات — إضافة دبلومات جانبية أثناء الإقامة تسرق وقت الاختبارات التي تحدد المصير فعلًا. كل ريال وساعة يذهبان للبورد والبحث حتى 2032، وبعدها تُفتح الدراسات المساندة.</p>
       <div class="links">
-        <a href="https://www.ascm.org/learning-development/certifications-credentials/cpim/" target="_blank">ASCM CPIM</a>
-        <a href="https://iassc.org/six-sigma-certification/black-belt-certification/" target="_blank">IASSC Black Belt</a>
-        <a href="https://www.pmi.org/certifications/project-management-pmp" target="_blank">PMI — PMP</a>
-        <a href="https://www.nebosh.org.uk" target="_blank">NEBOSH</a>
+        <a href="https://scfhs.org.sa/ar/E-Services/FirstExamApplicationDescription" target="_blank">اختبارات الدراسات العليا — الهيئة</a>
+        <a href="https://mumaris.scfhs.org.sa" target="_blank">ممارس بلس</a>
+        <a href="https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support/" target="_blank">ACS — ATLS</a>
       </div>
     </div>
   </div>
@@ -1185,43 +1045,43 @@ tr:nth-child(even) td{background:#FAFCFE}
 
 <!-- BUDGET -->
 <div class="card" style="border-top-color:var(--gold)">
-  <h2>ميزانية المسار الكامل</h2>
-  <div class="sub">موزعة على 5–7 سنوات — البكالوريوس يُدفع بنظام الساعات فصليًا فلا يشكل ضغطًا دفعة واحدة</div>
+  <h2>ميزانية المسار الكامل 2027 – 2033</h2>
+  <div class="sub">نقطة جوهرية تميز المسار الطبي: <b>المقيم يتقاضى راتبًا من أول يوم</b> — فالميزانية هنا مصروفات تطوير من دخل قائم لا استثمارًا بلا عائد</div>
   <div class="tbl-scroll"><table>
-    <tr><th>البند</th><th>التوقيت</th><th>سيناريو KAU انتساب</th><th>سيناريو SEU</th></tr>
-    <tr><td>البكالوريوس</td><td>2027–2030/31</td><td>≈ 2,000 – 4,000 ر.س</td><td>≈ 17,000 – 22,000 ر.س</td></tr>
-    <tr><td>CPIM</td><td>2027</td><td colspan="2">≈ 4,500 – 7,500 ر.س</td></tr>
-    <tr><td>LSS Black Belt (IASSC)</td><td>2028–29</td><td colspan="2">≈ 1,600 – 2,000 ر.س</td></tr>
-    <tr><td>PMP</td><td>2030–31</td><td colspan="2">≈ 2,400 – 2,900 ر.س</td></tr>
-    <tr><td>NEBOSH IGC (اختيارية)</td><td>2031</td><td colspan="2">0 أو ≈ 4,000 – 7,000 ر.س</td></tr>
-    <tr><td>احتياطي (كتب، اختبارات تجريبية، تجديدات)</td><td>موزع</td><td colspan="2">≈ 1,500 – 2,500 ر.س</td></tr>
+    <tr><th>البند</th><th>التوقيت</th><th>السيناريو الاقتصادي</th><th>السيناريو القياسي</th></tr>
+    <tr><td>تسجيل مهني وتصنيف (ممارس بلس) + تجديدات</td><td>موزع</td><td colspan="2">≈ 1,000 – 2,500 ر.س على المسار</td></tr>
+    <tr><td>بنوك أسئلة الترقية والجزء الأول والنهائي</td><td>2028–2032</td><td>≈ 1,000 ر.س</td><td>≈ 3,000 ر.س</td></tr>
+    <tr><td>رسوم اختبارات البورد (ترقية + جزء أول + نهائي)</td><td>2028–2032</td><td colspan="2">حسب جداول الهيئة وقتها — احتياطي ≈ 2,000 – 4,000 ر.س</td></tr>
+    <tr><td>ATLS + تجديدات ACLS/BLS</td><td>2028 ثم دوري</td><td>≈ 2,500 ر.س</td><td>≈ 4,500 ر.س</td></tr>
+    <tr><td>مؤتمر سنوي (تسجيل + سفر داخلي)</td><td>سنويًا</td><td>≈ 500 ر.س/سنة (بدعم البرنامج)</td><td>≈ 1,500 ر.س/سنة</td></tr>
+    <tr><td>رسوم نشر الأبحاث (عند الحاجة)</td><td>موزع</td><td>مجلات بلا رسوم ≈ 0 ر.س</td><td>≈ 2,000 ر.س على المسار</td></tr>
   </table></div>
   <div class="budget-total">
-    <div class="bt"><h4>سيناريو KAU انتساب</h4><div class="amt">≈ 12,000 – 26,000 ر.س</div><p>على المسار كاملًا ≈ 180 – 380 ر.س شهريًا</p></div>
-    <div class="bt std"><h4>سيناريو SEU</h4><div class="amt">≈ 27,000 – 44,000 ر.س</div><p>≈ 400 – 640 ر.س شهريًا — يسترده أول فرق راتب بين Supervisor وManager خلال أشهر</p></div>
+    <div class="bt"><h4>السيناريو الاقتصادي</h4><div class="amt">≈ 9,000 – 13,000 ر.س</div><p>على 7 سنوات ≈ 110 – 155 ر.س شهريًا — بدعم البرنامج للمؤتمرات والدورات</p></div>
+    <div class="bt std"><h4>السيناريو القياسي</h4><div class="amt">≈ 18,000 – 25,000 ر.س</div><p>≈ 215 – 300 ر.س شهريًا من راتب مقيم قائم — أقل من 5% من الدخل</p></div>
   </div>
-  <div class="disclaimer">MBA خارج هذه الميزانية (يبدأ 2032 ويُموَّل من راتب المنصب الأعلى). كثير من شركات الأدوية تدعم أو تسترد رسوم الشهادات المهنية — يُسأل عن سياسة Training Reimbursement في كل وظيفة جديدة قبل التوقيع.</div>
+  <div class="disclaimer">الأسعار تقديرية وتتغير بجداول الهيئة والمراكز. برامج الإقامة والمستشفيات تدعم غالبًا المؤتمرات والدورات وبعض رسوم الاختبارات — <b>يُسأل عن سياسة الدعم التعليمي في كل مركز قبل الدفع من الجيب</b>. ماجستير ما بعد البورد والزمالة الخارجية خارج هذه الميزانية (يُموَّلان من راتب نائب أول أو ابتعاث).</div>
 </div>
 
 <!-- SUCCESS CONDITIONS -->
 <div class="card">
   <h2>شروط نجاح الخطة — بصراحة</h2>
-  <div class="sub">خطة بهذا الطول لا تفشل بسبب الشهادات — تفشل بسبب هذه الخمسة</div>
+  <div class="sub">مسار بهذا الطول لا يفشل بسبب الذكاء — يفشل بسبب هذه الخمسة</div>
   <div class="tbl-scroll"><table>
     <tr><th>الخطر</th><th>الواقع</th><th>الوقاية</th></tr>
-    <tr><td>تأجيل البكالوريوس</td><td>أخطر قرار ممكن — كل سنة تأجيل تدفع السلم كله سنة</td><td>التقديم ربيع 2027 مهما كانت الظروف — أي خيار من الثلاثة أفضل من الانتظار</td></tr>
-    <tr><td>التمسك بالتقويم بدل المعالم</td><td>ترقية كل سنة بالضبط غير واقعية في صناعة الأدوية (المعتاد 2–3 سنوات للدرجة)</td><td>النجاح يُقاس بالمعالم لا بالسنة: تخرج ← Production Manager ← نافذة 2032–33 · التأخر سنة ليس فشلًا</td></tr>
-    <tr><td>الترقية لا تأتي بالشهادة وحدها</td><td>الشهادة تفتح الباب، الأداء الموثق يُدخِلك</td><td>مشروع تحسين موثق بالأرقام كل سنة + ملف إنجازات محدث دائمًا</td></tr>
-    <tr><td>الاحتراق (عمل + جامعة + شهادات)</td><td>7 سنوات بوتيرة 8–12 ساعة أسبوعيًا فوق الدوام</td><td>سنة 2029 محمية عمدًا · شهادة ثقيلة واحدة بالسنة كحد أقصى · صمام Black Belt معلن</td></tr>
-    <tr><td>الجمود في شركة لا تُرقّي</td><td>بعض الشركات سقفها منخفض مهما كان أداؤك</td><td>تقييم صادق كل 18 شهرًا + الانتقالتان المدروستان (≈ 2027 و2030) نحو المصانع الجديدة تحديدًا</td></tr>
+    <tr><td>تأجيل حسم التخصص</td><td>أخطر قرار مؤجل: ملف مشتت، خطابات عامة، ومناوبات بلا اتجاه — والماتشينق لا يرحم الملفات العامة</td><td>القرار مكتوب قبل نهاية يوليو 2026 مع بديل معلن — والملف كله يُوجَّه له فورًا</td></tr>
+    <tr><td>درجة SMLE دون التنافسية</td><td>الدرجة أثقل عنصر فرز — وتخصصات مثل الجراحة تُغلق عمليًا دون درجات عالية</td><td>اختبار أكتوبر يترك نافذتي إعادة قبل التقديم · وإن بقيت الدرجة قاصرة: التخصص البديل أو دورة الماتشينق التالية بملف بحثي أقوى — لا تقديم يائس</td></tr>
+    <tr><td>عدم القبول من أول دورة ماتشينق</td><td>يحدث لمتقدمين أقوياء في التخصصات التنافسية — سنة الانتظار بلا خطة هي الكارثة، لا الرفض نفسه</td><td>خطة السنة البديلة جاهزة سلفًا: وظيفة غير مصنف/بحثية في التخصص نفسه + بحثان إضافيان + إعادة تقديم أقوى</td></tr>
+    <tr><td>الاحتراق (مناوبات + اختبارات + بحث)</td><td>الإقامة ماراثون 5 سنوات بمناوبات قاسية — والانهيار في R2–R3 أشيع مما يُقال</td><td>سنة 2029 محمية عمدًا (الجزء الأول فقط) · محطة ثقيلة واحدة بالسنة · النوم والرياضة بندان في الجدول لا رفاهية</td></tr>
+    <tr><td>الاعتماد على الاختبارات وحدها</td><td>الدرجات تفتح الباب، لكن الزمالات ورئاسة القسم تُمنح بالسمعة والبحث والعلاقات</td><td>بحث منشور كل سنة + Chief Resident + مشروع QI + شبكة الجمعية العلمية من R1 — الملف يُبنى بالتوازي مع الاختبارات لا بعدها</td></tr>
   </table></div>
 </div>
 
 <!-- FINAL -->
 <div class="final">
-  <h2>الملف الكامل بنهاية المسار (2032–2033)</h2>
+  <h2>الملف الكامل بنهاية المسار (2033)</h2>
   <p class="note">كما سيبدو الملخص المهني بعد إتمام الخطتين:</p>
-  <div class="en">Plant Manager–ready operations leader with 10+ years of progressive pharmaceutical manufacturing experience, a bachelor's degree in Business Administration, CPIM, PMP, and Lean Six Sigma Black Belt. Proven track record of documented improvement projects, SFDA inspection readiness, budget ownership, and multi-department operations across solid, liquid, and packaging lines.</div>
+  <div class="en">Saudi Board–certified Senior Registrar with a competitive SMLE score, progressive residency training including a Chief Resident year, 8+ peer-reviewed publications spanning systematic reviews and clinical studies, a documented quality-improvement project, ACLS/ATLS certification, and proven large-scale volunteer leadership — currently completing a subspecialty fellowship on track for consultant appointment and future department leadership.</div>
 </div>
 
 </div><!-- /tab5 -->
@@ -1229,44 +1089,24 @@ tr:nth-child(even) td{background:#FAFCFE}
 </div>
 
 <script>
-const KEY='pharma_plan_v7';
+const KEY='plan_med_matching_v1';
 let state={};
 try{state=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){state={}}
 
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
 
 function toggle(h){h.parentElement.classList.toggle('open')}
-const HDR={
-  6:{p1:'المرحلة الأولى — خطة الـ 6 أشهر',
-     p2:'3 يوليو 2026 ← 2 يناير 2027',
-     h:'من تشغيل خط الإنتاج إلى إدارة الإنتاج الدوائي',
-     sub:'مسار متوازٍ: جودة دوائية ← سياسات وإجراءات ← مؤشرات ومستهدفات ← حل مشاكل ← Green Belt وISO ← انتقال وظيفي — والسيرة تُبنى في الخلفية طوال الوقت',
-     roles:['Senior Production Supervisor','Shift Production Manager / Shift Lead','Production Compliance Coordinator'],
-     gold:'Production Line Manager — هدف 12–18 شهر'},
-  5:{p1:'المرحلة الثانية — خطة الـ 5–7 سنوات',
-     p2:'2027 ← 2033 · معالم لا مواعيد',
-     h:'من مشرف أول إلى مدير مصنع دوائي',
-     sub:'البكالوريوس عمود فقري + شهادة احترافية ثقيلة كل سنة (CPIM ← Black Belt ← PMP) + خبرات مستهدفة موثقة — والرافعة السعودية تضغط المسار',
-     roles:['بكالوريوس إدارة أعمال 2027–2030','ASCM CPIM · LSS Black Belt · PMP','Production Manager ← Operations Manager'],
-     gold:'Plant Manager — نافذة 2032–2033'}
-};
 function showTab(n){
-  const h=HDR[n];
-  document.getElementById('hp1').textContent=h.p1;
-  document.getElementById('hp2').textContent=h.p2;
-  document.getElementById('hTitle').textContent=h.h;
-  document.getElementById('hSub').textContent=h.sub;
-  document.getElementById('hRoles').innerHTML=
-    h.roles.map(r=>'<span class="role">'+r+'</span>').join('')+
-    '<span class="role" style="border-color:rgba(201,154,59,.55);color:#EBD9AE">'+h.gold+'</span>';
   document.getElementById('tab6').style.display=(n===6?'':'none');
   document.getElementById('tab5').style.display=(n===5?'':'none');
+  document.getElementById('hdr6').style.display=(n===6?'':'none');
+  document.getElementById('hdr5').style.display=(n===5?'':'none');
   document.getElementById('btn6').classList.toggle('active',n===6);
   document.getElementById('btn5').classList.toggle('active',n===5);
-  try{localStorage.setItem('plan_tab',n)}catch(e){}
+  try{localStorage.setItem('plan_med_tab',n)}catch(e){}
   window.scrollTo({top:0});
 }
-try{if(localStorage.getItem('plan_tab')==='5')showTab(5)}catch(e){}
+try{if(localStorage.getItem('plan_med_tab')==='5')showTab(5)}catch(e){}
 function jump(n){
   showTab(6);
   const m=document.getElementById('m'+n);
